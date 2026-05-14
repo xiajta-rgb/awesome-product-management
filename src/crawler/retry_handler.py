@@ -7,6 +7,7 @@ logger = logging.getLogger(__name__)
 class RetryHandler:
 
     RELIABLE_SOURCES = {
+        "amazon",
         "amazon_bestseller",
         "amazon_trending",
         "google_trends",

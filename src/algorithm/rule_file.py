@@ -16,9 +16,9 @@ class RuleFileManager:
         },
         "rule2": {
             "name": "趋势匹配规则",
-            "match_score_calculation": "matched_element_count / total_trend_element_count * 100",
+            "match_score_calculation": "matched_element_count / product_element_count * 100",
             "match_threshold": 80,
-            "valid_heat_levels": ["high", "中", "medium"],
+            "valid_heat_levels": ["high", "中", "medium", "高热度", "中热度"],
         },
         "rule3": {
             "name": "权重打分规则",

@@ -27,10 +27,19 @@ class ProductPushBuilder:
         }
 
     def _format_product(self, product: dict) -> dict:
+        features = product.get("features", {})
+        if isinstance(features, str):
+            features = [f.strip() for f in features.split(";") if f.strip()]
+        elif isinstance(features, dict):
+            features = features
+        elif isinstance(features, list):
+            features = features
+        else:
+            features = {}
         formatted = {
             "title": product.get("title", ""),
             "url": product.get("url", ""),
-            "features": product.get("features", {}),
+            "features": features,
             "price": product.get("price", 0.0),
             "selling_points": product.get("selling_points", []),
             "trend_match_points": product.get("trend_match_points", []),

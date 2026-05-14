@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-05-14T03:57:58.873058+00:00",
+  "run_time": "2026-05-14T04:19:19.572335+00:00",
   "hit_products": {
     "push_type": "hit_product_list",
     "title": "高潜力爆品列表推送",
@@ -7,7 +7,11 @@
       {
         "title": "Men's Business Casual Shirt 大地色 棉麻混纺 修身",
         "url": "https://amazon.com/product1",
-        "features": "修身;棉麻;大地色",
+        "features": [
+          "修身",
+          "棉麻",
+          "大地色"
+        ],
         "price": 29.99,
         "selling_points": [],
         "trend_match_points": [],
@@ -34,21 +38,21 @@
     "title": "视觉差异化建议推送",
     "suggestions": [
       {
-        "visual_element": "",
-        "differentiation_strategy": "",
-        "reference_examples": [],
+        "element": "Earth Tone",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Earth Tone'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
-        "visual_element": "",
-        "differentiation_strategy": "",
-        "reference_examples": [],
+        "element": "Slim Fit",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Slim Fit'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
-        "visual_element": "",
-        "differentiation_strategy": "",
-        "reference_examples": [],
+        "element": "Cotton Linen Blend",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Cotton Linen Blend'，可作为视觉差异化亮点",
         "data_source": ""
       }
     ]
@@ -57,7 +61,7 @@
     "push_type": "pitfall_reminders",
     "title": "避坑提醒推送",
     "pitfalls": [],
-    "generated_at": "2026-05-14T03:57:58.872459"
+    "generated_at": "2026-05-14T04:19:19.571689"
   },
   "uniqueness_recommendations": {
     "push_type": "uniqueness_recommendations",

@@ -26,14 +26,16 @@ class TestDataSourceField:
         for p in result["products"]:
             assert "data_source" in p
 
-    def test_top10_elements_push_has_data_source(self):
+    def test_top10_elements_push_has_element_field(self):
         builder = ElementPushBuilder()
         elements = [
-            {"description": "test", "application_scene": "scene", "matched_category": "cat", "data_source": "google_trends", "standardized_tags": ["tag1"]},
+            {"element": "Earth Tone", "frequency": 25, "is_core": True, "margin": 0.35, "recommendation_weight": 1.0, "margin_penalty_applied": False},
         ]
         result = builder.build_top10_elements(elements)
         for e in result["elements"]:
-            assert "data_source" in e
+            assert "element" in e
+            assert "frequency" in e
+            assert "is_core" in e
 
     def test_element_matching_push_has_data_source(self):
         builder = ElementPushBuilder()
@@ -47,7 +49,7 @@ class TestDataSourceField:
     def test_visual_diff_push_has_data_source(self):
         builder = ElementPushBuilder()
         suggestions = [
-            {"visual_element": "elem", "differentiation_strategy": "strat", "reference_examples": [], "data_source": "instagram"},
+            {"element": "Earth Tone", "suggestion_type": "visual_gap", "description": "desc", "data_source": "instagram"},
         ]
         result = builder.build_visual_diff_suggestions(suggestions)
         for s in result["suggestions"]:

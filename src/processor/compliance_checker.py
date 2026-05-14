@@ -3,7 +3,6 @@ INFRINGEMENT_KEYWORDS = [
     "adidas",
     "gucci",
     "louis vuitton",
-    "lv",
     "chanel",
     "prada",
     "hermes",
@@ -11,7 +10,7 @@ INFRINGEMENT_KEYWORDS = [
     "versace",
     "balenciaga",
     "yeezy",
-    "jordan",
+    "air jordan",
     "supreme",
     "off-white",
     "puma",
@@ -82,6 +81,7 @@ class ComplianceChecker:
         return result
 
     def _check_size_label(self, product):
+        import re
         features = product.get("standardized_features", {})
         if isinstance(features, dict):
             size_info = features.get("size", [])
@@ -89,25 +89,24 @@ class ComplianceChecker:
                 return True
         title = product.get("title", "") or ""
         size_keywords = [
-            "size",
-            "尺码",
-            "码",
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL",
-            "small",
-            "medium",
-            "large",
+            r"\bsize\b",
+            r"尺码",
+            r"码",
+            r"\bS\b",
+            r"\bM\b",
+            r"\bL\b",
+            r"\bXL\b",
+            r"\bXXL\b",
+            r"\bsmall\b",
+            r"\bmedium\b",
+            r"\blarge\b",
         ]
-        title_upper = title.upper()
-        for kw in size_keywords:
-            if kw.upper() in title_upper:
+        for pattern in size_keywords:
+            if re.search(pattern, title, re.IGNORECASE):
                 return True
         features_str = product.get("features", "") or ""
-        for kw in size_keywords:
-            if kw.upper() in features_str.upper():
+        for pattern in size_keywords:
+            if re.search(pattern, features_str, re.IGNORECASE):
                 return True
         return False
 
@@ -121,14 +120,16 @@ class ComplianceChecker:
         if not material_tags and not title and not features_str:
             return True
         if not material_tags:
-            return True
+            return False
         return True
 
     def _check_infringement(self, product):
+        import re
         title = (product.get("title", "") or "").lower()
         features = (product.get("features", "") or "").lower()
         text = f"{title} {features}"
         for keyword in INFRINGEMENT_KEYWORDS:
-            if keyword.lower() in text:
+            pattern = r'\b' + re.escape(keyword.lower()) + r'\b'
+            if re.search(pattern, text):
                 return False
         return True

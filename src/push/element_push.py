@@ -9,11 +9,12 @@ class ElementPushBuilder:
         for element in top_elements:
             formatted_elements.append(
                 {
-                    "description": element.get("description", ""),
-                    "application_scene": element.get("application_scene", ""),
-                    "matched_category": element.get("matched_category", ""),
-                    "data_source": element.get("data_source", ""),
-                    "standardized_tags": element.get("standardized_tags", []),
+                    "element": element.get("element", ""),
+                    "frequency": element.get("frequency", 0),
+                    "is_core": element.get("is_core", False),
+                    "margin": element.get("margin", 0),
+                    "recommendation_weight": element.get("recommendation_weight", 1.0),
+                    "margin_penalty_applied": element.get("margin_penalty_applied", False),
                 }
             )
         return {
@@ -44,11 +45,9 @@ class ElementPushBuilder:
         for suggestion in suggestions:
             formatted_suggestions.append(
                 {
-                    "visual_element": suggestion.get("visual_element", ""),
-                    "differentiation_strategy": suggestion.get(
-                        "differentiation_strategy", ""
-                    ),
-                    "reference_examples": suggestion.get("reference_examples", []),
+                    "element": suggestion.get("element", ""),
+                    "suggestion_type": suggestion.get("suggestion_type", ""),
+                    "description": suggestion.get("description", ""),
                     "data_source": suggestion.get("data_source", ""),
                 }
             )
