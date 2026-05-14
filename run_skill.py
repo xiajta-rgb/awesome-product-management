@@ -604,12 +604,20 @@ def run_full_pipeline():
         }
     }
 
-    output_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "skill_result.json")
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
+    os.makedirs(output_dir, exist_ok=True)
+
+    output_file = os.path.join(output_dir, "skill_result.json")
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
+    run_date = datetime.now().strftime("%Y-%m-%d")
+    dated_file = os.path.join(output_dir, f"skill_result_{run_date}.json")
+    with open(dated_file, "w", encoding="utf-8") as f:
+        json.dump(output_data, f, ensure_ascii=False, indent=2)
+
     logger.info(f"  结果已保存到: {output_file}")
+    logger.info(f"  历史副本: {dated_file}")
     return output_data
 
 

@@ -43,6 +43,28 @@ header{
   font-family:'DM Sans',-apple-system,sans-serif;font-size:.82rem;color:var(--text-secondary);font-weight:400;letter-spacing:.02em;
 }
 .header-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.date-filter{display:flex;align-items:center;gap:8px}
+.date-filter label{font-size:.78rem;color:var(--text-secondary);font-weight:500;white-space:nowrap}
+.date-filter input[type="date"]{
+  padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.82rem;
+  font-family:inherit;color:var(--text-primary);background:var(--card);cursor:pointer;outline:none;
+  transition:border-color .2s;
+}
+.date-filter input[type="date"]:hover{border-color:var(--accent)}
+.date-filter input[type="date"]:focus{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-light)}
+.date-nav-btn{
+  display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--card);
+  color:var(--text-secondary);cursor:pointer;transition:all .2s;font-size:.9rem;
+}
+.date-nav-btn:hover{border-color:var(--accent);color:var(--accent)}
+.date-nav-btn:disabled{opacity:.3;cursor:not-allowed}
+.date-today-btn{
+  padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--card);
+  color:var(--text-primary);font-size:.78rem;cursor:pointer;font-family:inherit;font-weight:500;
+  transition:all .2s;white-space:nowrap;
+}
+.date-today-btn:hover{border-color:var(--accent);color:var(--accent)}
 .update-time{font-size:.78rem;color:var(--text-secondary);display:flex;align-items:center;gap:6px}
 .update-time svg{width:14px;height:14px;stroke:var(--text-secondary)}
 .refresh-btn{
@@ -260,6 +282,13 @@ footer .footer-text strong{color:var(--text-primary);font-weight:600}
       <span class="subtitle">亚马逊美国站跨境服装选品情报</span>
     </div>
     <div class="header-meta">
+      <div class="date-filter">
+        <button class="date-nav-btn" id="prevDayBtn" onclick="navigateDate(-1)" title="前一天">◀</button>
+        <label for="datePicker">日期</label>
+        <input type="date" id="datePicker" onchange="onDateChange()">
+        <button class="date-nav-btn" id="nextDayBtn" onclick="navigateDate(1)" title="后一天">▶</button>
+        <button class="date-today-btn" onclick="goToLatest()">最新数据</button>
+      </div>
       <div class="update-time" id="updateTime">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <span>加载中...</span>
@@ -289,7 +318,10 @@ footer .footer-text strong{color:var(--text-primary);font-weight:600}
 
 <script>
 const API_URL = '/api/skill-result';
+const DATES_URL = '/api/available-dates';
 let currentData = null;
+let availableDates = [];
+let selectedDate = null;
 
 function formatTime(isoStr) {
   if (!isoStr) return '未知';
@@ -664,6 +696,59 @@ function renderError(msg) {
   `;
 }
 
+async function fetchAvailableDates() {
+  try {
+    const res = await fetch(DATES_URL);
+    if (!res.ok) return;
+    const data = await res.json();
+    availableDates = data.dates || [];
+    updateDateNavButtons();
+  } catch (err) {
+    console.error('Failed to fetch available dates:', err);
+  }
+}
+
+function updateDateNavButtons() {
+  const picker = document.getElementById('datePicker');
+  const prevBtn = document.getElementById('prevDayBtn');
+  const nextBtn = document.getElementById('nextDayBtn');
+
+  if (!selectedDate || !availableDates.length) {
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
+    return;
+  }
+
+  const idx = availableDates.indexOf(selectedDate);
+  prevBtn.disabled = idx <= 0;
+  nextBtn.disabled = idx >= availableDates.length - 1;
+}
+
+function navigateDate(offset) {
+  if (!selectedDate || !availableDates.length) return;
+  const idx = availableDates.indexOf(selectedDate);
+  const newIdx = idx + offset;
+  if (newIdx < 0 || newIdx >= availableDates.length) return;
+  selectedDate = availableDates[newIdx];
+  document.getElementById('datePicker').value = selectedDate;
+  updateDateNavButtons();
+  fetchData();
+}
+
+function onDateChange() {
+  const picker = document.getElementById('datePicker');
+  selectedDate = picker.value;
+  updateDateNavButtons();
+  fetchData();
+}
+
+function goToLatest() {
+  selectedDate = null;
+  document.getElementById('datePicker').value = '';
+  updateDateNavButtons();
+  fetchData();
+}
+
 async function fetchData() {
   const btn = document.getElementById('refreshBtn');
   const main = document.getElementById('mainContent');
@@ -680,21 +765,44 @@ async function fetchData() {
   }
 
   try {
-    const res = await fetch(API_URL);
+    let url = API_URL;
+    if (selectedDate) {
+      url += `?date=${selectedDate}`;
+    }
+    const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
+
+    if (!selectedDate && data.run_time) {
+      try {
+        const dt = new Date(data.run_time);
+        const todayStr = dt.toISOString().slice(0, 10);
+        selectedDate = todayStr;
+        document.getElementById('datePicker').value = todayStr;
+        if (!availableDates.includes(todayStr)) {
+          availableDates.unshift(todayStr);
+        }
+        updateDateNavButtons();
+      } catch (e) {}
+    }
+
     renderPage(data);
   } catch (err) {
     console.error('Fetch error:', err);
     if (!currentData) {
-      renderError('无法连接数据服务，请检查网络后重试');
+      renderError(selectedDate
+        ? `${selectedDate} 暂无数据，请选择其他日期或查看最新数据`
+        : '无法连接数据服务，请检查网络后重试');
     }
   } finally {
     btn.classList.remove('loading');
   }
 }
 
-document.addEventListener('DOMContentLoaded', fetchData);
+document.addEventListener('DOMContentLoaded', async () => {
+  await fetchAvailableDates();
+  fetchData();
+});
 </script>
 </body>
 </html>
