@@ -1,0 +1,45 @@
+# 公司知识记忆 v1.0
+# 存储用户在需求中提到的公司特有信息，用于后续需求补全时自动关联
+
+version: "1.0"
+
+company:
+  name: ""
+  industry: ""
+
+systems:
+  - name: "磐石系统"
+    description: "我司内部系统，包含侵权库等功能"
+    related_modules: ["营销域"]
+
+data_sources:
+  - name: "USPTO专利网站"
+    url: "https://ppubs.uspto.gov/basic/"
+    description: "美国专利查询，获取指定关键词的专利PDF"
+  - name: "鸥鹭"
+    description: "已有侵权数据库，可进行侵权检索"
+  - name: "卖家精灵"
+    description: "已有侵权数据库，可进行侵权检索"
+
+departments:
+  - name: "法务"
+    description: "负责侵权风险评估和处理"
+  - name: "运营"
+    description: "负责产品上架前的专利排查"
+  - name: "开发"
+    description: "产品开发团队"
+
+business_rules:
+  - name: "新人首课培训"
+    description: "新人入职时首课固定做侵权案例学习与风险意识培训，从源头把控开发风控"
+    related_modules: ["营销域"]
+
+modules:
+  - name: "营销域"
+    typical_demands: "侵权风控、品牌对标、产品上架排查"
+  - name: "研发域"
+    typical_demands: "系统开发、技术架构、工具建设"
+  - name: "仓储与物流域"
+    typical_demands: "仓储管理、物流调度、库存优化"
+  - name: "供应链与制造域"
+    typical_demands: "供应链协同、制造流程、采购管理"

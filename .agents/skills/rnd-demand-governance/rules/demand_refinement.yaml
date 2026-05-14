@@ -1,22 +1,24 @@
-# 需求描述补全优化规则 v4.0
+# 需求描述补全优化规则 v5.0
 
-version: "4.0"
+version: "5.0"
 
-# 最终录入字段定义
 output_fields:
   demand_type:
     name: "需求类型"
-    description: "普通需求 / 价值需求"
     values: ["普通需求", "价值需求"]
     auto_derived: true
     derivation_rule: "A级/B级→价值需求 | C级/D级→普通需求"
   
   demand_module:
     name: "需求模块"
-    description: "需求所属业务域"
     values: ["仓储与物流域", "研发域", "供应链与制造域", "营销域"]
     auto_derived: false
-    guide: "根据需求涉及的核心业务流程判断归属域"
+    derivation_guide: |
+      仓储与物流域：仓储管理、物流调度、库存优化
+      研发域：系统开发、技术架构、工具建设、内部平台
+      供应链与制造域：供应链协同、制造流程、采购管理
+      营销域：侵权风控、品牌对标、产品上架、市场运营、客户服务
+      注意：参考 rules/company_context.yaml 中已记录的系统与模块关联
   
   title:
     name: "标题"
@@ -41,37 +43,46 @@ output_fields:
   
   label:
     name: "标签"
-    description: "需求类型标签（由评分自动推导）"
     values: ["战略", "经营", "日常", "无效型"]
     auto_derived: true
     derivation_rule: "A级≥80→战略 | B级60-79→经营 | C级40-59→日常 | D级<40→无效型"
   
   priority:
     name: "优先级"
-    description: "需求优先级（由评分自动推导）"
     values: ["P0", "P1", "P2", "P3"]
     auto_derived: true
-    derivation_rule: "A级≥80→P0(立即处理) | B级60-79→P1(本周处理) | C级40-59→P2(迭代内处理) | D级<40→P3(排期处理)"
+    derivation_rule: "A级→P0 | B级→P1 | C级→P2 | D级→P3"
+  
+  ai_suggestions:
+    name: "AI建议"
+    description: "基于评分维度和PM框架分析，给出需求迭代优化建议，助力开发人员理解和推进"
+    auto_derived: true
+    generation_rules:
+      - dimension: "业务价值"
+        check: "是否包含量化指标？当前值vs目标值？"
+        suggestion_template: "建议补充量化指标：当前{metric}是多少？目标提升到多少？"
+      - dimension: "战略匹配度"
+        check: "是否对齐OKR？归属哪个战略目标？"
+        suggestion_template: "建议对齐年度OKR，明确归属哪个战略目标"
+      - dimension: "影响范围"
+        check: "是否列出直接受益部门/岗位/用户规模？"
+        suggestion_template: "建议列出直接受益部门/岗位清单及用户规模"
+      - dimension: "投入产出比"
+        check: "是否明确技术栈、外部依赖、预估人月？"
+        suggestion_template: "建议明确技术栈选型、外部依赖、预估开发人月"
+      - dimension: "紧急程度"
+        check: "是否有刚性时间节点？"
+        suggestion_template: "建议补充刚性时间节点"
+      - dimension: "实施复杂度"
+        check: "是否需要拆分阶段？一次性交付风险？"
+        suggestion_template: "建议拆分阶段交付，降低一次性交付风险"
+      - dimension: "开发视角"
+        check: "开发人员能否直接理解并开始工作？验收标准是否明确？"
+        suggestion_template: "建议补充验收标准、技术方案要点、接口依赖说明"
+      - dimension: "缺失信息"
+        check: "成功度量指标、技术风险评估、跨部门协同机制是否明确？"
+        suggestion_template: "建议补充：{缺失项列表}"
 
-# 补全质量评估标准（不包含自动推导字段）
-quality_checks:
-  - field: "title"
-    check: "是否用一句话描述了需求核心内容"
-    min_requirement: true
-  - field: "background"
-    check: "是否描述了当前状况和存在的问题"
-    min_requirement: true
-  - field: "pain_points"
-    check: "是否列出了至少1个具体痛点及其表现"
-    min_requirement: true
-  - field: "description"
-    check: "是否详细描述了需求点和预期效果"
-    min_requirement: true
-  - field: "demand_module"
-    check: "是否选择了正确的需求模块"
-    min_requirement: true
-
-# 评分→标签→优先级 自动映射表
 score_to_label_mapping:
   - min_score: 80
     max_score: 100
@@ -98,13 +109,28 @@ score_to_label_mapping:
     priority: "P3"
     demand_type: "普通需求"
 
-# 补全置信度标记
+quality_checks:
+  - field: "title"
+    check: "是否用一句话描述了需求核心内容"
+    min_requirement: true
+  - field: "background"
+    check: "是否描述了当前状况和存在的问题"
+    min_requirement: true
+  - field: "pain_points"
+    check: "是否列出了至少1个具体痛点及其表现"
+    min_requirement: true
+  - field: "description"
+    check: "是否详细描述了需求点和预期效果"
+    min_requirement: true
+  - field: "demand_module"
+    check: "是否选择了正确的需求模块"
+    min_requirement: true
+
 confidence_levels:
   confirmed: "用户明确提供的信息"
   inferred: "根据上下文合理推测的信息"
   assumed: "AI基于经验假设的信息（需要用户确认）"
 
-# 补全不合格处理规则
 insufficient_info_rules:
   missing_threshold: 3
   action: "pause_and_ask"
