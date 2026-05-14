@@ -5,747 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>产品经理完全手册 — 从入门到顶级</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Serif+SC:wght@200;400;600;700;900&family=Source+Han+Serif+SC:wght@400;700&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
---bg-deep:#06060f;
---bg-primary:#0a0a1a;
---bg-secondary:#10102a;
---bg-card:#161640;
---bg-card-hover:#1c1c50;
---accent-gold:#c9a84c;
---accent-gold-light:#e8d5a0;
---accent-teal:#2dd4bf;
---accent-teal-dark:#0d9488;
---accent-rose:#fb7185;
---accent-violet:#a78bfa;
---accent-amber:#f59e0b;
---text-primary:#e8e4dc;
---text-secondary:#8b8fa8;
---text-muted:#5a5e78;
---border-color:rgba(201,168,76,0.15);
---border-subtle:rgba(255,255,255,0.06);
---shadow-gold:0 0 40px rgba(201,168,76,0.08);
---shadow-card:0 8px 32px rgba(0,0,0,0.4);
---font-display:'Playfair Display','Noto Serif SC',serif;
---font-body:'Noto Serif SC',Georgia,serif;
---font-mono:'DM Mono',monospace;
---font-accent:'Instrument Serif',serif;
-}
-html{scroll-behavior:smooth;font-size:16px}
-body{
-background:var(--bg-deep);
-color:var(--text-primary);
-font-family:var(--font-body);
-line-height:1.8;
-overflow-x:hidden;
--webkit-font-smoothing:antialiased;
-}
-::selection{background:rgba(201,168,76,0.3);color:#fff}
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--bg-deep)}
-::-webkit-scrollbar-thumb{background:var(--accent-gold);border-radius:3px}
-
-.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent-gold),var(--accent-teal));z-index:9999;transition:width .15s}
-
-nav.side-nav{
-position:fixed;left:0;top:0;width:260px;height:100vh;
-background:rgba(6,6,15,0.95);
-backdrop-filter:blur(20px);
-border-right:1px solid var(--border-subtle);
-z-index:1000;
-padding:2rem 0;
-overflow-y:auto;
-transition:transform .4s cubic-bezier(.4,0,.2,1);
-}
-nav.side-nav .nav-brand{
-padding:0 1.5rem 2rem;
-border-bottom:1px solid var(--border-subtle);
-margin-bottom:1.5rem;
-}
-nav.side-nav .nav-brand h3{
-font-family:var(--font-display);
-font-size:1.1rem;
-color:var(--accent-gold);
-letter-spacing:.02em;
-}
-nav.side-nav .nav-brand span{
-font-size:.7rem;
-color:var(--text-muted);
-font-family:var(--font-mono);
-letter-spacing:.1em;
-text-transform:uppercase;
-}
-nav.side-nav a{
-display:flex;align-items:center;gap:.75rem;
-padding:.6rem 1.5rem;
-color:var(--text-secondary);
-text-decoration:none;
-font-size:.82rem;
-transition:all .25s;
-border-left:2px solid transparent;
-font-family:var(--font-body);
-}
-nav.side-nav a:hover,nav.side-nav a.active{
-color:var(--accent-gold);
-background:rgba(201,168,76,0.05);
-border-left-color:var(--accent-gold);
-}
-nav.side-nav a .nav-icon{
-width:18px;height:18px;
-display:flex;align-items:center;justify-content:center;
-font-size:.7rem;
-opacity:.6;
-}
-nav.side-nav a:hover .nav-icon,nav.side-nav a.active .nav-icon{opacity:1}
-nav.side-nav .nav-section{
-padding:.5rem 1.5rem;
-font-size:.65rem;
-font-family:var(--font-mono);
-color:var(--text-muted);
-letter-spacing:.15em;
-text-transform:uppercase;
-margin-top:1rem;
-}
-
-.main-content{margin-left:260px}
-
-.hero{
-position:relative;
-min-height:100vh;
-display:flex;align-items:center;justify-content:center;
-overflow:hidden;
-}
-.hero-bg{
-position:absolute;inset:0;
-background:
-  radial-gradient(ellipse 80% 60% at 50% 40%,rgba(201,168,76,0.08),transparent),
-  radial-gradient(ellipse 60% 50% at 80% 20%,rgba(45,212,191,0.05),transparent),
-  radial-gradient(ellipse 50% 40% at 20% 80%,rgba(167,139,250,0.04),transparent),
-  var(--bg-deep);
-}
-.hero-bg::before{
-content:'';position:absolute;inset:0;
-background:url("https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Premium%20editorial%20magazine%20cover%20design%2C%20product%20management%20concept%20art%2C%20dark%20sophisticated%20workspace%20with%20floating%20holographic%20UI%20screens%20and%20data%20visualizations%2C%20deep%20navy%20and%20gold%20color%20scheme%2C%20luxury%20aesthetic%2C%20cinematic%20lighting&image_size=landscape_16_9") center/cover no-repeat;
-opacity:.12;
-filter:saturate(.5);
-}
-.hero-content{
-position:relative;z-index:2;
-text-align:center;
-max-width:900px;
-padding:2rem;
-}
-.hero-eyebrow{
-font-family:var(--font-mono);
-font-size:.7rem;
-letter-spacing:.25em;
-text-transform:uppercase;
-color:var(--accent-gold);
-margin-bottom:1.5rem;
-display:inline-flex;align-items:center;gap:.75rem;
-}
-.hero-eyebrow::before,.hero-eyebrow::after{
-content:'';width:40px;height:1px;
-background:linear-gradient(90deg,transparent,var(--accent-gold));
-}
-.hero-eyebrow::after{
-background:linear-gradient(90deg,var(--accent-gold),transparent);
-}
-.hero h1{
-font-family:var(--font-display);
-font-size:clamp(2.8rem,6vw,5.5rem);
-font-weight:900;
-line-height:1.1;
-margin-bottom:1.5rem;
-background:linear-gradient(135deg,var(--text-primary) 0%,var(--accent-gold-light) 50%,var(--accent-gold) 100%);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-background-clip:text;
-}
-.hero h1 em{
-font-family:var(--font-accent);
-font-style:italic;
--webkit-text-fill-color:var(--accent-teal);
-}
-.hero-subtitle{
-font-size:1.15rem;
-color:var(--text-secondary);
-max-width:600px;
-margin:0 auto 2.5rem;
-line-height:1.9;
-}
-.hero-meta{
-display:flex;justify-content:center;gap:2.5rem;
-font-family:var(--font-mono);
-font-size:.7rem;
-color:var(--text-muted);
-letter-spacing:.05em;
-}
-.hero-meta span{display:flex;align-items:center;gap:.4rem}
-.hero-scroll{
-position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
-display:flex;flex-direction:column;align-items:center;gap:.5rem;
-color:var(--text-muted);font-size:.65rem;
-font-family:var(--font-mono);letter-spacing:.15em;
-animation:float 3s ease-in-out infinite;
-}
-.hero-scroll .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--accent-gold),transparent)}
-@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-8px)}}
-
-.chapter{
-position:relative;
-padding:6rem 4rem;
-}
-.chapter-header{
-position:relative;
-margin-bottom:4rem;
-}
-.chapter-number{
-font-family:var(--font-display);
-font-size:8rem;
-font-weight:900;
-color:rgba(201,168,76,0.06);
-position:absolute;
-top:-3rem;left:-1rem;
-line-height:1;
-user-select:none;
-}
-.chapter-label{
-font-family:var(--font-mono);
-font-size:.65rem;
-letter-spacing:.2em;
-text-transform:uppercase;
-color:var(--accent-gold);
-margin-bottom:.5rem;
-display:flex;align-items:center;gap:.5rem;
-}
-.chapter-label::before{content:'';width:20px;height:1px;background:var(--accent-gold)}
-.chapter-title{
-font-family:var(--font-display);
-font-size:clamp(2rem,4vw,3.2rem);
-font-weight:700;
-line-height:1.2;
-margin-bottom:1rem;
-}
-.chapter-title .highlight{color:var(--accent-gold)}
-.chapter-desc{
-font-size:1rem;
-color:var(--text-secondary);
-max-width:640px;
-line-height:1.9;
-}
-.chapter-banner{
-width:100%;height:280px;
-border-radius:16px;
-overflow:hidden;
-margin:3rem 0;
-position:relative;
-}
-.chapter-banner img{
-width:100%;height:100%;object-fit:cover;
-opacity:.6;
-filter:saturate(.7);
-}
-.chapter-banner::after{
-content:'';position:absolute;inset:0;
-background:linear-gradient(135deg,rgba(6,6,15,0.7),rgba(6,6,15,0.3));
-}
-
-.section{margin-bottom:4rem}
-.section-header{
-display:flex;align-items:center;gap:.75rem;
-margin-bottom:2rem;
-padding-bottom:1rem;
-border-bottom:1px solid var(--border-subtle);
-}
-.section-num{
-font-family:var(--font-mono);
-font-size:.7rem;
-color:var(--accent-gold);
-background:rgba(201,168,76,0.1);
-padding:.25rem .6rem;
-border-radius:4px;
-letter-spacing:.05em;
-}
-.section-title{
-font-family:var(--font-display);
-font-size:1.6rem;
-font-weight:700;
-}
-
-.concept-block{
-background:var(--bg-secondary);
-border:1px solid var(--border-subtle);
-border-radius:12px;
-padding:2rem;
-margin-bottom:2rem;
-position:relative;
-overflow:hidden;
-transition:border-color .3s,box-shadow .3s;
-}
-.concept-block:hover{
-border-color:rgba(201,168,76,0.25);
-box-shadow:var(--shadow-gold);
-}
-.concept-block::before{
-content:'';position:absolute;top:0;left:0;right:0;height:2px;
-background:linear-gradient(90deg,var(--accent-gold),var(--accent-teal));
-opacity:0;transition:opacity .3s;
-}
-.concept-block:hover::before{opacity:1}
-.concept-block h4{
-font-family:var(--font-display);
-font-size:1.2rem;
-margin-bottom:.75rem;
-display:flex;align-items:center;gap:.5rem;
-}
-.concept-block h4 .tag{
-font-family:var(--font-mono);
-font-size:.6rem;
-padding:.15rem .5rem;
-border-radius:3px;
-letter-spacing:.05em;
-}
-.tag-gold{background:rgba(201,168,76,0.15);color:var(--accent-gold)}
-.tag-teal{background:rgba(45,212,191,0.15);color:var(--accent-teal)}
-.tag-rose{background:rgba(251,113,133,0.15);color:var(--accent-rose)}
-.tag-violet{background:rgba(167,139,250,0.15);color:var(--accent-violet)}
-.concept-block p{color:var(--text-secondary);font-size:.92rem;line-height:1.9}
-
-.pull-quote{
-position:relative;
-padding:2rem 2.5rem;
-margin:2.5rem 0;
-border-left:3px solid var(--accent-gold);
-background:rgba(201,168,76,0.03);
-border-radius:0 12px 12px 0;
-}
-.pull-quote p{
-font-family:var(--font-display);
-font-size:1.2rem;
-font-style:italic;
-line-height:1.7;
-color:var(--text-primary);
-}
-.pull-quote .quote-author{
-margin-top:1rem;
-font-family:var(--font-mono);
-font-size:.75rem;
-color:var(--accent-gold);
-font-style:normal;
-}
-
-.framework-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:1.5rem;
-margin:2rem 0;
-}
-.framework-card{
-background:var(--bg-card);
-border:1px solid var(--border-subtle);
-border-radius:12px;
-padding:1.75rem;
-transition:all .3s;
-position:relative;
-overflow:hidden;
-}
-.framework-card:hover{
-transform:translateY(-2px);
-border-color:rgba(201,168,76,0.2);
-box-shadow:var(--shadow-card);
-}
-.framework-card .fc-icon{
-width:44px;height:44px;
-border-radius:10px;
-display:flex;align-items:center;justify-content:center;
-font-size:1.3rem;
-margin-bottom:1rem;
-}
-.fc-icon-gold{background:rgba(201,168,76,0.12);color:var(--accent-gold)}
-.fc-icon-teal{background:rgba(45,212,191,0.12);color:var(--accent-teal)}
-.fc-icon-rose{background:rgba(251,113,133,0.12);color:var(--accent-rose)}
-.fc-icon-violet{background:rgba(167,139,250,0.12);color:var(--accent-violet)}
-.fc-icon-amber{background:rgba(245,158,11,0.12);color:var(--accent-amber)}
-.framework-card h5{
-font-family:var(--font-display);
-font-size:1.05rem;
-margin-bottom:.5rem;
-}
-.framework-card p{
-font-size:.85rem;
-color:var(--text-secondary);
-line-height:1.7;
-}
-.framework-card .fc-author{
-margin-top:1rem;
-font-family:var(--font-mono);
-font-size:.68rem;
-color:var(--text-muted);
-display:flex;align-items:center;gap:.3rem;
-}
-
-.book-card{
-display:flex;gap:1.5rem;
-background:var(--bg-secondary);
-border:1px solid var(--border-subtle);
-border-radius:12px;
-padding:1.5rem;
-margin-bottom:1.25rem;
-transition:all .3s;
-}
-.book-card:hover{
-border-color:rgba(201,168,76,0.2);
-box-shadow:var(--shadow-gold);
-}
-.book-cover{
-flex-shrink:0;
-width:80px;height:110px;
-border-radius:6px;
-display:flex;align-items:center;justify-content:center;
-font-family:var(--font-display);
-font-size:.7rem;
-text-align:center;
-padding:.5rem;
-line-height:1.3;
-color:#fff;
-position:relative;
-overflow:hidden;
-}
-.book-cover::after{
-content:'';position:absolute;inset:0;
-background:linear-gradient(135deg,rgba(255,255,255,0.1),transparent);
-}
-.bc-1{background:linear-gradient(135deg,#1a1a4e,#2a2a6e)}
-.bc-2{background:linear-gradient(135deg,#0d4a4a,#1a6b6b)}
-.bc-3{background:linear-gradient(135deg,#4a1a4a,#6b2a6b)}
-.bc-4{background:linear-gradient(135deg,#4a3a0a,#6b5a1a)}
-.bc-5{background:linear-gradient(135deg,#0a2a4a,#1a4a6b)}
-.bc-6{background:linear-gradient(135deg,#3a0a0a,#5a1a1a)}
-.bc-7{background:linear-gradient(135deg,#0a3a2a,#1a5a4a)}
-.bc-8{background:linear-gradient(135deg,#2a1a4a,#4a2a6b)}
-.book-info h5{
-font-family:var(--font-display);
-font-size:1rem;
-margin-bottom:.3rem;
-}
-.book-info .book-author{
-font-family:var(--font-mono);
-font-size:.72rem;
-color:var(--accent-gold);
-margin-bottom:.5rem;
-}
-.book-info .book-desc{
-font-size:.82rem;
-color:var(--text-secondary);
-line-height:1.7;
-}
-
-.diagram{
-background:var(--bg-secondary);
-border:1px solid var(--border-subtle);
-border-radius:16px;
-padding:2.5rem;
-margin:2.5rem 0;
-position:relative;
-}
-.diagram-title{
-font-family:var(--font-mono);
-font-size:.7rem;
-letter-spacing:.15em;
-text-transform:uppercase;
-color:var(--accent-gold);
-margin-bottom:1.5rem;
-text-align:center;
-}
-
-.flow-horizontal{
-display:flex;align-items:center;justify-content:center;gap:0;
-flex-wrap:wrap;
-}
-.flow-step{
-text-align:center;
-padding:1rem 1.25rem;
-position:relative;
-}
-.flow-step .step-circle{
-width:56px;height:56px;
-border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-margin:0 auto .75rem;
-font-family:var(--font-display);
-font-size:1.1rem;
-font-weight:700;
-border:2px solid;
-}
-.flow-step .step-label{
-font-size:.8rem;
-font-weight:600;
-margin-bottom:.25rem;
-}
-.flow-step .step-desc{
-font-size:.7rem;
-color:var(--text-muted);
-max-width:120px;
-margin:0 auto;
-}
-.flow-arrow{
-font-size:1.2rem;
-color:var(--text-muted);
-padding:0 .25rem;
-}
-
-.matrix-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:1px;
-background:var(--border-subtle);
-border-radius:12px;
-overflow:hidden;
-margin:1.5rem 0;
-}
-.matrix-cell{
-padding:1.5rem;
-background:var(--bg-secondary);
-text-align:center;
-}
-.matrix-cell h6{
-font-family:var(--font-display);
-font-size:.9rem;
-margin-bottom:.3rem;
-}
-.matrix-cell p{
-font-size:.75rem;
-color:var(--text-secondary);
-}
-.matrix-cell.mc-gold{background:rgba(201,168,76,0.08)}
-.matrix-cell.mc-teal{background:rgba(45,212,191,0.06)}
-.matrix-cell.mc-rose{background:rgba(251,113,133,0.06)}
-.matrix-cell.mc-violet{background:rgba(167,139,250,0.06)}
-.matrix-axis{
-display:flex;justify-content:space-between;
-font-family:var(--font-mono);
-font-size:.65rem;
-color:var(--text-muted);
-letter-spacing:.05em;
-margin-top:.5rem;
-}
-
-.comparison-table{
-width:100%;
-border-collapse:collapse;
-margin:1.5rem 0;
-font-size:.85rem;
-}
-.comparison-table th{
-font-family:var(--font-mono);
-font-size:.7rem;
-letter-spacing:.1em;
-text-transform:uppercase;
-color:var(--accent-gold);
-text-align:left;
-padding:.75rem 1rem;
-border-bottom:2px solid rgba(201,168,76,0.2);
-}
-.comparison-table td{
-padding:.75rem 1rem;
-border-bottom:1px solid var(--border-subtle);
-color:var(--text-secondary);
-}
-.comparison-table tr:hover td{background:rgba(201,168,76,0.03)}
-
-.checklist{
-list-style:none;
-margin:1.5rem 0;
-}
-.checklist li{
-padding:.6rem 0 .6rem 2rem;
-position:relative;
-font-size:.88rem;
-color:var(--text-secondary);
-border-bottom:1px solid var(--border-subtle);
-}
-.checklist li::before{
-content:'◆';
-position:absolute;left:0;
-color:var(--accent-gold);
-font-size:.6rem;
-top:.75rem;
-}
-
-.article-ref{
-display:flex;align-items:flex-start;gap:1rem;
-padding:1rem 1.25rem;
-background:var(--bg-card);
-border-radius:8px;
-margin-bottom:.75rem;
-border:1px solid var(--border-subtle);
-transition:border-color .3s;
-}
-.article-ref:hover{border-color:rgba(201,168,76,0.2)}
-.article-ref .ar-dot{
-width:6px;height:6px;
-border-radius:50%;
-background:var(--accent-gold);
-flex-shrink:0;
-margin-top:.6rem;
-}
-.article-ref .ar-title{
-font-size:.88rem;
-margin-bottom:.2rem;
-}
-.article-ref .ar-title a{
-color:var(--text-primary);
-text-decoration:none;
-border-bottom:1px solid rgba(201,168,76,0.3);
-transition:border-color .3s;
-}
-.article-ref .ar-title a:hover{border-color:var(--accent-gold)}
-.article-ref .ar-author{
-font-family:var(--font-mono);
-font-size:.7rem;
-color:var(--accent-gold);
-}
-
-.practice-box{
-background:linear-gradient(135deg,rgba(45,212,191,0.06),rgba(201,168,76,0.04));
-border:1px solid rgba(45,212,191,0.15);
-border-radius:12px;
-padding:2rem;
-margin:2rem 0;
-}
-.practice-box h5{
-font-family:var(--font-display);
-font-size:1.1rem;
-color:var(--accent-teal);
-margin-bottom:1rem;
-display:flex;align-items:center;gap:.5rem;
-}
-.practice-box ol{
-padding-left:1.25rem;
-}
-.practice-box li{
-font-size:.88rem;
-color:var(--text-secondary);
-margin-bottom:.5rem;
-line-height:1.7;
-}
-.practice-box li strong{color:var(--text-primary)}
-
-.key-idea{
-display:inline-flex;align-items:center;gap:.4rem;
-background:rgba(201,168,76,0.08);
-border:1px solid rgba(201,168,76,0.15);
-padding:.2rem .7rem;
-border-radius:20px;
-font-size:.78rem;
-color:var(--accent-gold-light);
-margin:.2rem;
-}
-
-.two-col{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:2rem;
-margin:2rem 0;
-}
-
-.divider{
-height:1px;
-background:linear-gradient(90deg,transparent,var(--border-color),transparent);
-margin:4rem 0;
-}
-
-.appendix{
-background:var(--bg-secondary);
-border-top:1px solid var(--border-subtle);
-padding:4rem;
-}
-.appendix h3{
-font-family:var(--font-display);
-font-size:1.8rem;
-margin-bottom:2rem;
-color:var(--accent-gold);
-}
-.resource-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:1.25rem;
-}
-.resource-card{
-background:var(--bg-card);
-border:1px solid var(--border-subtle);
-border-radius:10px;
-padding:1.5rem;
-transition:all .3s;
-}
-.resource-card:hover{
-border-color:rgba(201,168,76,0.2);
-transform:translateY(-1px);
-}
-.resource-card h5{
-font-size:.95rem;
-margin-bottom:.5rem;
-display:flex;align-items:center;gap:.4rem;
-}
-.resource-card p{
-font-size:.8rem;
-color:var(--text-secondary);
-line-height:1.6;
-}
-.resource-card .rc-tag{
-font-family:var(--font-mono);
-font-size:.6rem;
-color:var(--accent-teal);
-margin-top:.5rem;
-}
-
-footer{
-text-align:center;
-padding:3rem 2rem;
-border-top:1px solid var(--border-subtle);
-}
-footer p{
-font-family:var(--font-mono);
-font-size:.7rem;
-color:var(--text-muted);
-letter-spacing:.05em;
-}
-footer a{color:var(--accent-gold);text-decoration:none}
-
-@keyframes fadeInUp{
-from{opacity:0;transform:translateY(30px)}
-to{opacity:1;transform:translateY(0)}
-}
-.animate-in{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.4,0,.2,1)}
-.animate-in.visible{opacity:1;transform:translateY(0)}
-
-@media(max-width:1024px){
-nav.side-nav{transform:translateX(-100%)}
-nav.side-nav.open{transform:translateX(0)}
-.main-content{margin-left:0}
-.chapter{padding:4rem 2rem}
-.hero h1{font-size:2.5rem}
-.two-col{grid-template-columns:1fr}
-}
-@media(max-width:640px){
-.chapter{padding:3rem 1.25rem}
-.hero h1{font-size:2rem}
-.framework-grid{grid-template-columns:1fr}
-.book-card{flex-direction:column}
-.book-cover{width:100%;height:60px}
-}
-
-.menu-toggle{
-display:none;
-position:fixed;top:1rem;left:1rem;z-index:1001;
-background:rgba(6,6,15,0.9);border:1px solid var(--border-subtle);
-border-radius:8px;padding:.6rem;cursor:pointer;
-color:var(--accent-gold);font-size:1.2rem;
-}
-@media(max-width:1024px){.menu-toggle{display:block}}
-</style>
+<link rel="stylesheet" href="pm-handbook.css">
 </head>
 <body>
 
@@ -820,7 +80,7 @@ SCROLL
 </div>
 
 <div class="chapter-banner">
-<img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Abstract%20geometric%20foundation%20blocks%20assembling%20together%20in%20mid-air%2C%20minimalist%20architectural%20concept%2C%20deep%20blue%20and%20warm%20amber%20lighting%2C%20premium%20editorial%20style%2C%20clean%20composition&image_size=landscape_16_9" alt="入门篇">
+<img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Abstract%20geometric%20white%20marble%20foundation%20blocks%20assembling%20in%20mid-air%2C%20minimalist%20architectural%20concept%2C%20bright%20white%20and%20warm%20amber%20lighting%2C%20premium%20editorial%20style%2C%20clean%20composition&image_size=landscape_16_9" alt="入门篇">
 </div>
 
 <!-- 1.1 什么是产品经理 -->
@@ -846,24 +106,24 @@ SCROLL
 <div style="display:flex;justify-content:center;padding:2rem 0">
 <div style="position:relative;width:320px;height:280px">
 <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);text-align:center">
-<div style="width:80px;height:80px;border-radius:50%;background:rgba(201,168,76,0.12);border:2px solid var(--accent-gold);display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.85rem;color:var(--accent-gold)">商业</div>
+<div style="width:80px;height:80px;border-radius:50%;background:var(--accent-gold-bg);border:2px solid var(--accent-gold);display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.85rem;color:var(--accent-gold)">商业</div>
 <span style="font-size:.7rem;color:var(--text-muted)">Business Value</span>
 </div>
 <div style="position:absolute;bottom:20px;left:10px;text-align:center">
-<div style="width:80px;height:80px;border-radius:50%;background:rgba(45,212,191,0.12);border:2px solid var(--accent-teal);display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.85rem;color:var(--accent-teal)">技术</div>
+<div style="width:80px;height:80px;border-radius:50%;background:var(--accent-teal-bg);border:2px solid var(--accent-teal);display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.85rem;color:var(--accent-teal)">技术</div>
 <span style="font-size:.7rem;color:var(--text-muted)">Technology</span>
 </div>
 <div style="position:absolute;bottom:20px;right:10px;text-align:center">
-<div style="width:80px;height:80px;border-radius:50%;background:rgba(251,113,133,0.12);border:2px solid var(--accent-rose);display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.85rem;color:var(--accent-rose)">设计</div>
+<div style="width:80px;height:80px;border-radius:50%;background:var(--accent-rose-bg);border:2px solid var(--accent-rose);display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.85rem;color:var(--accent-rose)">设计</div>
 <span style="font-size:.7rem;color:var(--text-muted)">Design</span>
 </div>
 <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-30%);text-align:center">
-<div style="width:60px;height:60px;border-radius:50%;background:rgba(167,139,250,0.15);border:2px solid var(--accent-violet);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.6rem;color:var(--accent-violet);letter-spacing:.05em">PM</div>
+<div style="width:60px;height:60px;border-radius:50%;background:var(--accent-violet-bg);border:2px solid var(--accent-violet);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.6rem;color:var(--accent-violet);letter-spacing:.05em">PM</div>
 </div>
 <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 320 280">
-<line x1="160" y1="80" x2="70" y2="210" stroke="rgba(201,168,76,0.2)" stroke-width="1" stroke-dasharray="4"/>
-<line x1="160" y1="80" x2="250" y2="210" stroke="rgba(201,168,76,0.2)" stroke-width="1" stroke-dasharray="4"/>
-<line x1="70" y1="210" x2="250" y2="210" stroke="rgba(201,168,76,0.2)" stroke-width="1" stroke-dasharray="4"/>
+<line x1="160" y1="80" x2="70" y2="210" stroke="rgba(184,134,11,0.15)" stroke-width="1" stroke-dasharray="4"/>
+<line x1="160" y1="80" x2="250" y2="210" stroke="rgba(184,134,11,0.15)" stroke-width="1" stroke-dasharray="4"/>
+<line x1="70" y1="210" x2="250" y2="210" stroke="rgba(184,134,11,0.15)" stroke-width="1" stroke-dasharray="4"/>
 </svg>
 </div>
 </div>
@@ -1047,7 +307,7 @@ SCROLL
 </div>
 
 <div class="chapter-banner">
-<img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interconnected%20methodology%20flowchart%20floating%20in%20dark%20space%2C%20modern%20data%20visualization%20aesthetic%2C%20network%20nodes%20and%20glowing%20connections%2C%20teal%20and%20gold%20accents%20on%20dark%20background%2C%20futuristic&image_size=landscape_16_9" alt="进阶篇">
+<img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interconnected%20methodology%20flowchart%20on%20clean%20white%20background%2C%20modern%20data%20visualization%20aesthetic%2C%20network%20nodes%20and%20glowing%20connections%2C%20teal%20and%20gold%20accents%2C%20bright%20futuristic%20minimalist&image_size=landscape_16_9" alt="进阶篇">
 </div>
 
 <!-- 2.1 用户研究方法 -->
@@ -1066,19 +326,19 @@ SCROLL
 <div class="diagram-title">The Mom Test 三原则</div>
 <div class="flow-horizontal">
 <div class="flow-step">
-<div class="step-circle" style="border-color:var(--accent-rose);color:var(--accent-rose);background:rgba(251,113,133,0.08)">1</div>
+<div class="step-circle" style="border-color:var(--accent-rose);color:var(--accent-rose);background:var(--accent-rose-bg)">1</div>
 <div class="step-label">谈事实</div>
 <div class="step-desc">问过去的行为，而非未来的承诺</div>
 </div>
 <div class="flow-arrow">→</div>
 <div class="flow-step">
-<div class="step-circle" style="border-color:var(--accent-gold);color:var(--accent-gold);background:rgba(201,168,76,0.08)">2</div>
+<div class="step-circle" style="border-color:var(--accent-gold);color:var(--accent-gold);background:var(--accent-gold-bg)">2</div>
 <div class="step-label">谈具体</div>
 <div class="step-desc">问具体细节，而非笼统意见</div>
 </div>
 <div class="flow-arrow">→</div>
 <div class="flow-step">
-<div class="step-circle" style="border-color:var(--accent-teal);color:var(--accent-teal);background:rgba(45,212,191,0.08)">3</div>
+<div class="step-circle" style="border-color:var(--accent-teal);color:var(--accent-teal);background:var(--accent-teal-bg)">3</div>
 <div class="step-label">谈问题</div>
 <div class="step-desc">关注问题，而非你的解决方案</div>
 </div>
@@ -1162,30 +422,30 @@ SCROLL
 <div class="diagram-title">机会解决方案树（Opportunity Solution Tree）</div>
 <div style="text-align:center;padding:1rem 0">
 <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1rem">
-<div style="background:rgba(201,168,76,0.12);border:2px solid var(--accent-gold);border-radius:10px;padding:.75rem 2rem;font-family:var(--font-display);color:var(--accent-gold)">期望成果</div>
+<div style="background:var(--accent-gold-bg);border:2px solid var(--accent-gold);border-radius:10px;padding:.75rem 2rem;font-family:var(--font-display);color:var(--accent-gold)">期望成果</div>
 <div style="width:2px;height:20px;background:var(--accent-gold);opacity:.3"></div>
 <div style="display:flex;gap:2rem;align-items:flex-start">
 <div style="display:flex;flex-direction:column;align-items:center;gap:.75rem">
-<div style="background:rgba(45,212,191,0.1);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.5rem 1.25rem;font-size:.85rem;color:var(--accent-teal)">机会 1</div>
+<div style="background:var(--accent-teal-bg);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.5rem 1.25rem;font-size:.85rem;color:var(--accent-teal)">机会 1</div>
 <div style="width:1.5px;height:15px;background:var(--accent-teal);opacity:.3"></div>
 <div style="display:flex;gap:.75rem">
-<div style="background:rgba(251,113,133,0.08);border:1px solid rgba(251,113,133,0.3);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 A</div>
-<div style="background:rgba(251,113,133,0.08);border:1px solid rgba(251,113,133,0.3);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 B</div>
+<div style="background:var(--accent-rose-bg);border:1px solid rgba(225,29,72,0.2);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 A</div>
+<div style="background:var(--accent-rose-bg);border:1px solid rgba(225,29,72,0.2);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 B</div>
 </div>
 </div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:.75rem">
-<div style="background:rgba(45,212,191,0.1);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.5rem 1.25rem;font-size:.85rem;color:var(--accent-teal)">机会 2</div>
+<div style="background:var(--accent-teal-bg);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.5rem 1.25rem;font-size:.85rem;color:var(--accent-teal)">机会 2</div>
 <div style="width:1.5px;height:15px;background:var(--accent-teal);opacity:.3"></div>
 <div style="display:flex;gap:.75rem">
-<div style="background:rgba(251,113,133,0.08);border:1px solid rgba(251,113,133,0.3);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 C</div>
-<div style="background:rgba(251,113,133,0.08);border:1px solid rgba(251,113,133,0.3);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 D</div>
+<div style="background:var(--accent-rose-bg);border:1px solid rgba(225,29,72,0.2);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 C</div>
+<div style="background:var(--accent-rose-bg);border:1px solid rgba(225,29,72,0.2);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 D</div>
 </div>
 </div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:.75rem">
-<div style="background:rgba(45,212,191,0.1);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.5rem 1.25rem;font-size:.85rem;color:var(--accent-teal)">机会 3</div>
+<div style="background:var(--accent-teal-bg);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.5rem 1.25rem;font-size:.85rem;color:var(--accent-teal)">机会 3</div>
 <div style="width:1.5px;height:15px;background:var(--accent-teal);opacity:.3"></div>
 <div style="display:flex;gap:.75rem">
-<div style="background:rgba(251,113,133,0.08);border:1px solid rgba(251,113,133,0.3);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 E</div>
+<div style="background:var(--accent-rose-bg);border:1px solid rgba(225,29,72,0.2);border-radius:6px;padding:.4rem .75rem;font-size:.75rem;color:var(--accent-rose)">方案 E</div>
 </div>
 </div>
 </div>
@@ -1236,19 +496,19 @@ SCROLL
 <div class="diagram-title">精益创业的核心循环 — Build-Measure-Learn</div>
 <div class="flow-horizontal" style="padding:1.5rem 0">
 <div class="flow-step">
-<div class="step-circle" style="border-color:var(--accent-rose);color:var(--accent-rose);background:rgba(251,113,133,0.08);width:72px;height:72px;font-size:.75rem">BUILD<br>构建</div>
+<div class="step-circle" style="border-color:var(--accent-rose);color:var(--accent-rose);background:var(--accent-rose-bg);width:72px;height:72px;font-size:.75rem">BUILD<br>构建</div>
 <div class="step-label">最小可行产品</div>
 <div class="step-desc">快速构建测试载体</div>
 </div>
 <div class="flow-arrow" style="font-size:1.5rem;color:var(--accent-gold)">⟶</div>
 <div class="flow-step">
-<div class="step-circle" style="border-color:var(--accent-teal);color:var(--accent-teal);background:rgba(45,212,191,0.08);width:72px;height:72px;font-size:.75rem">MEASURE<br>测量</div>
+<div class="step-circle" style="border-color:var(--accent-teal);color:var(--accent-teal);background:var(--accent-teal-bg);width:72px;height:72px;font-size:.75rem">MEASURE<br>测量</div>
 <div class="step-label">收集数据</div>
 <div class="step-desc">验证或否定假设</div>
 </div>
 <div class="flow-arrow" style="font-size:1.5rem;color:var(--accent-gold)">⟶</div>
 <div class="flow-step">
-<div class="step-circle" style="border-color:var(--accent-gold);color:var(--accent-gold);background:rgba(201,168,76,0.08);width:72px;height:72px;font-size:.75rem">LEARN<br>学习</div>
+<div class="step-circle" style="border-color:var(--accent-gold);color:var(--accent-gold);background:var(--accent-gold-bg);width:72px;height:72px;font-size:.75rem">LEARN<br>学习</div>
 <div class="step-label">验证学习</div>
 <div class="step-desc">坚持或转型决策</div>
 </div>
@@ -1300,23 +560,23 @@ SCROLL
 <div class="diagram animate-in">
 <div class="diagram-title">AARRR 海盗指标漏斗（Pirate Funnel）</div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1rem 0">
-<div style="width:90%;background:rgba(201,168,76,0.12);border:1.5px solid var(--accent-gold);border-radius:8px;padding:.75rem;text-align:center">
+<div style="width:90%;background:var(--accent-gold-bg);border:1.5px solid var(--accent-gold);border-radius:8px;padding:.75rem;text-align:center">
 <strong style="color:var(--accent-gold)">A</strong>cquisition 获取 — 用户如何发现你的产品？
 </div>
 <div style="color:var(--text-muted);font-size:.8rem">↓</div>
-<div style="width:78%;background:rgba(45,212,191,0.1);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.75rem;text-align:center">
+<div style="width:78%;background:var(--accent-teal-bg);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.75rem;text-align:center">
 <strong style="color:var(--accent-teal)">A</strong>ctivation 激活 — 用户是否有良好的首次体验？
 </div>
 <div style="color:var(--text-muted);font-size:.8rem">↓</div>
-<div style="width:66%;background:rgba(167,139,250,0.1);border:1.5px solid var(--accent-violet);border-radius:8px;padding:.75rem;text-align:center">
+<div style="width:66%;background:var(--accent-violet-bg);border:1.5px solid var(--accent-violet);border-radius:8px;padding:.75rem;text-align:center">
 <strong style="color:var(--accent-violet)">R</strong>etention 留存 — 用户是否持续回来？
 </div>
 <div style="color:var(--text-muted);font-size:.8rem">↓</div>
-<div style="width:54%;background:rgba(251,113,133,0.08);border:1.5px solid var(--accent-rose);border-radius:8px;padding:.75rem;text-align:center">
+<div style="width:54%;background:var(--accent-rose-bg);border:1.5px solid var(--accent-rose);border-radius:8px;padding:.75rem;text-align:center">
 <strong style="color:var(--accent-rose)">R</strong>eferral 推荐 — 用户是否告诉他人？
 </div>
 <div style="color:var(--text-muted);font-size:.8rem">↓</div>
-<div style="width:42%;background:rgba(245,158,11,0.1);border:1.5px solid var(--accent-amber);border-radius:8px;padding:.75rem;text-align:center">
+<div style="width:42%;background:var(--accent-amber-bg);border:1.5px solid var(--accent-amber);border-radius:8px;padding:.75rem;text-align:center">
 <strong style="color:var(--accent-amber)">R</strong>evenue 收益 — 如何变现？
 </div>
 </div>
@@ -1393,7 +653,7 @@ SCROLL
 </div>
 
 <div class="chapter-banner">
-<img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Strategic%20chess%20pieces%20on%20a%20luminous%20glass%20board%2C%20dramatic%20spotlight%20from%20above%2C%20deep%20indigo%20atmosphere%2C%20luxury%20editorial%20photography%20style%2C%20cinematic%20depth%20of%20field&image_size=landscape_16_9" alt="高级篇">
+<img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Strategic%20chess%20pieces%20on%20a%20luminous%20white%20glass%20board%2C%20dramatic%20spotlight%20from%20above%2C%20bright%20white%20atmosphere%2C%20luxury%20editorial%20photography%20style%2C%20cinematic%20depth%20of%20field&image_size=landscape_16_9" alt="高级篇">
 </div>
 
 <!-- 3.1 产品战略 -->
@@ -1412,19 +672,19 @@ SCROLL
 <div class="diagram-title">好战略的三要素</div>
 <div class="flow-horizontal" style="padding:1.5rem 0">
 <div class="flow-step" style="max-width:200px">
-<div class="step-circle" style="border-color:var(--accent-gold);color:var(--accent-gold);background:rgba(201,168,76,0.08);width:64px;height:64px;font-size:.7rem;line-height:1.2">诊断<br>Diagnosis</div>
+<div class="step-circle" style="border-color:var(--accent-gold);color:var(--accent-gold);background:var(--accent-gold-bg);width:64px;height:64px;font-size:.7rem;line-height:1.2">诊断<br>Diagnosis</div>
 <div class="step-label">定义挑战</div>
 <div class="step-desc">清晰描述面临的根本问题</div>
 </div>
 <div class="flow-arrow" style="font-size:1.5rem;color:var(--accent-gold)">⟶</div>
 <div class="flow-step" style="max-width:200px">
-<div class="step-circle" style="border-color:var(--accent-teal);color:var(--accent-teal);background:rgba(45,212,191,0.08);width:64px;height:64px;font-size:.7rem;line-height:1.2">指导方针<br>Guiding<br>Policy</div>
+<div class="step-circle" style="border-color:var(--accent-teal);color:var(--accent-teal);background:var(--accent-teal-bg);width:64px;height:64px;font-size:.7rem;line-height:1.2">指导方针<br>Guiding<br>Policy</div>
 <div class="step-label">制定方针</div>
 <div class="step-desc">应对挑战的整体方法</div>
 </div>
 <div class="flow-arrow" style="font-size:1.5rem;color:var(--accent-gold)">⟶</div>
 <div class="flow-step" style="max-width:200px">
-<div class="step-circle" style="border-color:var(--accent-rose);color:var(--accent-rose);background:rgba(251,113,133,0.08);width:64px;height:64px;font-size:.7rem;line-height:1.2">连贯行动<br>Coherent<br>Actions</div>
+<div class="step-circle" style="border-color:var(--accent-rose);color:var(--accent-rose);background:var(--accent-rose-bg);width:64px;height:64px;font-size:.7rem;line-height:1.2">连贯行动<br>Coherent<br>Actions</div>
 <div class="step-label">执行落地</div>
 <div class="step-desc">协调一致的实际行动</div>
 </div>
@@ -1503,14 +763,14 @@ SCROLL
 <p>Geoffrey Moore 在《Crossing the Chasm》中提出了技术采用生命周期中最关键的挑战：<strong>从早期采用者到早期多数人之间存在一条"鸿沟"</strong>，大多数产品死在这里。</p>
 <div class="diagram" style="margin:1rem 0">
 <div style="display:flex;align-items:flex-end;justify-content:center;gap:2px;height:100px;padding:0 1rem">
-<div style="width:60px;background:rgba(201,168,76,0.3);height:40px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent-gold)">创新者</div>
-<div style="width:80px;background:rgba(45,212,191,0.3);height:60px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent-teal)">早期采用者</div>
-<div style="width:20px;background:rgba(251,113,133,0.5);height:10px;border-radius:4px 4px 0 0;position:relative">
+<div style="width:60px;background:var(--accent-gold-bg);height:40px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent-gold);border:1px solid rgba(184,134,11,0.2)">创新者</div>
+<div style="width:80px;background:var(--accent-teal-bg);height:60px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent-teal);border:1px solid rgba(13,148,136,0.2)">早期采用者</div>
+<div style="width:20px;background:var(--accent-rose-bg);height:10px;border-radius:4px 4px 0 0;position:relative;border:1px solid rgba(225,29,72,0.2)">
 <span style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:.55rem;color:var(--accent-rose);white-space:nowrap">鸿沟!</span>
 </div>
-<div style="width:120px;background:rgba(167,139,250,0.3);height:90px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent-violet)">早期多数</div>
-<div style="width:100px;background:rgba(245,158,11,0.3);height:70px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent-amber)">晚期多数</div>
-<div style="width:50px;background:rgba(255,255,255,0.1);height:30px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--text-muted)">落后者</div>
+<div style="width:120px;background:var(--accent-violet-bg);height:90px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent-violet);border:1px solid rgba(124,58,237,0.2)">早期多数</div>
+<div style="width:100px;background:var(--accent-amber-bg);height:70px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent-amber);border:1px solid rgba(217,119,6,0.2)">晚期多数</div>
+<div style="width:50px;background:rgba(0,0,0,0.03);height:30px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--text-muted);border:1px solid var(--border-subtle)">落后者</div>
 </div>
 </div>
 </div>
@@ -1596,7 +856,7 @@ SCROLL
 </text>
 </svg>
 <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 240 240">
-<circle cx="120" cy="120" r="80" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="120" cy="120" r="80" fill="none" stroke="rgba(184,134,11,0.12)" stroke-width="2" stroke-dasharray="6 4"/>
 <circle cx="120" cy="40" r="5" fill="var(--accent-gold)"/>
 <circle cx="196" cy="90" r="5" fill="var(--accent-teal)"/>
 <circle cx="196" cy="150" r="5" fill="var(--accent-rose)"/>
@@ -1691,7 +951,7 @@ SCROLL
 </div>
 
 <div class="chapter-banner">
-<img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Lighthouse%20beacon%20shining%20on%20cliff%20edge%2C%20dramatic%20golden%20sunset%20over%20vast%20ocean%2C%20inspirational%20leadership%20metaphor%2C%20cinematic%20editorial%20style%2C%20warm%20golden%20light&image_size=landscape_16_9" alt="顶级篇">
+<img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Lighthouse%20beacon%20shining%20on%20cliff%20edge%2C%20dramatic%20golden%20sunset%20over%20vast%20ocean%2C%20inspirational%20leadership%20metaphor%2C%20bright%20cinematic%20editorial%20style%2C%20warm%20golden%20light%2C%20white%20aesthetic&image_size=landscape_16_9" alt="顶级篇">
 </div>
 
 <!-- 4.1 团队领导 -->
@@ -1775,22 +1035,22 @@ SCROLL
 <div class="diagram animate-in">
 <div class="diagram-title">产品组织成熟度阶梯</div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1rem 0">
-<div style="width:40%;background:rgba(201,168,76,0.15);border:2px solid var(--accent-gold);border-radius:8px;padding:.75rem;text-align:center">
+<div style="width:40%;background:var(--accent-gold-bg);border:2px solid var(--accent-gold);border-radius:8px;padding:.75rem;text-align:center">
 <strong style="color:var(--accent-gold)">Level 4: 战略型</strong>
 <div style="font-size:.75rem;color:var(--text-secondary);margin-top:.25rem">产品驱动公司战略</div>
 </div>
 <div style="color:var(--text-muted)">↑</div>
-<div style="width:55%;background:rgba(45,212,191,0.1);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.75rem;text-align:center">
+<div style="width:55%;background:var(--accent-teal-bg);border:1.5px solid var(--accent-teal);border-radius:8px;padding:.75rem;text-align:center">
 <strong style="color:var(--accent-teal)">Level 3: 赋能型</strong>
 <div style="font-size:.75rem;color:var(--text-secondary);margin-top:.25rem">赋能团队自主决策</div>
 </div>
 <div style="color:var(--text-muted)">↑</div>
-<div style="width:70%;background:rgba(167,139,250,0.08);border:1.5px solid var(--accent-violet);border-radius:8px;padding:.75rem;text-align:center">
+<div style="width:70%;background:var(--accent-violet-bg);border:1.5px solid var(--accent-violet);border-radius:8px;padding:.75rem;text-align:center">
 <strong style="color:var(--accent-violet)">Level 2: 协作型</strong>
 <div style="font-size:.75rem;color:var(--text-secondary);margin-top:.25rem">跨功能团队协作交付</div>
 </div>
 <div style="color:var(--text-muted)">↑</div>
-<div style="width:85%;background:rgba(251,113,133,0.06);border:1.5px solid var(--accent-rose);border-radius:8px;padding:.75rem;text-align:center">
+<div style="width:85%;background:var(--accent-rose-bg);border:1.5px solid var(--accent-rose);border-radius:8px;padding:.75rem;text-align:center">
 <strong style="color:var(--accent-rose)">Level 1: 执行型</strong>
 <div style="font-size:.75rem;color:var(--text-secondary);margin-top:.25rem">按需求文档执行交付</div>
 </div>
@@ -1903,27 +1163,27 @@ SCROLL
 <div style="display:flex;justify-content:center;padding:1.5rem 0">
 <div style="position:relative;width:300px;height:300px">
 <div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);text-align:center;width:120px">
-<div style="background:rgba(201,168,76,0.12);border:2px solid var(--accent-gold);border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.8rem;color:var(--accent-gold)">触发</div>
+<div style="background:var(--accent-gold-bg);border:2px solid var(--accent-gold);border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.8rem;color:var(--accent-gold)">触发</div>
 <div style="font-size:.7rem;color:var(--text-muted)">Trigger</div>
 </div>
 <div style="position:absolute;top:50%;right:0;transform:translateY(-50%);text-align:center;width:120px">
-<div style="background:rgba(45,212,191,0.1);border:2px solid var(--accent-teal);border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.8rem;color:var(--accent-teal)">行动</div>
+<div style="background:var(--accent-teal-bg);border:2px solid var(--accent-teal);border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.8rem;color:var(--accent-teal)">行动</div>
 <div style="font-size:.7rem;color:var(--text-muted)">Action</div>
 </div>
 <div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);text-align:center;width:120px">
-<div style="background:rgba(167,139,250,0.1);border:2px solid var(--accent-violet);border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.75rem;color:var(--accent-violet);line-height:1.2">多变<br>奖励</div>
+<div style="background:var(--accent-violet-bg);border:2px solid var(--accent-violet);border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.75rem;color:var(--accent-violet);line-height:1.2">多变<br>奖励</div>
 <div style="font-size:.7rem;color:var(--text-muted)">Variable Reward</div>
 </div>
 <div style="position:absolute;top:50%;left:0;transform:translateY(-50%);text-align:center;width:120px">
-<div style="background:rgba(251,113,133,0.08);border:2px solid var(--accent-rose);border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.8rem;color:var(--accent-rose)">投入</div>
+<div style="background:var(--accent-rose-bg);border:2px solid var(--accent-rose);border-radius:50%;width:80px;height:80px;display:flex;align-items:center;justify-content:center;margin:0 auto .5rem;font-family:var(--font-display);font-size:.8rem;color:var(--accent-rose)">投入</div>
 <div style="font-size:.7rem;color:var(--text-muted)">Investment</div>
 </div>
 <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 300 300">
-<defs><marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="rgba(201,168,76,0.4)"/></marker></defs>
-<path d="M 180,60 Q 250,60 250,130" fill="none" stroke="rgba(201,168,76,0.3)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-<path d="M 250,180 Q 250,250 180,250" fill="none" stroke="rgba(45,212,191,0.3)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-<path d="M 120,250 Q 50,250 50,180" fill="none" stroke="rgba(167,139,250,0.3)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-<path d="M 50,130 Q 50,60 120,60" fill="none" stroke="rgba(251,113,133,0.3)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<defs><marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="rgba(184,134,11,0.3)"/></marker></defs>
+<path d="M 180,60 Q 250,60 250,130" fill="none" stroke="rgba(184,134,11,0.2)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<path d="M 250,180 Q 250,250 180,250" fill="none" stroke="rgba(13,148,136,0.2)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<path d="M 120,250 Q 50,250 50,180" fill="none" stroke="rgba(124,58,237,0.2)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<path d="M 50,130 Q 50,60 120,60" fill="none" stroke="rgba(225,29,72,0.2)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 </svg>
 </div>
 </div>
@@ -2236,44 +1496,6 @@ SCROLL
 
 </div>
 
-<script>
-window.addEventListener('scroll',()=>{
-const h=document.documentElement;
-const scrollTop=h.scrollTop||document.body.scrollTop;
-const scrollHeight=h.scrollHeight-h.clientHeight;
-const progress=(scrollTop/scrollHeight)*100;
-document.getElementById('progressBar').style.width=progress+'%';
-
-const sections=document.querySelectorAll('.chapter,.section,.hero');
-const navLinks=document.querySelectorAll('.side-nav a[href^="#"]');
-let current='';
-sections.forEach(s=>{
-const top=s.offsetTop-200;
-if(scrollTop>=top)current=s.getAttribute('id');
-});
-navLinks.forEach(l=>{
-l.classList.remove('active');
-if(l.getAttribute('href')==='#'+current)l.classList.add('active');
-});
-});
-
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{
-if(e.isIntersecting){
-e.target.classList.add('visible');
-}
-});
-},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-document.querySelectorAll('.animate-in').forEach(el=>observer.observe(el));
-
-document.querySelectorAll('.side-nav a').forEach(a=>{
-a.addEventListener('click',()=>{
-if(window.innerWidth<=1024){
-document.querySelector('.side-nav').classList.remove('open');
-}
-});
-});
-</script>
-
+<script src="pm-handbook.js"></script>
 </body>
 </html>
