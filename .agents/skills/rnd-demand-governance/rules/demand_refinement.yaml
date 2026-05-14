@@ -1,7 +1,7 @@
-# 需求描述补全优化规则 v2.0
+# 需求描述补全优化规则 v3.0
 # 用于将用户原始需求描述补全为结构化、标准化的需求文档
 
-version: "2.0"
+version: "3.0"
 
 # 最终录入字段定义（对外展示的标准字段）
 output_fields:
@@ -41,6 +41,18 @@ output_fields:
     name: "需求描述"
     description: "需求点补充描述更具体详细"
     guide: "详细说明要做什么、怎么做、预期效果"
+  
+  label:
+    name: "标签"
+    description: "需求类型标签"
+    values: ["战略", "经营", "日常", "无效型"]
+    guide: "战略=公司级战略方向；经营=经营优化改进；日常=日常运维改进；无效型=无业务价值"
+  
+  priority:
+    name: "优先级"
+    description: "需求优先级 P0-P3"
+    values: ["P0", "P1", "P2", "P3"]
+    guide: "P0=紧急致命（立即处理）；P1=重要高优（本周处理）；P2=中等优先（迭代内处理）；P3=低优先级（排期处理）"
 
 # 补全方法论（用于将原始描述转化为标准字段）
 refinement_methods:
@@ -54,7 +66,7 @@ refinement_methods:
   
   - name: "JTBD (Jobs-to-be-Done)"
     description: "识别用户雇佣产品完成的真实任务"
-    application: "区分表面需求和深层Job，用于判断需求类型（价值/普通）"
+    application: "区分表面需求和深层Job，用于判断需求类型（价值/普通）和标签（战略/经营/日常/无效型）"
   
   - name: "PR-FAQ (Amazon Press Release + FAQ)"
     description: "先写新闻稿和FAQ，反推需求价值"
@@ -101,6 +113,14 @@ quality_checks:
   
   - field: "demand_module"
     check: "是否选择了正确的需求模块"
+    min_requirement: true
+  
+  - field: "label"
+    check: "是否标注了需求标签"
+    min_requirement: true
+  
+  - field: "priority"
+    check: "是否标注了优先级"
     min_requirement: true
 
 # 补全置信度标记
