@@ -2,7 +2,8 @@ const App = {
     currentSection: 'feed',
     currentFeedTab: 'all',
 
-    init() {
+    async init() {
+        await loadSkillData();
         this.updateLastTime();
         this.renderStats();
         this.renderFeed();
@@ -26,40 +27,68 @@ const App = {
     },
 
     renderStats() {
-        const stats = MOCK_DATA.stats;
-        document.getElementById('statHitCount').textContent = stats.hitCount;
-        document.getElementById('statElementCount').textContent = stats.elementCount;
-        document.getElementById('statTrendMatch').textContent = stats.trendMatch;
-        document.getElementById('statMargin').textContent = stats.margin;
+        const stats = AppData.stats;
+        document.getElementById('statHitCount').textContent = stats.hitCount || '--';
+        document.getElementById('statElementCount').textContent = stats.elementCount || '--';
+        document.getElementById('statTrendMatch').textContent = stats.trendMatch || '--';
+        document.getElementById('statMargin').textContent = stats.margin || '--';
     },
 
     renderFeed() {
         const container = document.getElementById('feedStream');
-        const items = MOCK_DATA.feedItems;
+        const items = AppData.feedItems;
+        if (!items || items.length === 0) {
+            container.innerHTML = '<div class="empty-state">暂无数据，请先运行skill采集</div>';
+            return;
+        }
         container.innerHTML = items.map(item => Renderers.feedItem(item)).join('');
     },
 
     renderProducts() {
         const container = document.getElementById('productCards');
-        const products = MOCK_DATA.hitProducts;
+        const products = AppData.hitProducts;
+        if (!products || products.length === 0) {
+            container.innerHTML = '<div class="empty-state">暂无爆品推荐</div>';
+            return;
+        }
         container.innerHTML = products.map(p => Renderers.productCard(p)).join('');
     },
 
     renderElements() {
         const listContainer = document.getElementById('elementsList');
         const suggestionsContainer = document.getElementById('suggestionsGrid');
-        listContainer.innerHTML = MOCK_DATA.topElements.map(e => Renderers.elementCard(e)).join('');
-        suggestionsContainer.innerHTML = MOCK_DATA.visualSuggestions.map(s => Renderers.suggestionCard(s)).join('');
+        const elements = AppData.topElements;
+        const suggestions = AppData.visualSuggestions;
+        if (!elements || elements.length === 0) {
+            listContainer.innerHTML = '<div class="empty-state">暂无核心元素数据（需要更多产品样本）</div>';
+        } else {
+            listContainer.innerHTML = elements.map(e => Renderers.elementCard(e)).join('');
+        }
+        if (!suggestions || suggestions.length === 0) {
+            suggestionsContainer.innerHTML = '<div class="empty-state">暂无视觉差异化建议</div>';
+        } else {
+            suggestionsContainer.innerHTML = suggestions.map(s => Renderers.suggestionCard(s)).join('');
+        }
     },
 
     renderTrends() {
         const container = document.getElementById('trendsGrid');
-        container.innerHTML = MOCK_DATA.trends.map(t => Renderers.trendCard(t)).join('');
+        const trends = AppData.trends;
+        if (!trends || trends.length === 0) {
+            container.innerHTML = '<div class="empty-state">暂无趋势数据</div>';
+            return;
+        }
+        container.innerHTML = trends.map(t => Renderers.trendCard(t)).join('');
     },
 
     renderAlerts() {
         const container = document.getElementById('alertsList');
-        container.innerHTML = MOCK_DATA.alerts.map(a => Renderers.alertCard(a)).join('');
+        const alerts = AppData.alerts;
+        if (!alerts || alerts.length === 0) {
+            container.innerHTML = '<div class="empty-state">暂无避坑预警</div>';
+            return;
+        }
+        container.innerHTML = alerts.map(a => Renderers.alertCard(a)).join('');
     },
 
     bindEvents() {
@@ -182,15 +211,21 @@ const App = {
         btn.style.opacity = '0.6';
         btn.style.pointerEvents = 'none';
 
-        setTimeout(() => {
+        loadSkillData().then(() => {
             this.updateLastTime();
+            this.renderStats();
+            this.renderFeed();
+            this.renderProducts();
+            this.renderElements();
+            this.renderTrends();
+            this.renderAlerts();
             btn.style.opacity = '1';
             btn.style.pointerEvents = 'auto';
-        }, 1200);
+        });
     },
 
     openProductModal(productId) {
-        const product = MOCK_DATA.hitProducts.find(p => p.id === productId);
+        const product = AppData.hitProducts.find(p => p.id === productId);
         if (!product) return;
 
         const modal = document.getElementById('modalOverlay');
@@ -224,19 +259,19 @@ const App = {
             <div class="modal-field">
                 <div class="modal-field-label">核心卖点</div>
                 <div class="modal-field-value">
-                    <ul style="list-style:none;padding:0;">
+                    ${product.sellingPoints && product.sellingPoints.length > 0 ? `<ul style="list-style:none;padding:0;">
                         ${product.sellingPoints.map(sp => `<li style="padding:4px 0;padding-left:16px;position:relative;">
                             <span style="position:absolute;left:0;color:var(--accent-primary);">&#8226;</span>${sp}
                         </li>`).join('')}
-                    </ul>
+                    </ul>` : '<div style="color:var(--text-secondary);">暂无卖点数据</div>'}
                 </div>
             </div>
             <div class="modal-field">
                 <div class="modal-field-label">趋势匹配元素</div>
                 <div class="modal-field-value">
-                    <div class="feed-tags" style="margin-top:4px;">
+                    ${product.trendMatch && product.trendMatch.length > 0 ? `<div class="feed-tags" style="margin-top:4px;">
                         ${product.trendMatch.map(tm => `<span class="feed-tag material">${tm}</span>`).join('')}
-                    </div>
+                    </div>` : '<div style="color:var(--text-secondary);">暂无趋势匹配数据</div>'}
                 </div>
             </div>
             <div class="modal-field">
