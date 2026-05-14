@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-05-14T04:19:19.572335+00:00",
+  "run_time": "2026-05-14T06:06:05.839506+00:00",
   "hit_products": {
     "push_type": "hit_product_list",
     "title": "高潜力爆品列表推送",
@@ -9,10 +9,45 @@
         "url": "https://amazon.com/product1",
         "features": [
           "修身",
-          "棉麻",
+          "棉麻混纺",
           "大地色"
         ],
         "price": 29.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警"
+      },
+      {
+        "title": "Women's Athletic Shorts 薄荷绿 速干",
+        "url": "https://amazon.com/product7",
+        "features": [
+          "速干",
+          "薄荷绿"
+        ],
+        "price": 24.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警"
+      },
+      {
+        "title": "Women's Yoga Leggings 黑色 弹力纤维 高腰 修身",
+        "url": "https://amazon.com/product16",
+        "features": [
+          "高腰",
+          "黑色",
+          "弹力纤维",
+          "修身",
+          "无痕"
+        ],
+        "price": 38.99,
         "selling_points": [],
         "trend_match_points": [],
         "data_source": "amazon",
@@ -26,7 +61,243 @@
   "potential_products": {
     "push_type": "potential_product_list",
     "title": "潜力爆品列表推送",
-    "products": []
+    "products": [
+      {
+        "title": "Men's Chino Pants 卡其色 弹力斜纹布 修身",
+        "url": "https://amazon.com/product10",
+        "features": [
+          "卡其色",
+          "弹力斜纹布",
+          "修身",
+          "隐藏拉链"
+        ],
+        "price": 49.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Men's Cargo Pants 多口袋 军绿色 帆布",
+        "url": "https://amazon.com/product3",
+        "features": [
+          "多口袋",
+          "军绿色",
+          "帆布"
+        ],
+        "price": 45.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Men's Athletic Hoodie 黑色 速干面料 常规",
+        "url": "https://amazon.com/product2",
+        "features": [
+          "速干面料",
+          "黑色"
+        ],
+        "price": 35.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Men's Jogger Pants 灰色 弹力纤维 修身",
+        "url": "https://amazon.com/product11",
+        "features": [
+          "灰色",
+          "弹力纤维",
+          "松紧腰",
+          "束脚"
+        ],
+        "price": 32.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Women's Sports Bra 紫色 吸湿排汗 中支撑",
+        "url": "https://amazon.com/product17",
+        "features": [
+          "紫色",
+          "吸湿排汗",
+          "中支撑",
+          "工字背"
+        ],
+        "price": 29.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Women's Hiking Pants 军绿色 防水面料 直筒",
+        "url": "https://amazon.com/product18",
+        "features": [
+          "军绿色",
+          "防水面料",
+          "直筒",
+          "多口袋"
+        ],
+        "price": 59.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Women's Blouse 白色 雪纺 常规",
+        "url": "https://amazon.com/product14",
+        "features": [
+          "白色",
+          "雪纺",
+          "V领",
+          "常规"
+        ],
+        "price": 34.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Women's Business Suit 深蓝色 羊毛 修身",
+        "url": "https://amazon.com/product5",
+        "features": [
+          "羊毛",
+          "深蓝色",
+          "修身"
+        ],
+        "price": 89.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Men's Oxford Shirt 深蓝色 纯棉 常规",
+        "url": "https://amazon.com/product9",
+        "features": [
+          "深蓝色",
+          "纯棉",
+          "纽扣领"
+        ],
+        "price": 39.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Women's Fleece Jacket 酒红色 抓绒 常规",
+        "url": "https://amazon.com/product19",
+        "features": [
+          "酒红色",
+          "抓绒",
+          "常规",
+          "全拉链"
+        ],
+        "price": 49.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Men's Tactical Vest 多口袋 黑色 尼龙 宽松",
+        "url": "https://amazon.com/product13",
+        "features": [
+          "多口袋",
+          "黑色",
+          "尼龙",
+          "宽松",
+          "可调节"
+        ],
+        "price": 55.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "Men's Performance Shorts 藏青色 吸湿排汗 直筒",
+        "url": "https://amazon.com/product12",
+        "features": [
+          "藏青色",
+          "吸湿排汗",
+          "直筒"
+        ],
+        "price": 28.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      }
+    ]
   },
   "top10_elements": {
     "push_type": "top10_elements",
@@ -38,9 +309,177 @@
     "title": "视觉差异化建议推送",
     "suggestions": [
       {
+        "element": "Multi Pocket",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Multi Pocket'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Solid Basic",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Solid Basic'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Straight Fit",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Straight Fit'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "雪纺",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '雪纺'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "紫色",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '紫色'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "酒红色",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '酒红色'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "高腰",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '高腰'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Navy Blue",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Navy Blue'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "V领",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'V领'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Fleece",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Fleece'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "吸湿排汗面料",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '吸湿排汗面料'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Loose Fit",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Loose Fit'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Wool",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Wool'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "全拉链",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '全拉链'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "纽扣领",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '纽扣领'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Nylon",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Nylon'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "工字背",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '工字背'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Quick Dry",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Quick Dry'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "弹力斜纹布",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '弹力斜纹布'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Cotton Linen Blend",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Cotton Linen Blend'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Pure Cotton",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Pure Cotton'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Neutral Classic",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Neutral Classic'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Elastic Waist",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Elastic Waist'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Army Green",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Army Green'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Elastane",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Elastane'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Pastel Sport",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Pastel Sport'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Waterproof Coating",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Waterproof Coating'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
         "element": "Earth Tone",
         "suggestion_type": "visual_differentiation",
         "description": "站内爆品独有元素 'Earth Tone'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Canvas",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Canvas'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
@@ -50,9 +489,15 @@
         "data_source": ""
       },
       {
-        "element": "Cotton Linen Blend",
+        "element": "常规",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Cotton Linen Blend'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 '常规'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "隐藏拉链",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '隐藏拉链'，可作为视觉差异化亮点",
         "data_source": ""
       }
     ]
@@ -61,7 +506,7 @@
     "push_type": "pitfall_reminders",
     "title": "避坑提醒推送",
     "pitfalls": [],
-    "generated_at": "2026-05-14T04:19:19.571689"
+    "generated_at": "2026-05-14T06:06:05.837058"
   },
   "uniqueness_recommendations": {
     "push_type": "uniqueness_recommendations",
@@ -76,19 +521,146 @@
         "category_sub": "",
         "price": 29.99,
         "data_source": "amazon"
+      },
+      {
+        "title": "Women's Athletic Shorts 薄荷绿 速干",
+        "url": "https://amazon.com/product7",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 24.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Women's Yoga Leggings 黑色 弹力纤维 高腰 修身",
+        "url": "https://amazon.com/product16",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 38.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Men's Chino Pants 卡其色 弹力斜纹布 修身",
+        "url": "https://amazon.com/product10",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 49.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Men's Cargo Pants 多口袋 军绿色 帆布",
+        "url": "https://amazon.com/product3",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 45.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Men's Athletic Hoodie 黑色 速干面料 常规",
+        "url": "https://amazon.com/product2",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 35.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Men's Jogger Pants 灰色 弹力纤维 修身",
+        "url": "https://amazon.com/product11",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 32.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Women's Sports Bra 紫色 吸湿排汗 中支撑",
+        "url": "https://amazon.com/product17",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 29.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Women's Hiking Pants 军绿色 防水面料 直筒",
+        "url": "https://amazon.com/product18",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 59.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Women's Blouse 白色 雪纺 常规",
+        "url": "https://amazon.com/product14",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 34.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Women's Business Suit 深蓝色 羊毛 修身",
+        "url": "https://amazon.com/product5",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 89.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Men's Oxford Shirt 深蓝色 纯棉 常规",
+        "url": "https://amazon.com/product9",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 39.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Women's Fleece Jacket 酒红色 抓绒 常规",
+        "url": "https://amazon.com/product19",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 49.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Men's Tactical Vest 多口袋 黑色 尼龙 宽松",
+        "url": "https://amazon.com/product13",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 55.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Men's Performance Shorts 藏青色 吸湿排汗 直筒",
+        "url": "https://amazon.com/product12",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 28.99,
+        "data_source": "amazon"
       }
     ]
   },
   "data_statistics": {
-    "raw_products": 10,
-    "raw_trends": 8,
-    "deduped_products": 9,
-    "deduped_trends": 8,
-    "denoised_products": 8,
-    "denoised_trends": 7,
-    "filtered_products": 5,
-    "matched_products": 1,
-    "hit_products": 1,
-    "potential_products": 0
+    "raw_products": 19,
+    "raw_trends": 19,
+    "deduped_products": 19,
+    "deduped_trends": 19,
+    "denoised_products": 19,
+    "denoised_trends": 19,
+    "filtered_products": 15,
+    "matched_products": 8,
+    "total_candidates": 15,
+    "hit_products": 3,
+    "potential_products": 12
   }
 }

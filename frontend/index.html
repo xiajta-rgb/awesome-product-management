@@ -179,52 +179,6 @@
                 <div class="alerts-list" id="alertsList">
                 </div>
             </section>
-
-            <section class="settings-section" id="settingsSection" style="display: none;">
-                <div class="section-header">
-                    <h2>推送设置</h2>
-                    <span class="section-desc">自定义推送偏好与独特性阈值</span>
-                </div>
-                <div class="settings-form">
-                    <div class="form-group">
-                        <label class="form-label">关注品类</label>
-                        <div class="checkbox-group" id="categoryCheckboxes">
-                            <label class="checkbox-item"><input type="checkbox" value="menswear" checked> 男装</label>
-                            <label class="checkbox-item"><input type="checkbox" value="womenswear" checked> 女装</label>
-                            <label class="checkbox-item"><input type="checkbox" value="business-casual" checked> 商务休闲</label>
-                            <label class="checkbox-item"><input type="checkbox" value="casual-sport" checked> 休闲运动</label>
-                            <label class="checkbox-item"><input type="checkbox" value="workwear-outdoor" checked> 工装登山</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">推送频率</label>
-                        <select class="form-select" id="pushFrequency">
-                            <option value="daily">每日推送</option>
-                            <option value="weekly">每周推送</option>
-                            <option value="manual">手动触发</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">推送渠道</label>
-                        <div class="checkbox-group" id="channelCheckboxes">
-                            <label class="checkbox-item"><input type="checkbox" value="skill" checked> 技能内消息</label>
-                            <label class="checkbox-item"><input type="checkbox" value="email"> 邮件</label>
-                            <label class="checkbox-item"><input type="checkbox" value="sms"> 短信</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">独特性系数阈值</label>
-                        <div class="slider-group">
-                            <input type="range" class="form-slider" id="uniquenessSlider" min="0" max="1" step="0.05" value="0.7">
-                            <span class="slider-value" id="uniquenessValue">0.70</span>
-                        </div>
-                    </div>
-                    <div class="form-actions">
-                        <button class="btn-primary" id="saveSettingsBtn">保存设置</button>
-                        <button class="btn-secondary" id="manualPushBtn">立即推送</button>
-                    </div>
-                </div>
-            </section>
         </main>
     </div>
 

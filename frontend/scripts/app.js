@@ -123,20 +123,6 @@ const App = {
             }
         });
 
-        const slider = document.getElementById('uniquenessSlider');
-        const sliderValue = document.getElementById('uniquenessValue');
-        slider.addEventListener('input', () => {
-            sliderValue.textContent = parseFloat(slider.value).toFixed(2);
-        });
-
-        document.getElementById('saveSettingsBtn').addEventListener('click', () => {
-            this.saveSettings();
-        });
-
-        document.getElementById('manualPushBtn').addEventListener('click', () => {
-            this.triggerManualPush();
-        });
-
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 this.closeModal();
@@ -297,35 +283,6 @@ const App = {
         document.getElementById('modalOverlay').classList.remove('active');
     },
 
-    saveSettings() {
-        const categories = Array.from(document.querySelectorAll('#categoryCheckboxes input:checked')).map(cb => cb.value);
-        const frequency = document.getElementById('pushFrequency').value;
-        const channels = Array.from(document.querySelectorAll('#channelCheckboxes input:checked')).map(cb => cb.value);
-        const uniquenessThreshold = parseFloat(document.getElementById('uniquenessSlider').value);
-
-        const btn = document.getElementById('saveSettingsBtn');
-        const originalText = btn.textContent;
-        btn.textContent = '已保存';
-        btn.style.background = 'var(--accent-success)';
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.style.background = '';
-        }, 2000);
-    },
-
-    triggerManualPush() {
-        const btn = document.getElementById('manualPushBtn');
-        const originalText = btn.textContent;
-        btn.textContent = '推送中...';
-        btn.style.pointerEvents = 'none';
-        setTimeout(() => {
-            btn.textContent = '推送成功';
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.pointerEvents = 'auto';
-            }, 1500);
-        }, 1000);
-    }
 };
 
 document.addEventListener('DOMContentLoaded', () => App.init());
