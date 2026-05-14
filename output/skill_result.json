@@ -1,11 +1,23 @@
 {
-  "run_time": "2026-05-14T07:46:44.170733+00:00",
+  "run_time": "2026-05-14T08:10:00.576494+00:00",
   "news_items": [
     {
-      "title": "2025亚马逊美国站时尚品类趋势：环保材料+个性印花销量暴涨",
-      "source": "亚马逊全球开店官方报告",
+      "title": "亚马逊全球开店发布《2025年时尚品类电商选品洞察报告》",
+      "source": "亚马逊全球开店 / 新浪财经",
+      "date": "2025-07-15",
+      "summary": "报告揭示美欧日消费趋势：美国站女装注重多场景穿搭与舒适性融合，修身开衫、阔腿裤、飞行员夹克热卖；男装运动休闲与商务界限模糊，高端运动套装、亚麻西装、宽腿牛仔裤走俏。全球时尚产业2029年预计达3.4万亿美元，美国电商渗透率66.8%。",
+      "tags": [
+        "选品报告",
+        "阔腿裤",
+        "运动套装"
+      ],
+      "url": "https://finance.sina.cn/2025-07-15/detail-inffqiin1945342.d.html"
+    },
+    {
+      "title": "2025年亚马逊美欧日站点时尚品类选品攻略",
+      "source": "亚马逊全球开店官方",
       "date": "2025-04-13",
-      "summary": "环保理念盛行，天然、再生材料服饰及亚麻材质备受青睐；个性化定制印花如照片印花、手绘图案广泛流行。亮青柠、樱桃红等明亮色系主打夺目吸睛，水鸭绿、奶酪黄营造春夏明媚氛围。",
+      "summary": "美国站环保材料+个性印花销量暴涨：天然再生材料、亚麻备受青睐；亮青柠、樱桃红等明亮色系夺目吸睛，水鸭绿、奶酪黄营造春夏氛围。女性消费趋势：阔腿裤、机车夹克成大热门；男性消费趋势：针织Polo衫持续热销。",
       "tags": [
         "环保材料",
         "个性印花",
@@ -17,85 +29,97 @@
       "title": "亚马逊服装鞋类2025年销售额预计达720亿美元",
       "source": "CNBC",
       "date": "2025-12-01",
-      "summary": "亚马逊已成为美国最大服装零售商，服装鞋类销售额预计2025年达到720亿美元。基础T恤、运动衫和居家服主导销售，舒适度优先于时尚度。",
+      "summary": "亚马逊已成为美国最大服装零售商，服装鞋类销售额预计2025年达到720亿美元。基础T恤、运动衫和居家服主导销售，舒适度优先于时尚度。Amazon Essentials品牌持续领跑基础款市场。",
       "tags": [
         "市场规模",
         "基础款",
-        "居家服"
+        "Amazon Essentials"
       ],
       "url": "https://www.cnbc.com/2025/12/01/how-amazon-became-americas-biggest-clothing-seller.html"
     },
     {
-      "title": "WGSN 2025/2026秋冬关键色彩：Berry Tones与Cocoa Powder",
-      "source": "WGSN",
-      "date": "2025-05-07",
-      "summary": "WGSN发布2025/2026秋冬色彩趋势：深色系（黑、棕、海军蓝、灰）搭配Berry Tones叛逆浆果色调；Cocoa Powder可可棕成为关键色彩。探险风格多口袋设计持续流行。",
+      "title": "2025亚马逊美国服装选品趋势深度解析",
+      "source": "TopEst Express / 跨境电商",
+      "date": "2025-02-15",
+      "summary": "Z世代热衷极简主义健身服；高科技职场人偏爱工作+休闲多场景切换服饰；中年消费者钟情老钱风高品质单品。女装下装和运动服备受青睐，阔腿裤、直筒牛仔裤热卖；男装运动服饰和休闲上装为重点品类。",
       "tags": [
-        "Berry Tones",
-        "Cocoa Powder",
-        "探险风"
+        "Z世代",
+        "老钱风",
+        "极简主义"
       ],
-      "url": "https://pt.accio.com/business/popular-roupas-amazon"
+      "url": "https://m.topestexpress.com/xinwenzixun/2025-nianyamaxunmeiguofuzhuang.html"
     },
     {
-      "title": "2025春夏亚马逊时尚：风衣与玛丽珍鞋成关键单品",
-      "source": "PureWow",
-      "date": "2025-02-18",
-      "summary": "动物印花（鹿纹、斑马纹）作为豹纹替代方案受到追捧；蕾丝细节为休闲装增添浪漫感。风衣和玛丽珍鞋正当时，运动学院风和马术风格随户外活动增加而流行。",
+      "title": "亚马逊2025服饰品类风向标：美欧日核心站点选品趋势解码",
+      "source": "SDS定制选品",
+      "date": "2025-07-14",
+      "summary": "美国站舒适与时尚共融：女装修身开衫、柔软长裙、迷你裙、阔腿裤热卖；男装高端运动套装、半素色度假衬衫、亚麻西装走俏。欧洲站经典焕新：紧身连衣裙需求上升，T恤取代Crop Top。日本站沉静柔和：烟熏淡彩与暗色调为主流。",
       "tags": [
-        "动物印花",
-        "蕾丝细节",
-        "风衣"
-      ],
-      "url": "https://www.purewow.com/fashion/amazon-spring-fashion"
-    },
-    {
-      "title": "亚马逊美国站男性消费趋势：针织Polo衫持续热销",
-      "source": "亚马逊全球开店官方报告",
-      "date": "2025-04-13",
-      "summary": "度假风格针织Polo衫一直是美国站男性消费者心头好，圆领衫和针织背心销量提升。白色翻领衬衫、直筒裤、宽松牛仔裤、风衣等实用简约单品不可忽视。",
-      "tags": [
-        "针织Polo",
-        "翻领衬衫",
-        "直筒裤"
-      ],
-      "url": "https://gs.amazon.cn/zhishi/article-250413-1"
-    },
-    {
-      "title": "亚马逊美国站女性消费趋势：阔腿裤与机车夹克成大热门",
-      "source": "亚马逊全球开店官方报告",
-      "date": "2025-04-13",
-      "summary": "受不稳定天气影响，可跨季节搭配的基础单品如阔腿裤、机车夹克是消费大热门。WGSN数据显示长款连衣裙搜索量增长，修身迷你裙在社交媒体走红。",
-      "tags": [
+        "舒适时尚",
         "阔腿裤",
-        "机车夹克",
-        "长款连衣裙"
+        "烟熏淡彩"
       ],
-      "url": "https://gs.amazon.cn/zhishi/article-250413-1"
+      "url": "https://m.10100.com/article/1936937"
     },
     {
-      "title": "2026时尚产业趋势：可持续+二手市场增长2-3倍",
-      "source": "CNN Brasil / StealTheLook",
-      "date": "2025-12-03",
-      "summary": "二手市场增长速度是传统零售的2-3倍，消费者追求真实性和环保。品牌开始直接进入二手市场作为获客和留存策略。AI从承诺变为基础设施，应用于需求预测和创意设计。",
+      "title": "亚马逊热销女装2025：风衣与宽松单品成关键趋势",
+      "source": "Alibaba.com Insights",
+      "date": "2025-11-15",
+      "summary": "亚马逊女装Best Sellers年增长30%，休闲装、工装、居家服和风衣主导市场。Amazon Essentials和IZOD品牌领跑。消费者重视透气面料、包容尺码(XS-3X)和现代剪裁。每日折扣和Lightning Deals让消费者节省高达60%。",
       "tags": [
-        "可持续",
-        "二手市场",
-        "AI应用"
+        "女装Best Sellers",
+        "风衣",
+        "包容尺码"
       ],
-      "url": "https://mercadoeconsumo.com.br/03/12/2025/artigos/moda-2026-o-ano-em-que-a-eficiencia-volta-a-valer-mais-que-escala/"
+      "url": "https://www.alibaba.com/blog/top-amazon-best-sellers-womens-clothing-2025s-hottest-fashion-trends-you-cant-miss.html"
     },
     {
-      "title": "亚马逊热销T恤Top10：运动背心月销4.5万件领跑",
+      "title": "亚马逊热销T恤市场分析：Y2K复古+个性化定制+功能性舒适三大主题",
       "source": "Accio Market Intelligence",
-      "date": "2025-07-16",
-      "summary": "iGENJUN运动背心以$11.25月销45113件领跑，Jerzees Polo衫$10.97月销11777件。设计趋势：星座主题、Y2K复古美学、极简排版正在崛起。有机棉和再生聚酯纤维等环保面料受追捧。",
+      "date": "2026-05-11",
+      "summary": "T恤市场三大主题：Nostalgia(Y2K/90年代)、Personalization(定制POD)和Functional Comfort(宽松/华夫格面料)。57%的Best Seller在$10-20价格区间。ATHMILE Oversized Tee月销519件$12.99，STITCH&STONE 4件装Graphic Tees $19.99表现亮眼。",
       "tags": [
-        "运动背心",
-        "Polo衫",
-        "环保面料"
+        "Y2K复古",
+        "POD定制",
+        "华夫格面料"
       ],
-      "url": "https://www.accio.com/business/amazon-top-selling-shirts"
+      "url": "https://de.accio.com/business/top-selling-t-shirts-amazon"
+    },
+    {
+      "title": "亚马逊Best Selling服装2025：基础款+舒适风+可持续三大核心",
+      "source": "Accio Market Intelligence",
+      "date": "2026-05-09",
+      "summary": "消费者优先'舒适胜过高级定制'，基础T恤、运动衫和居家服主导。Amazon Essentials在基础款领域称王。无钢圈内衣和瑜伽裤增长爆发。Oxford短袖衬衫月销412351件$8.55，青少年无钢圈内衣3件装月销38878件$6.50。",
+      "tags": [
+        "基础款",
+        "无钢圈内衣",
+        "可持续"
+      ],
+      "url": "https://es.accio.com/business/amazon-best-selling-clothes"
+    },
+    {
+      "title": "海外消费者青睐怎样的时尚表达？亚马逊2025选品洞察报告",
+      "source": "搜狐 / 心动物语",
+      "date": "2025-07-14",
+      "summary": "美国消费者追求舒适性与时尚感完美结合：女装修身开衫、迷你裙、阔腿裤热卖；男装高端运动套装、休闲夹克展现运动与商务交融。欧洲消费者经典与创新并重：紧身连衣裙需求上升，牛津鞋和布洛克鞋销售强劲。日本消费者青睐柔和沉静风格。",
+      "tags": [
+        "舒适性",
+        "运动商务交融",
+        "经典创新"
+      ],
+      "url": "https://www.sohu.com/a/913816879_122094388"
+    },
+    {
+      "title": "亚马逊宽松不贴身单品热销：桶形裤到亚麻长裤的舒适风潮",
+      "source": "Elite Daily",
+      "date": "2025-07-04",
+      "summary": "Amazon上宽松不贴身的精致单品热销：IXIMO棉麻桶形裤、Aimiray无袖娃娃裙、PRETTYGARDEN碎花中长裙、Poetsky V领超长连衣裙等。趋势关键词：桶形剪裁、高腰弹力、A字版型、飘逸面料。",
+      "tags": [
+        "宽松风",
+        "桶形裤",
+        "亚麻"
+      ],
+      "url": "https://www.elitedaily.com/shopping/amazons-selling-a-ton-of-these-bougie-pieces-that-dont-cling-to-your-body-look-good-on-everyone"
     }
   ],
   "hit_products": {
@@ -105,6 +129,7 @@
       {
         "title": "The Gym People Tummy Control Leggings 深蓝色 弹力纤维 高腰",
         "url": "https://www.amazon.com/dp/B07HQM6NH8",
+        "source_url": "https://es.accio.com/business/amazon-best-selling-clothes",
         "features": [
           "深蓝色",
           "弹力纤维",
@@ -123,6 +148,7 @@
       {
         "title": "Carhartt Men's Relaxed Fit Work Pants 棕色 帆布 多口袋",
         "url": "https://www.amazon.com/dp/B0051QVJAG",
+        "source_url": "https://es.accio.com/business/amazon-best-selling-clothes",
         "features": [
           "棕色",
           "帆布",
@@ -141,6 +167,7 @@
       {
         "title": "BLACKMYTH Women's Graphic T Shirt 樱桃红 棉混纺 图案印花",
         "url": "https://www.amazon.com/dp/B07F9LNHCG",
+        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
         "features": [
           "樱桃红",
           "棉混纺",
@@ -157,8 +184,66 @@
         "margin_alert": "低毛利预警"
       },
       {
+        "title": "Poetsky V-Neck Maxi Sundress 藏青色 雪纺 超长连衣裙",
+        "url": "https://www.amazon.com/dp/B07QVG8Z5L",
+        "source_url": "https://www.elitedaily.com/shopping/amazons-selling-a-ton-of-these-bougie-pieces-that-dont-cling-to-your-body-look-good-on-everyone",
+        "features": [
+          "藏青色",
+          "雪纺",
+          "V领",
+          "细肩带"
+        ],
+        "price": 26.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "有有效评论",
+        "margin_alert": "低毛利预警"
+      },
+      {
+        "title": "Aimiray Casual Sleeveless Mini Dress 白色 纯棉 娃娃裙",
+        "url": "https://www.amazon.com/dp/B0CZNYW6KS",
+        "source_url": "https://www.elitedaily.com/shopping/amazons-selling-a-ton-of-these-bougie-pieces-that-dont-cling-to-your-body-look-good-on-everyone",
+        "features": [
+          "白色",
+          "纯棉",
+          "无袖",
+          "V领"
+        ],
+        "price": 32.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "有有效评论",
+        "margin_alert": "低毛利预警"
+      },
+      {
+        "title": "STITCH & STONE 4-Pack Graphic Tees for Boys 蓝色 棉 图案印花",
+        "url": "https://www.amazon.com/dp/B0D7MYCHKF",
+        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
+        "features": [
+          "蓝色",
+          "纯棉",
+          "图案印花",
+          "圆领"
+        ],
+        "price": 19.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "有有效评论",
+        "margin_alert": "低毛利预警"
+      },
+      {
         "title": "INTO THE AM Cosmic Beats Men's Tee 藏青色 棉混纺 图案印花",
         "url": "https://www.amazon.com/dp/B092PWJCFF",
+        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
         "features": [
           "藏青色",
           "棉混纺",
@@ -177,6 +262,7 @@
       {
         "title": "JMIERR Men's Short Sleeve T-Shirt 灰色 速干面料 V领",
         "url": "https://www.amazon.com/dp/B0CYPV1YL8",
+        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
         "features": [
           "灰色",
           "速干面料",
@@ -195,6 +281,7 @@
       {
         "title": "Amazon Essentials Men's Slim-Fit Chino Pants 大地色 弹力斜纹布",
         "url": "https://www.amazon.com/dp/B07R54MCNJ",
+        "source_url": "https://es.accio.com/business/amazon-best-selling-clothes",
         "features": [
           "大地色",
           "弹力斜纹布",
@@ -213,6 +300,7 @@
       {
         "title": "iGENJUN Workout Tops for Women Racerback Tank 黑色 速干面料",
         "url": "https://www.amazon.com/dp/B0CZWWH37Q",
+        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
         "features": [
           "黑色",
           "速干面料",
@@ -229,8 +317,28 @@
         "margin_alert": "低毛利预警"
       },
       {
+        "title": "IXIMO Casual Cotton Linen Baggy Pants 灰色 棉麻混纺 桶形",
+        "url": "https://www.amazon.com/dp/B07WJGNQS7",
+        "source_url": "https://www.elitedaily.com/shopping/amazons-selling-a-ton-of-these-bougie-pieces-that-dont-cling-to-your-body-look-good-on-everyone",
+        "features": [
+          "灰色",
+          "棉麻混纺",
+          "桶形",
+          "高腰弹力"
+        ],
+        "price": 28.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "有有效评论",
+        "margin_alert": "低毛利预警"
+      },
+      {
         "title": "Jerzees Men's Short Sleeve Polo Shirts 深蓝色 纯棉",
         "url": "https://www.amazon.com/dp/B075LT1NJ8",
+        "source_url": "https://es.accio.com/business/amazon-best-selling-clothes",
         "features": [
           "深蓝色",
           "纯棉",
@@ -247,44 +355,9 @@
         "margin_alert": "低毛利预警"
       },
       {
-        "title": "True Classic Men's Henley Long Sleeve T-Shirt 卡其色 棉混纺",
-        "url": "https://www.amazon.com/dp/B0CGVX512V",
-        "features": [
-          "卡其色",
-          "棉混纺",
-          "亨利领",
-          "长袖"
-        ],
-        "price": 32.93,
-        "selling_points": [],
-        "trend_match_points": [],
-        "data_source": "amazon",
-        "expected_margin": 0.0,
-        "uniqueness_coefficient": 1.0,
-        "review_status": "有有效评论",
-        "margin_alert": "低毛利预警"
-      },
-      {
-        "title": "Verdusa Women's Formal Wedding Guest Dress 酒红色 雪纺",
-        "url": "https://www.amazon.com/dp/B0DNF6MLKM",
-        "features": [
-          "酒红色",
-          "雪纺",
-          "V领",
-          "修身"
-        ],
-        "price": 45.99,
-        "selling_points": [],
-        "trend_match_points": [],
-        "data_source": "amazon",
-        "expected_margin": 0.0,
-        "uniqueness_coefficient": 1.0,
-        "review_status": "有有效评论",
-        "margin_alert": "低毛利预警"
-      },
-      {
         "title": "Women's Hiking Pants 棕色 防水面料 直筒 多口袋",
         "url": "https://www.amazon.com/dp/B0CY2B4DY1",
+        "source_url": "https://es.accio.com/business/amazon-best-selling-clothes",
         "features": [
           "棕色",
           "防水面料",
@@ -303,6 +376,7 @@
       {
         "title": "Carhartt Women's Relaxed Fit Sweatshirt 军绿色 棉混纺",
         "url": "https://www.amazon.com/dp/B0051QVJAG",
+        "source_url": "https://es.accio.com/business/amazon-best-selling-clothes",
         "features": [
           "军绿色",
           "棉混纺",
@@ -319,33 +393,16 @@
         "margin_alert": "低毛利预警"
       },
       {
-        "title": "ATHMILE Women's Short Sleeve V Neck Tee 白色 吸湿排汗",
-        "url": "https://www.amazon.com/dp/B0CYPV1YL8",
+        "title": "ATHMILE Oversized T-Shirts for Teen Girls 灰色 棉混纺 宽松",
+        "url": "https://www.amazon.com/dp/B0CLCGB6RD",
+        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
         "features": [
-          "白色",
-          "吸湿排汗面料",
-          "V领",
-          "短袖"
+          "灰色",
+          "棉混纺",
+          "圆领",
+          "宽松"
         ],
-        "price": 11.15,
-        "selling_points": [],
-        "trend_match_points": [],
-        "data_source": "amazon",
-        "expected_margin": 0.0,
-        "uniqueness_coefficient": 1.0,
-        "review_status": "有有效评论",
-        "margin_alert": "低毛利预警"
-      },
-      {
-        "title": "True Classic Men's Long Sleeve Thermal Tee 黑色 混纺 修身",
-        "url": "https://www.amazon.com/dp/B0CGVV81DC",
-        "features": [
-          "黑色",
-          "混纺",
-          "修身",
-          "长袖"
-        ],
-        "price": 38.26,
+        "price": 12.99,
         "selling_points": [],
         "trend_match_points": [],
         "data_source": "amazon",
@@ -357,6 +414,7 @@
       {
         "title": "RZIV Women's Oversized Blazer 黑色 羊毛混纺 宽松",
         "url": "https://www.amazon.com/dp/B095W6S7SV",
+        "source_url": "https://www.alibaba.com/blog/top-amazon-best-sellers-womens-clothing-2025s-hottest-fashion-trends-you-cant-miss.html",
         "features": [
           "黑色",
           "羊毛混纺",
@@ -373,15 +431,16 @@
         "margin_alert": "低毛利预警"
       },
       {
-        "title": "PrettyGarden Pleated Midi Dress 薄荷绿 聚酯纤维 褶皱",
-        "url": "https://www.amazon.com/dp/B0DNF6MLKM",
+        "title": "PRETTYGARDEN Floral Print Midi Skirt 碎花 聚酯纤维 A字中长裙",
+        "url": "https://www.amazon.com/dp/B09K49FLFL",
+        "source_url": "https://www.elitedaily.com/shopping/amazons-selling-a-ton-of-these-bougie-pieces-that-dont-cling-to-your-body-look-good-on-everyone",
         "features": [
-          "薄荷绿",
+          "碎花",
           "聚酯纤维",
-          "褶皱",
-          "无袖"
+          "A字",
+          "高腰"
         ],
-        "price": 28.0,
+        "price": 35.99,
         "selling_points": [],
         "trend_match_points": [],
         "data_source": "amazon",
@@ -395,52 +454,15 @@
   "potential_products": {
     "push_type": "potential_product_list",
     "title": "潜力爆品列表推送",
-    "products": [
-      {
-        "title": "Demucy Men's Baseball Vintage T-Shirts 军绿色 棉混纺 复古印花",
-        "url": "https://www.amazon.com/dp/B0DBKCCW5W",
-        "features": [
-          "军绿色",
-          "棉混纺",
-          "复古印花",
-          "圆领"
-        ],
-        "price": 9.99,
-        "selling_points": [],
-        "trend_match_points": [],
-        "data_source": "amazon",
-        "expected_margin": 0.0,
-        "uniqueness_coefficient": 1.0,
-        "review_status": "有有效评论",
-        "margin_alert": "低毛利预警",
-        "growth_potential": "",
-        "supply_chain_feasibility": ""
-      }
-    ]
+    "products": []
   },
   "top10_elements": {
     "push_type": "top10_elements",
     "title": "Top10核心爆品元素推送",
     "elements": [
       {
-        "element": "Slim Fit",
-        "frequency": 6,
-        "is_core": true,
-        "margin": 0.35,
-        "recommendation_weight": 1.0,
-        "margin_penalty_applied": false
-      },
-      {
         "element": "Loose Fit",
-        "frequency": 5,
-        "is_core": true,
-        "margin": 0.35,
-        "recommendation_weight": 1.0,
-        "margin_penalty_applied": false
-      },
-      {
-        "element": "棉混纺",
-        "frequency": 5,
+        "frequency": 8,
         "is_core": true,
         "margin": 0.35,
         "recommendation_weight": 1.0,
@@ -455,23 +477,39 @@
         "margin_penalty_applied": false
       },
       {
-        "element": "Earth Tone",
-        "frequency": 4,
-        "is_core": true,
-        "margin": 0.35,
-        "recommendation_weight": 1.0,
-        "margin_penalty_applied": false
-      },
-      {
-        "element": "Solid Basic",
-        "frequency": 4,
-        "is_core": true,
-        "margin": 0.35,
-        "recommendation_weight": 1.0,
-        "margin_penalty_applied": false
-      },
-      {
         "element": "Navy Blue",
+        "frequency": 4,
+        "is_core": true,
+        "margin": 0.35,
+        "recommendation_weight": 1.0,
+        "margin_penalty_applied": false
+      },
+      {
+        "element": "棉混纺",
+        "frequency": 4,
+        "is_core": true,
+        "margin": 0.35,
+        "recommendation_weight": 1.0,
+        "margin_penalty_applied": false
+      },
+      {
+        "element": "Slim Fit",
+        "frequency": 3,
+        "is_core": true,
+        "margin": 0.35,
+        "recommendation_weight": 1.0,
+        "margin_penalty_applied": false
+      },
+      {
+        "element": "Earth Tone",
+        "frequency": 3,
+        "is_core": true,
+        "margin": 0.35,
+        "recommendation_weight": 1.0,
+        "margin_penalty_applied": false
+      },
+      {
+        "element": "Print Design",
         "frequency": 3,
         "is_core": true,
         "margin": 0.35,
@@ -487,16 +525,16 @@
         "margin_penalty_applied": false
       },
       {
-        "element": "Multi Pocket",
-        "frequency": 2,
+        "element": "Solid Basic",
+        "frequency": 3,
         "is_core": true,
         "margin": 0.35,
         "recommendation_weight": 1.0,
         "margin_penalty_applied": false
       },
       {
-        "element": "Print Design",
-        "frequency": 2,
+        "element": "Pure Cotton",
+        "frequency": 3,
         "is_core": true,
         "margin": 0.35,
         "recommendation_weight": 1.0,
@@ -509,21 +547,21 @@
     "title": "视觉差异化建议推送",
     "suggestions": [
       {
+        "element": "酒红色",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '酒红色' 在站内爆品中缺失，建议补充视觉呈现",
+        "data_source": ""
+      },
+      {
         "element": "亮青柠",
         "suggestion_type": "visual_gap",
         "description": "站外趋势元素 '亮青柠' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
-        "element": "奶酪黄",
+        "element": "褶皱",
         "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 '奶酪黄' 在站内爆品中缺失，建议补充视觉呈现",
-        "data_source": ""
-      },
-      {
-        "element": "Cotton Linen Blend",
-        "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 'Cotton Linen Blend' 在站内爆品中缺失，建议补充视觉呈现",
+        "description": "站外趋势元素 '褶皱' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
@@ -533,51 +571,39 @@
         "data_source": ""
       },
       {
-        "element": "复古印花",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '复古印花'，可作为视觉差异化亮点",
+        "element": "华夫格面料",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '华夫格面料' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
-        "element": "亨利领",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '亨利领'，可作为视觉差异化亮点",
+        "element": "奶酪黄",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '奶酪黄' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
-        "element": "雪纺",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '雪纺'，可作为视觉差异化亮点",
+        "element": "烟熏淡彩",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '烟熏淡彩' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
-        "element": "弹力斜纹布",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '弹力斜纹布'，可作为视觉差异化亮点",
+        "element": "Pastel Sport",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 'Pastel Sport' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
-        "element": "全拉链",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '全拉链'，可作为视觉差异化亮点",
+        "element": "桶形剪裁",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '桶形剪裁' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
-        "element": "混纺",
+        "element": "羊毛混纺",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '混纺'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "双排扣",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '双排扣'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "Polyester",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Polyester'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 '羊毛混纺'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
@@ -587,15 +613,57 @@
         "data_source": ""
       },
       {
-        "element": "Straight Fit",
+        "element": "双排扣",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Straight Fit'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 '双排扣'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
-        "element": "羊毛混纺",
+        "element": "全拉链",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '羊毛混纺'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 '全拉链'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "棉混纺",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '棉混纺'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "雪纺",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '雪纺'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "桶形",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '桶形'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Polyester",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Polyester'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "碎花",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '碎花'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "A字",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'A字'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "圆领",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '圆领'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
@@ -611,21 +679,27 @@
         "data_source": ""
       },
       {
+        "element": "Straight Fit",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Straight Fit'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "蓝色",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '蓝色'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
         "element": "Solid Basic",
         "suggestion_type": "visual_differentiation",
         "description": "站内爆品独有元素 'Solid Basic'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
-        "element": "棉混纺",
+        "element": "弹力斜纹布",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '棉混纺'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "吸湿排汗面料",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '吸湿排汗面料'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 '弹力斜纹布'，可作为视觉差异化亮点",
         "data_source": ""
       }
     ]
@@ -658,6 +732,24 @@
         "pain_points": [
           "图案印花洗后开裂",
           "棉混纺起球"
+        ],
+        "data_source": "amazon"
+      },
+      {
+        "title": "Poetsky V-Neck Maxi Sundress 藏青色 雪纺 超长连衣裙",
+        "description": "该产品存在 2 个常见问题，选品时需注意规避",
+        "pain_points": [
+          "雪纺易勾丝",
+          "细肩带易滑落"
+        ],
+        "data_source": "amazon"
+      },
+      {
+        "title": "Aimiray Casual Sleeveless Mini Dress 白色 纯棉 娃娃裙",
+        "description": "该产品存在 2 个常见问题，选品时需注意规避",
+        "pain_points": [
+          "纯棉易缩水",
+          "白色易透"
         ],
         "data_source": "amazon"
       },
@@ -698,20 +790,20 @@
         "data_source": "amazon"
       },
       {
+        "title": "IXIMO Casual Cotton Linen Baggy Pants 灰色 棉麻混纺 桶形",
+        "description": "该产品存在 2 个常见问题，选品时需注意规避",
+        "pain_points": [
+          "棉麻易皱",
+          "尺码偏大"
+        ],
+        "data_source": "amazon"
+      },
+      {
         "title": "Jerzees Men's Short Sleeve Polo Shirts 深蓝色 纯棉",
         "description": "该产品存在 2 个常见问题，选品时需注意规避",
         "pain_points": [
           "纯棉易缩水",
           "颜色偏深"
-        ],
-        "data_source": "amazon"
-      },
-      {
-        "title": "Verdusa Women's Formal Wedding Guest Dress 酒红色 雪纺",
-        "description": "该产品存在 2 个常见问题，选品时需注意规避",
-        "pain_points": [
-          "雪纺易勾丝",
-          "尺码不准"
         ],
         "data_source": "amazon"
       },
@@ -734,20 +826,11 @@
         "data_source": "amazon"
       },
       {
-        "title": "ATHMILE Women's Short Sleeve V Neck Tee 白色 吸湿排汗",
+        "title": "ATHMILE Oversized T-Shirts for Teen Girls 灰色 棉混纺 宽松",
         "description": "该产品存在 2 个常见问题，选品时需注意规避",
         "pain_points": [
-          "白色易透",
-          "吸湿排汗效果一般"
-        ],
-        "data_source": "amazon"
-      },
-      {
-        "title": "True Classic Men's Long Sleeve Thermal Tee 黑色 混纺 修身",
-        "description": "该产品存在 2 个常见问题，选品时需注意规避",
-        "pain_points": [
-          "混纺透气性差",
-          "领口易变形"
+          "棉混纺起球",
+          "版型偏大"
         ],
         "data_source": "amazon"
       },
@@ -761,33 +844,24 @@
         "data_source": "amazon"
       },
       {
-        "title": "PrettyGarden Pleated Midi Dress 薄荷绿 聚酯纤维 褶皱",
+        "title": "PRETTYGARDEN Floral Print Midi Skirt 碎花 聚酯纤维 A字中长裙",
         "description": "该产品存在 2 个常见问题，选品时需注意规避",
         "pain_points": [
           "聚酯纤维不透气",
-          "褶皱洗涤后消失"
+          "裙长偏长"
         ],
         "data_source": "amazon"
       },
       {
-        "title": "Demucy Men's Baseball Vintage T-Shirts 军绿色 棉混纺 复古印花",
-        "description": "该产品存在 2 个常见问题，选品时需注意规避",
-        "pain_points": [
-          "复古印花掉色严重",
-          "面料偏薄"
-        ],
-        "data_source": "amazon"
-      },
-      {
-        "title": "True Classic Men's Henley Long Sleeve T-Shirt 卡其色 棉混纺",
+        "title": "STITCH & STONE 4-Pack Graphic Tees for Boys 蓝色 棉 图案印花",
         "description": "该产品存在 1 个常见问题，选品时需注意规避",
         "pain_points": [
-          "亨利领扣子易脱落"
+          "图案印花洗后开裂"
         ],
         "data_source": "amazon"
       }
     ],
-    "generated_at": "2026-05-14T07:46:44.170584"
+    "generated_at": "2026-05-14T08:10:00.576346"
   },
   "uniqueness_recommendations": {
     "push_type": "uniqueness_recommendations",
@@ -819,6 +893,33 @@
         "category_main": "",
         "category_sub": "",
         "price": 14.24,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Poetsky V-Neck Maxi Sundress 藏青色 雪纺 超长连衣裙",
+        "url": "https://www.amazon.com/dp/B07QVG8Z5L",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 26.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "Aimiray Casual Sleeveless Mini Dress 白色 纯棉 娃娃裙",
+        "url": "https://www.amazon.com/dp/B0CZNYW6KS",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 32.99,
+        "data_source": "amazon"
+      },
+      {
+        "title": "STITCH & STONE 4-Pack Graphic Tees for Boys 蓝色 棉 图案印花",
+        "url": "https://www.amazon.com/dp/B0D7MYCHKF",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 19.99,
         "data_source": "amazon"
       },
       {
@@ -858,30 +959,21 @@
         "data_source": "amazon"
       },
       {
+        "title": "IXIMO Casual Cotton Linen Baggy Pants 灰色 棉麻混纺 桶形",
+        "url": "https://www.amazon.com/dp/B07WJGNQS7",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 28.99,
+        "data_source": "amazon"
+      },
+      {
         "title": "Jerzees Men's Short Sleeve Polo Shirts 深蓝色 纯棉",
         "url": "https://www.amazon.com/dp/B075LT1NJ8",
         "uniqueness_coefficient": 1.0,
         "category_main": "",
         "category_sub": "",
         "price": 10.97,
-        "data_source": "amazon"
-      },
-      {
-        "title": "True Classic Men's Henley Long Sleeve T-Shirt 卡其色 棉混纺",
-        "url": "https://www.amazon.com/dp/B0CGVX512V",
-        "uniqueness_coefficient": 1.0,
-        "category_main": "",
-        "category_sub": "",
-        "price": 32.93,
-        "data_source": "amazon"
-      },
-      {
-        "title": "Verdusa Women's Formal Wedding Guest Dress 酒红色 雪纺",
-        "url": "https://www.amazon.com/dp/B0DNF6MLKM",
-        "uniqueness_coefficient": 1.0,
-        "category_main": "",
-        "category_sub": "",
-        "price": 45.99,
         "data_source": "amazon"
       },
       {
@@ -903,21 +995,12 @@
         "data_source": "amazon"
       },
       {
-        "title": "ATHMILE Women's Short Sleeve V Neck Tee 白色 吸湿排汗",
-        "url": "https://www.amazon.com/dp/B0CYPV1YL8",
+        "title": "ATHMILE Oversized T-Shirts for Teen Girls 灰色 棉混纺 宽松",
+        "url": "https://www.amazon.com/dp/B0CLCGB6RD",
         "uniqueness_coefficient": 1.0,
         "category_main": "",
         "category_sub": "",
-        "price": 11.15,
-        "data_source": "amazon"
-      },
-      {
-        "title": "True Classic Men's Long Sleeve Thermal Tee 黑色 混纺 修身",
-        "url": "https://www.amazon.com/dp/B0CGVV81DC",
-        "uniqueness_coefficient": 1.0,
-        "category_main": "",
-        "category_sub": "",
-        "price": 38.26,
+        "price": 12.99,
         "data_source": "amazon"
       },
       {
@@ -930,34 +1013,25 @@
         "data_source": "amazon"
       },
       {
-        "title": "PrettyGarden Pleated Midi Dress 薄荷绿 聚酯纤维 褶皱",
-        "url": "https://www.amazon.com/dp/B0DNF6MLKM",
+        "title": "PRETTYGARDEN Floral Print Midi Skirt 碎花 聚酯纤维 A字中长裙",
+        "url": "https://www.amazon.com/dp/B09K49FLFL",
         "uniqueness_coefficient": 1.0,
         "category_main": "",
         "category_sub": "",
-        "price": 28.0,
-        "data_source": "amazon"
-      },
-      {
-        "title": "Demucy Men's Baseball Vintage T-Shirts 军绿色 棉混纺 复古印花",
-        "url": "https://www.amazon.com/dp/B0DBKCCW5W",
-        "uniqueness_coefficient": 1.0,
-        "category_main": "",
-        "category_sub": "",
-        "price": 9.99,
+        "price": 35.99,
         "data_source": "amazon"
       }
     ]
   },
   "data_statistics": {
     "raw_products": 17,
-    "raw_trends": 25,
-    "news_count": 8,
+    "raw_trends": 28,
+    "news_count": 10,
     "deduped_products": 17,
     "filtered_products": 17,
-    "matched_products": 11,
+    "matched_products": 13,
     "total_candidates": 17,
-    "hit_products": 16,
-    "potential_products": 1
+    "hit_products": 17,
+    "potential_products": 0
   }
 }

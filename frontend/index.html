@@ -149,6 +149,7 @@ main{padding:40px 0 80px}
 }
 .product-link:hover{opacity:.7}
 .product-link svg{width:12px;height:12px;stroke:currentColor}
+.source-link{color:var(--text-secondary)!important;margin-left:8px}
 
 .elements-grid{display:flex;flex-wrap:wrap;gap:12px}
 .element-pill{
@@ -417,6 +418,12 @@ function renderProducts(products, sectionTitle, sectionId, cardStyle) {
                   ${p.url ? `
                     <a class="product-link" href="${p.url}" target="_blank" rel="noopener">
                       在亚马逊查看
+                      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                  ` : ''}
+                  ${p.source_url ? `
+                    <a class="product-link source-link" href="${p.source_url}" target="_blank" rel="noopener">
+                      查看原文
                       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                   ` : ''}

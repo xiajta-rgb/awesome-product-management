@@ -39,6 +39,7 @@ class ProductPushBuilder:
         formatted = {
             "title": product.get("title", ""),
             "url": product.get("url", ""),
+            "source_url": product.get("source_url", ""),
             "features": features,
             "price": product.get("price", 0.0),
             "selling_points": product.get("selling_points", []),
