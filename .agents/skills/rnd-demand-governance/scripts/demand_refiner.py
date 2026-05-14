@@ -58,6 +58,7 @@ class DemandRefiner:
 ## 输出格式（JSON）
 {{
   "demand_id": "{demand_id or '自动生成'}",
+  "proposer": "需求提出人姓名",
   "title": "一句话简单描述需求核心内容（≤50字）",
   "demand_module": "仓储与物流域/研发域/供应链与制造域/营销域",
   "background": "问题背景与现状说明",

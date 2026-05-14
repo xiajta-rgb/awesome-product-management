@@ -149,7 +149,7 @@ class DemandLibrary:
         results.sort(key=lambda x: x['similarity'], reverse=True)
         return results
 
-    def add(self, title: str, demand_type: str = '', demand_module: str = '',
+    def add(self, title: str, proposer: str = '', demand_type: str = '', demand_module: str = '',
             background: str = '', pain_points: str = '', description: str = '',
             label: str = '', priority: str = '', ai_suggestions: str = '',
             submitter: str = '', grade: str = '', total_score: int = 0,
@@ -163,6 +163,7 @@ class DemandLibrary:
             'id': f'D{demand_id:03d}',
             'demand_type': demand_type,
             'demand_module': demand_module,
+            'proposer': proposer,
             'title': title,
             'background': background,
             'pain_points': pain_points,

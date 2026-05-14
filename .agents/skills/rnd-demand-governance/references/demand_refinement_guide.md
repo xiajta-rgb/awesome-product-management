@@ -43,6 +43,7 @@
 
 | 字段 | 补全内容 | 置信度 |
 |------|----------|--------|
+| proposer | 戴玉婷 | confirmed |
 | title | 亚马逊侵权专利库自动化采集系统 | inferred |
 | demand_module | 营销域 | inferred |
 | background | 当前依赖手动采集USPTO专利网站，流程复杂效率低，已有2次侵权警告 | inferred |

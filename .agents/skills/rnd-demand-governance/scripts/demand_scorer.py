@@ -35,6 +35,7 @@ class DemandScorer:
 
     def _build_demand_info_section(self, demand: dict) -> str:
         field_map = [
+            ('proposer', '提出人'),
             ('title', '标题'),
             ('demand_module', '需求模块'),
             ('background', '背景'),

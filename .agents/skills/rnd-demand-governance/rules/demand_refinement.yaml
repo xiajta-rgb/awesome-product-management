@@ -20,6 +20,11 @@ output_fields:
       营销域：侵权风控、品牌对标、产品上架、市场运营、客户服务
       注意：参考 rules/company_context.yaml 中已记录的系统与模块关联
   
+  proposer:
+    name: "提出人"
+    description: "需求提出人姓名"
+    auto_derived: false
+  
   title:
     name: "标题"
     description: "用一句话简单描述需求的核心内容"
