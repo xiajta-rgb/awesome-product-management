@@ -78,39 +78,48 @@ dimensions:
     name: "影响范围"
     weight: 15
     reverse_score: false
+    scoring_note: "影响范围需区分核心业务场景vs非核心场景：全公司用周报模板≠高影响，2个部门用合规系统可能=高影响"
     pm_frameworks:
       - name: "RICE - Reach"
         description: "该需求影响多少用户/客户"
-        scoring_guide: "影响全体或大量用户=高分，影响个别用户=低分"
+        scoring_guide: "影响全体或大量用户=高分，影响个别用户=低分；需结合业务重要性判断"
       - name: "Crossing the Chasm (Geoffrey Moore)"
         description: "需求处于市场采纳的哪个阶段"
         scoring_guide: "跨越鸿沟阶段=高分，早期采纳者阶段=中等，滞后=低分"
+      - name: "Impact Depth Check"
+        description: "影响深度：核心业务场景还是辅助场景"
+        scoring_guide: "核心业务场景(合规/营收/客户)=加分，辅助场景(行政/汇报/个人)=减分"
     rules:
       - min_score: 13
         max_score: 15
-        condition: "影响3个及以上部门/业务链路，RICE Reach覆盖全体用户，具备高复用价值"
-        keywords: ["跨部门", "多部门", "全体用户", "复用", "全链路", "高Reach"]
+        condition: "影响3个及以上部门/业务链路，RICE Reach覆盖全体用户，具备高复用价值，且为核心业务场景"
+        keywords: ["跨部门", "多部门", "全体用户", "复用", "全链路", "高Reach", "核心场景"]
       - min_score: 9
         max_score: 12
-        condition: "影响2个部门/多个岗位，RICE Reach覆盖部分用户，具备一定复用价值"
-        keywords: ["2个部门", "多岗位", "部分用户", "中等Reach"]
+        condition: "影响2个部门/多个岗位，RICE Reach覆盖部分用户，具备一定复用价值，且为业务相关场景"
+        keywords: ["2个部门", "多岗位", "部分用户", "中等Reach", "业务场景"]
       - min_score: 5
         max_score: 8
-        condition: "仅影响单个部门的1-2个岗位，RICE Reach覆盖少量用户"
-        keywords: ["单部门", "岗位", "少量用户", "低Reach"]
+        condition: "仅影响单个部门的1-2个岗位，或影响面广但仅为非核心辅助场景（如行政、汇报）"
+        keywords: ["单部门", "岗位", "少量用户", "低Reach", "辅助场景", "非核心"]
       - min_score: 0
         max_score: 4
-        condition: "仅个人使用，RICE Reach极低，无跨岗位/跨部门影响"
-        keywords: ["个人", "无影响", "独立", "Reach极低"]
+        condition: "仅个人使用，或仅个人环境问题，RICE Reach极低，无跨岗位/跨部门影响"
+        keywords: ["个人", "无影响", "独立", "Reach极低", "个人环境"]
 
   roi:
     name: "投入产出比"
     weight: 15
     reverse_score: false
+    override_rules:
+      - condition: "收益为零或无明确收益预期"
+        action: "force_max_score"
+        value: 4
+        reason: "零收益时ROI必为低分，不论投入多低"
     pm_frameworks:
       - name: "RICE - Effort & Confidence"
         description: "投入多少资源？信心度多高？"
-        scoring_guide: "低Effort高Confidence=高分，高Effort低Confidence=低分"
+        scoring_guide: "低Effort高Confidence=高分，高Effort低Confidence=低分；收益为零时强制≤4分"
     rules:
       - min_score: 13
         max_score: 15
@@ -126,8 +135,8 @@ dimensions:
         keywords: ["投入高", "收益一般", "低Confidence"]
       - min_score: 0
         max_score: 4
-        condition: "资源投入高，无明确收益预期，Confidence极低"
-        keywords: ["高投入", "无收益", "失衡", "极低Confidence"]
+        condition: "资源投入高，无明确收益预期，Confidence极低，或收益为零"
+        keywords: ["高投入", "无收益", "失衡", "极低Confidence", "零收益"]
 
   urgency:
     name: "紧急程度"

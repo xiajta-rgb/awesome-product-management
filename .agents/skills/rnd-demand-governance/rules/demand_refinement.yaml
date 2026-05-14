@@ -85,3 +85,16 @@ confidence_levels:
   confirmed: "用户明确提供的信息"
   inferred: "根据上下文合理推测的信息"
   assumed: "AI基于经验假设的信息（需要用户确认）"
+
+# 补全不合格处理规则
+# 当必须字段缺失过多时，AI应追问而非强行推测
+insufficient_info_rules:
+  missing_threshold: 3
+  action: "pause_and_ask"
+  guidance: "当必须字段(background/pain_points/target_users/expected_value/usage_scenario)缺失≥3个时，暂停评分，主动追问用户补充关键信息"
+  output_template: |
+    ⚠️ 需求信息不足，无法进行专业评审。请补充以下关键信息：
+    1. {缺失字段}：{引导问题}
+    ...
+    补充后我将重新进行补全和评审。
+  partial_missing_guidance: "当必须字段缺失1-2个时，可合理推测补全，标记为assumed，在评审结果中提醒用户确认"
