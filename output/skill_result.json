@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-05-14T03:57:58.873058+00:00",
+  "hit_products": {
+    "push_type": "hit_product_list",
+    "title": "高潜力爆品列表推送",
+    "products": [
+      {
+        "title": "Men's Business Casual Shirt 大地色 棉麻混纺 修身",
+        "url": "https://amazon.com/product1",
+        "features": "修身;棉麻;大地色",
+        "price": 29.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "无有效评论",
+        "margin_alert": "低毛利预警"
+      }
+    ]
+  },
+  "potential_products": {
+    "push_type": "potential_product_list",
+    "title": "潜力爆品列表推送",
+    "products": []
+  },
+  "top10_elements": {
+    "push_type": "top10_elements",
+    "title": "Top10核心爆品元素推送",
+    "elements": []
+  },
+  "visual_diff_suggestions": {
+    "push_type": "visual_diff_suggestions",
+    "title": "视觉差异化建议推送",
+    "suggestions": [
+      {
+        "visual_element": "",
+        "differentiation_strategy": "",
+        "reference_examples": [],
+        "data_source": ""
+      },
+      {
+        "visual_element": "",
+        "differentiation_strategy": "",
+        "reference_examples": [],
+        "data_source": ""
+      },
+      {
+        "visual_element": "",
+        "differentiation_strategy": "",
+        "reference_examples": [],
+        "data_source": ""
+      }
+    ]
+  },
+  "pitfall_warnings": {
+    "push_type": "pitfall_reminders",
+    "title": "避坑提醒推送",
+    "pitfalls": [],
+    "generated_at": "2026-05-14T03:57:58.872459"
+  },
+  "uniqueness_recommendations": {
+    "push_type": "uniqueness_recommendations",
+    "title": "独特性系数筛选推送",
+    "threshold": 0.3,
+    "recommendations": [
+      {
+        "title": "Men's Business Casual Shirt 大地色 棉麻混纺 修身",
+        "url": "https://amazon.com/product1",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 29.99,
+        "data_source": "amazon"
+      }
+    ]
+  },
+  "data_statistics": {
+    "raw_products": 10,
+    "raw_trends": 8,
+    "deduped_products": 9,
+    "deduped_trends": 8,
+    "denoised_products": 8,
+    "denoised_trends": 7,
+    "filtered_products": 5,
+    "matched_products": 1,
+    "hit_products": 1,
+    "potential_products": 0
+  }
+}

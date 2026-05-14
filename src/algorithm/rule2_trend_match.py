@@ -35,7 +35,9 @@ class TrendMatcher:
         for element in product_elements:
             if element.lower() in trend_elements_lower:
                 matched_count += 1
-        score = (matched_count / len(trend_elements)) * 100
+        # 匹配分数 = (匹配的元素数量 / 产品元素总数) * 100
+        # 这样更合理：产品有多少比例的元素是当前趋势
+        score = (matched_count / len(product_elements)) * 100
         return round(score, 2)
 
     def _extract_product_elements(self, product):
@@ -61,7 +63,7 @@ class TrendMatcher:
         elements = []
         for trend in trends:
             heat_level = trend.get("heat_level", "")
-            if heat_level not in ("high", "中", "medium"):
+            if heat_level not in ("high", "中", "medium", "高热度", "中热度"):
                 continue
             tag = trend.get("standardized_tag", "")
             if tag:

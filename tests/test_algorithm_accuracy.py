@@ -115,7 +115,8 @@ class TestRule2TrendMatch:
             }
         }
         score = matcher.calculate_match_score(product, trends)
-        assert score == 75.0
+        # 新公式: (匹配数 / 产品元素数) * 100 = (3/3) * 100 = 100.0
+        assert score == 100.0
 
     def test_match_threshold_80(self):
         matcher = TrendMatcher()
@@ -147,12 +148,13 @@ class TestRule2TrendMatch:
         product = {
             "standardized_features": {
                 "color": ["Earth Tone"],
-                "material": [],
-                "design": [],
-                "fit": [],
+                "material": ["Polyester"],
+                "design": ["Print Design"],
+                "fit": ["Loose Fit"],
             }
         }
         score = matcher.calculate_match_score(product, trends)
+        # 新公式: 1个匹配(Earth Tone) / 4个产品元素 = 25.0
         assert score < 80.0
 
     def test_match_method_filters_by_threshold(self):

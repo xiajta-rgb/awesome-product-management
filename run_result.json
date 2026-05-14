@@ -1,0 +1,23 @@
+{
+  "run_time": "2026-05-14T03:54:33.356404",
+  "pipeline_summary": {
+    "raw_products": 11,
+    "raw_trends": 10,
+    "deduped_products": 10,
+    "deduped_trends": 10,
+    "denoised_products": 9,
+    "denoised_trends": 9,
+    "filtered_products": 6,
+    "scored_products": 1
+  },
+  "top_products": [
+    {
+      "title": "Men's Business Casual Shirt 大地色 棉麻混纺 Slim Fit",
+      "score": 86.28,
+      "sales_tier": "爆品",
+      "monthly_sales": 1200,
+      "rating": 4.5
+    }
+  ],
+  "top_elements": []
+}
