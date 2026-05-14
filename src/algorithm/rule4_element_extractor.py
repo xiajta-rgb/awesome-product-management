@@ -2,16 +2,16 @@ from src.common.ontology_engine import OntologyEngine
 
 
 class ElementExtractor:
-    CORE_FREQUENCY_THRESHOLD = 20
+    CORE_FREQUENCY_THRESHOLD = 2
     MARGIN_THRESHOLD = 0.3
 
     def __init__(self):
         self.ontology_engine = OntologyEngine()
 
-    def extract(self, hit_products):
+    def extract(self, hit_products, trends=None):
         freq = self._count_element_frequency(hit_products)
         top10 = self._get_top10_elements(freq)
-        visual_suggestions = self._generate_visual_suggestions(hit_products, [])
+        visual_suggestions = self._generate_visual_suggestions(hit_products, trends or [])
         return {
             "top10_elements": top10,
             "visual_diff_suggestions": visual_suggestions,

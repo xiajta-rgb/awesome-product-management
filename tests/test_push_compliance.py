@@ -207,7 +207,7 @@ class TestPitfallOnlyReliableReviews:
             },
         ]
         result = builder.build_pitfall_reminders(products)
-        pitfall_titles = [p.get("product_title", "") for p in result["pitfalls"]]
+        pitfall_titles = [p.get("title", "") for p in result["pitfalls"]]
         assert "Product A" in pitfall_titles
         assert "Product B" not in pitfall_titles
 

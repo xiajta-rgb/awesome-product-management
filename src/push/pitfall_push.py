@@ -8,11 +8,15 @@ class PitfallPushBuilder:
         pitfalls = []
         for product in filtered_products:
             reviews = product.get("reviews", [])
-            product_pitfalls = self._extract_pain_points(reviews)
-            for pitfall in product_pitfalls:
-                pitfall["product_title"] = product.get("title", "")
-                pitfall["data_source"] = product.get("data_source", "")
-                pitfalls.append(pitfall)
+            pain_points = self._extract_pain_points(reviews)
+            if not pain_points:
+                continue
+            pitfalls.append({
+                "title": product.get("title", "未知产品"),
+                "description": f"该产品存在 {len(pain_points)} 个常见问题，选品时需注意规避",
+                "pain_points": pain_points,
+                "data_source": product.get("data_source", ""),
+            })
         ranked_pitfalls = self._rank_pitfalls(pitfalls)
         return {
             "push_type": "pitfall_reminders",
@@ -22,22 +26,19 @@ class PitfallPushBuilder:
         }
 
     def _extract_pain_points(self, reviews: list) -> list:
-        pain_point_map = {}
+        pain_points = []
+        seen = set()
         for review in reviews:
             points = review.get("pain_points", [])
             for point in points:
                 point_text = point if isinstance(point, str) else str(point)
-                if point_text in pain_point_map:
-                    pain_point_map[point_text] += 1
-                else:
-                    pain_point_map[point_text] = 1
-        result = []
-        for text, count in pain_point_map.items():
-            result.append({"pain_point": text, "frequency": count})
-        return result
+                if point_text not in seen:
+                    seen.add(point_text)
+                    pain_points.append(point_text)
+        return pain_points
 
     def _rank_pitfalls(self, pitfalls: list) -> list:
-        return sorted(pitfalls, key=lambda x: x.get("frequency", 0), reverse=True)
+        return sorted(pitfalls, key=lambda x: len(x.get("pain_points", [])), reverse=True)
 
     def _filter_no_review_products(self, products: list) -> list:
         filtered = []
