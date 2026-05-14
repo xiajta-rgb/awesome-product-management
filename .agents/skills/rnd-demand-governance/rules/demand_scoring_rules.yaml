@@ -1,13 +1,52 @@
-# 需求评审评分规则判定文件 v2.0
-# 融入产品管理专业框架：RICE / JTBD / OST / Amazon Working Backwards / OKR / North Star
-version: "2.0"
+# 需求评审评分规则判定文件 v3.0
+version: "3.0"
 total_score: 100
 
 grade_rules:
-  A: {min: 80, type: "战略型需求", action: "独立立项评审", priority: "高优先级"}
-  B: {min: 60, max: 79, type: "经营优化型需求", action: "纳入评审流程，按价值排序", priority: "中优先级"}
-  C: {min: 40, max: 59, type: "日常改进型需求", action: "轻量快速处理", priority: "低优先级"}
-  D: {max: 39, type: "无效/暂不支持型", action: "驳回/暂缓，说明原因", priority: "不通过"}
+  A: {min: 80, max: 100, type: "战略型需求", action: "独立立项评审", label: "战略", priority: "P0", demand_type: "价值需求"}
+  B: {min: 60, max: 79, type: "经营优化型需求", action: "纳入评审流程", label: "经营", priority: "P1", demand_type: "价值需求"}
+  C: {min: 40, max: 59, type: "日常改进型需求", action: "轻量快速处理", label: "日常", priority: "P2", demand_type: "普通需求"}
+  D: {min: 0, max: 39, type: "无效/暂不支持型", action: "驳回并说明原因", label: "无效型", priority: "P3", demand_type: "普通需求"}
+
+dedup_rules:
+  enabled: true
+  similarity_threshold: "标题或描述高度相似（关键词重叠≥60%）"
+  action: "提示用户需求库中已存在相似需求，询问是否合并/更新/新建"
+  output_template: |
+    ⚠️ 需求库中已存在相似需求：
+    {existing_id}  {existing_title}
+    是否：1.合并到已有需求 2.更新已有需求 3.作为新需求继续
+
+status_flow:
+  transitions:
+    - from: "待评审"
+      to: ["已评审"]
+      trigger: "评分完成"
+    - from: "已评审"
+      to: ["已立项", "已驳回", "已暂缓"]
+      trigger: "用户确认决策"
+    - from: "已暂缓"
+      to: ["已立项", "已驳回"]
+      trigger: "用户重新决策"
+    - from: "已立项"
+      to: ["开发中", "已取消"]
+      trigger: "项目启动或取消"
+  status_commands:
+    "立项D001": "已评审→已立项"
+    "驳回D001": "已评审→已驳回"
+    "暂缓D001": "已评审→已暂缓"
+    "取消D001": "已立项→已取消"
+
+company_context_rules:
+  record_triggers:
+    - "用户提到公司内部系统名称"
+    - "用户提到部门/团队名称"
+    - "用户提到外部数据源/工具"
+    - "用户提到业务规则/流程"
+  do_not_record:
+    - "通用技术术语"
+    - "个人偏好"
+    - "临时性描述"
 
 dimensions:
   business_value:
@@ -31,19 +70,15 @@ dimensions:
       - min_score: 21
         max_score: 25
         condition: "显著提升收入/降本（≥10%），或解决核心业务痛点，直接影响北极星指标，用户核心Job被满足"
-        keywords: ["收入提升", "降本", "核心业务", "痛点", "北极星", "核心Job", "客户强需求"]
       - min_score: 16
         max_score: 20
         condition: "提升效率/降低差错（≥20%），或解决重要业务环节问题，有明确客户验证"
-        keywords: ["效率提升", "降低差错", "重要业务", "客户验证", "RICE高Impact"]
       - min_score: 11
         max_score: 15
         condition: "局部优化，效率提升<20%，或解决非核心痛点，缺乏客户验证"
-        keywords: ["局部优化", "非核心", "假设需求", "缺乏验证"]
       - min_score: 0
         max_score: 10
         condition: "无明确业务价值，或仅个人习惯优化，无客户需求支撑"
-        keywords: ["个人", "习惯", "临时", "无价值", "无需求"]
 
   strategy_alignment:
     name: "战略匹配度"
@@ -60,25 +95,21 @@ dimensions:
       - min_score: 17
         max_score: 20
         condition: "完全匹配公司核心战略重点，直接支撑公司级OKR，位于机会树主干"
-        keywords: ["核心战略", "年度重点", "OKR", "机会树主干", "公司级目标"]
       - min_score: 13
         max_score: 16
         condition: "部分匹配战略方向，支持部门级OKR，在机会树分支上"
-        keywords: ["部门重点", "部分匹配", "部门OKR", "机会树分支"]
       - min_score: 9
         max_score: 12
         condition: "与战略方向无直接冲突，但未对齐任何OKR"
-        keywords: ["无冲突", "未对齐OKR", "常规"]
       - min_score: 0
         max_score: 8
         condition: "与公司战略重点无关，或存在方向冲突，偏离机会树"
-        keywords: ["无关", "冲突", "偏离", "反OKR"]
 
   impact_scope:
     name: "影响范围"
     weight: 15
     reverse_score: false
-    scoring_note: "影响范围需区分核心业务场景vs非核心场景：全公司用周报模板≠高影响，2个部门用合规系统可能=高影响"
+    scoring_note: "影响范围需区分核心业务场景vs非核心场景"
     pm_frameworks:
       - name: "RICE - Reach"
         description: "该需求影响多少用户/客户"
@@ -92,20 +123,16 @@ dimensions:
     rules:
       - min_score: 13
         max_score: 15
-        condition: "影响3个及以上部门/业务链路，RICE Reach覆盖全体用户，具备高复用价值，且为核心业务场景"
-        keywords: ["跨部门", "多部门", "全体用户", "复用", "全链路", "高Reach", "核心场景"]
+        condition: "影响3个及以上部门/业务链路，RICE Reach覆盖全体用户，且为核心业务场景"
       - min_score: 9
         max_score: 12
-        condition: "影响2个部门/多个岗位，RICE Reach覆盖部分用户，具备一定复用价值，且为业务相关场景"
-        keywords: ["2个部门", "多岗位", "部分用户", "中等Reach", "业务场景"]
+        condition: "影响2个部门/多个岗位，RICE Reach覆盖部分用户，且为业务相关场景"
       - min_score: 5
         max_score: 8
-        condition: "仅影响单个部门的1-2个岗位，或影响面广但仅为非核心辅助场景（如行政、汇报）"
-        keywords: ["单部门", "岗位", "少量用户", "低Reach", "辅助场景", "非核心"]
+        condition: "仅影响单个部门的1-2个岗位，或影响面广但仅为非核心辅助场景"
       - min_score: 0
         max_score: 4
-        condition: "仅个人使用，或仅个人环境问题，RICE Reach极低，无跨岗位/跨部门影响"
-        keywords: ["个人", "无影响", "独立", "Reach极低", "个人环境"]
+        condition: "仅个人使用，或仅个人环境问题，RICE Reach极低"
 
   roi:
     name: "投入产出比"
@@ -124,19 +151,15 @@ dimensions:
       - min_score: 13
         max_score: 15
         condition: "低资源投入，高预期收益，ROI≥3:1，RICE Effort低且Confidence高"
-        keywords: ["低投入", "高收益", "ROI", "高效", "高Confidence", "低Effort"]
       - min_score: 9
         max_score: 12
         condition: "资源投入合理，收益明确，ROI在1:1-3:1之间，Confidence中等"
-        keywords: ["合理", "收益明确", "中等Confidence"]
       - min_score: 5
         max_score: 8
         condition: "资源投入较高，收益一般，ROI<1:1，Confidence偏低"
-        keywords: ["投入高", "收益一般", "低Confidence"]
       - min_score: 0
         max_score: 4
         condition: "资源投入高，无明确收益预期，Confidence极低，或收益为零"
-        keywords: ["高投入", "无收益", "失衡", "极低Confidence", "零收益"]
 
   urgency:
     name: "紧急程度"
@@ -150,19 +173,15 @@ dimensions:
       - min_score: 13
         max_score: 15
         condition: "存在明确合规/履约/客户风险，或有刚性时间节点，机会窗口即将关闭"
-        keywords: ["合规", "风险", "客户影响", "刚性", "紧急", "截止", "窗口关闭"]
       - min_score: 9
         max_score: 12
         condition: "影响业务正常推进，有较明确的时间要求"
-        keywords: ["业务推进", "时间要求", "较急"]
       - min_score: 5
         max_score: 8
         condition: "无明确时间压力，属于可延后优化项"
-        keywords: ["延后", "优化", "可等待"]
       - min_score: 0
         max_score: 4
         condition: "无紧急性，属于长期优化或非必要需求"
-        keywords: ["不紧急", "长期", "非必要"]
 
   implementation_complexity:
     name: "实施复杂度"
@@ -176,16 +195,12 @@ dimensions:
       - min_score: 8
         max_score: 10
         condition: "技术实现简单，无跨部门依赖，可快速落地，不增加技术债"
-        keywords: ["简单", "快速", "无依赖", "易实现", "减少技术债"]
       - min_score: 5
         max_score: 7
         condition: "实现难度中等，依赖可控，无重大风险"
-        keywords: ["中等", "可控", "常规"]
       - min_score: 2
         max_score: 4
         condition: "实现难度较高，存在跨部门协同成本，或数据基础不完善"
-        keywords: ["难度高", "协同", "数据不完善", "复杂"]
       - min_score: 0
         max_score: 1
         condition: "实现难度极高，依赖复杂，存在技术瓶颈或重大风险，增加技术债"
-        keywords: ["极高", "瓶颈", "重大风险", "增加技术债"]

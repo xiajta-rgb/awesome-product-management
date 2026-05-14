@@ -1,13 +1,13 @@
-# 需求描述补全优化规则 v5.0
+# 需求描述补全优化规则 v6.0
 
-version: "5.0"
+version: "6.0"
 
 output_fields:
   demand_type:
     name: "需求类型"
     values: ["普通需求", "价值需求"]
     auto_derived: true
-    derivation_rule: "A级/B级→价值需求 | C级/D级→普通需求"
+    derivation_source: "rules/demand_scoring_rules.yaml → grade_rules"
   
   demand_module:
     name: "需求模块"
@@ -45,13 +45,13 @@ output_fields:
     name: "标签"
     values: ["战略", "经营", "日常", "无效型"]
     auto_derived: true
-    derivation_rule: "A级≥80→战略 | B级60-79→经营 | C级40-59→日常 | D级<40→无效型"
+    derivation_source: "rules/demand_scoring_rules.yaml → grade_rules"
   
   priority:
     name: "优先级"
     values: ["P0", "P1", "P2", "P3"]
     auto_derived: true
-    derivation_rule: "A级→P0 | B级→P1 | C级→P2 | D级→P3"
+    derivation_source: "rules/demand_scoring_rules.yaml → grade_rules"
   
   ai_suggestions:
     name: "AI建议"
@@ -82,32 +82,6 @@ output_fields:
       - dimension: "缺失信息"
         check: "成功度量指标、技术风险评估、跨部门协同机制是否明确？"
         suggestion_template: "建议补充：{缺失项列表}"
-
-score_to_label_mapping:
-  - min_score: 80
-    max_score: 100
-    grade: "A"
-    label: "战略"
-    priority: "P0"
-    demand_type: "价值需求"
-  - min_score: 60
-    max_score: 79
-    grade: "B"
-    label: "经营"
-    priority: "P1"
-    demand_type: "价值需求"
-  - min_score: 40
-    max_score: 59
-    grade: "C"
-    label: "日常"
-    priority: "P2"
-    demand_type: "普通需求"
-  - min_score: 0
-    max_score: 39
-    grade: "D"
-    label: "无效型"
-    priority: "P3"
-    demand_type: "普通需求"
 
 quality_checks:
   - field: "title"

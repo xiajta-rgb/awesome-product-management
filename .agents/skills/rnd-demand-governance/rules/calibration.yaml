@@ -1,0 +1,12 @@
+# 校准规则 v1.0
+# 存储从用户反馈中提取的校准规则，评分时优先于基础规则
+
+version: "1.0"
+confidence_level: "initial"
+total_feedbacks: 0
+
+dimension_calibrations: []
+
+threshold_calibrations: []
+
+pattern_calibrations: []

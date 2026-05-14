@@ -111,15 +111,14 @@ def _generate_formal_notice(dept_submitter: str, scored_demands: list = None) ->
 
 
 def _calculate_stats(scored_demands: list) -> dict:
-    """计算评分统计信息"""
     return {
         'total': len(scored_demands),
-        'A': len([d for d in scored_demands if d['grade'] == 'A']),
-        'B': len([d for d in scored_demands if d['grade'] == 'B']),
-        'C': len([d for d in scored_demands if d['grade'] == 'C']),
-        'D': len([d for d in scored_demands if d['grade'] == 'D']),
-        'valid': len([d for d in scored_demands if d['grade'] != 'D']),
-        'invalid': len([d for d in scored_demands if d['grade'] == 'D'])
+        'A': len([d for d in scored_demands if d.get('grade') == 'A']),
+        'B': len([d for d in scored_demands if d.get('grade') == 'B']),
+        'C': len([d for d in scored_demands if d.get('grade') == 'C']),
+        'D': len([d for d in scored_demands if d.get('grade') == 'D']),
+        'valid': len([d for d in scored_demands if d.get('grade') != 'D']),
+        'invalid': len([d for d in scored_demands if d.get('grade') == 'D'])
     }
 
 

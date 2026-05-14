@@ -1,6 +1,6 @@
 """
-需求描述补全优化器 v2 - 精简版
-基于5W1H/User Story/JTBD/PR-FAQ/SMART将原始描述补全为结构化需求文档
+需求描述补全优化器 v3
+输出字段对齐标准录入字段：title/background/pain_points/description/demand_module
 """
 
 import yaml
@@ -22,11 +22,19 @@ class DemandRefiner:
         extra = '\n'.join([f"- {k}: {v}" for k, v in demand_raw.items()
                           if k not in ('description', 'raw_description', 'id') and v])
 
-        fields = '\n'.join([f"- {k}: {v}" for k, v in self.rules.get('refinement_fields', {}).items()])
+        output_fields = self.rules.get('output_fields', {})
+        fields_text = '\n'.join([
+            f"- {data.get('name', key)}: {data.get('description', '')} {'[自动推导]' if data.get('auto_derived') else '[需补全]'}"
+            for key, data in output_fields.items()
+            if not data.get('auto_derived')
+        ])
+
         checks = '\n'.join([
             f"- {'[必须]' if c['min_requirement'] else '[建议]'} {c['field']}: {c['check']}"
             for c in self.rules.get('quality_checks', [])
         ])
+
+        module_guide = output_fields.get('demand_module', {}).get('derivation_guide', '')
 
         return f"""你是专业产品经理。请将以下原始需求补全为结构化需求文档。
 
@@ -41,30 +49,29 @@ class DemandRefiner:
 4. PR-FAQ: 从客户视角验证需求真实性
 5. SMART: 预期价值必须具体、可量化、有时限
 
-## 补全字段
-{fields}
+## 需补全字段（仅手动字段，自动字段由评分推导）
+{fields_text}
+
+## 需求模块推导参考
+{module_guide}
 
 ## 输出格式（JSON）
 {{
   "demand_id": "{demand_id or '自动生成'}",
-  "demand_name": "简洁可量化的名称",
-  "demand_category": "产品优化/效率提升/合规风控/基础设施/新功能开发/体验改进",
-  "description": "原始描述保留",
-  "background": "当前状况、问题、触发事件",
-  "pain_points": "具体表现、影响程度",
-  "target_users": "角色、部门、规模",
-  "usage_scenario": "典型流程、触发条件",
+  "title": "一句话简单描述需求核心内容（≤50字）",
+  "demand_module": "仓储与物流域/研发域/供应链与制造域/营销域",
+  "background": "问题背景与现状说明",
+  "pain_points": "描述当前业务的痛点",
+  "description": "需求点补充描述更具体详细",
   "user_story": "As a... I want... so that...",
   "expected_value": "SMART量化价值",
-  "cross_department_impact": "涉及部门、影响方式",
+  "target_users": "角色、部门、规模",
   "resource_input": "人月、技术栈、外部依赖",
   "deadline_risk": "时间节点、延期后果",
-  "success_metrics": "上线后评估标准",
-  "risks_assumptions": "技术/业务风险、假设",
   "confidence": {{
-    "confirmed": ["用户明确提供"],
-    "inferred": ["AI合理推测"],
-    "assumed": ["AI假设需确认"]
+    "confirmed": ["用户明确提供的信息"],
+    "inferred": ["AI合理推测的信息"],
+    "assumed": ["AI假设需确认的信息"]
   }}
 }}
 
@@ -75,6 +82,8 @@ class DemandRefiner:
 - 不编造数据：inferred和assumed必须合理
 - JTBD分析结论将复用于后续PM框架评分，需明确标注核心Job/边缘Job
 - 严格区分confirmed/inferred/assumed
+- title必须≤50字，简洁描述核心内容
+- demand_module根据推导参考判断，需合理
 """
 
     def refine_demand(self, demand_raw: dict, demand_id: str = None) -> dict:
