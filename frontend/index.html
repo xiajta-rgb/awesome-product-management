@@ -98,6 +98,12 @@ main{padding:40px 0 80px}
 .news-card .news-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px}
 .news-card .news-date{font-size:.75rem;color:var(--text-secondary)}
 .news-card .news-tags{display:flex;gap:6px;flex-wrap:wrap}
+.news-link{
+  display:inline-flex;align-items:center;gap:5px;font-size:.8rem;color:var(--accent);text-decoration:none;font-weight:600;
+  padding:8px 16px;border:1px solid var(--accent);border-radius:var(--radius-sm);transition:all .2s ease;margin-top:4px;
+}
+.news-link:hover{background:var(--accent);color:#fff}
+.news-link svg{width:13px;height:13px;stroke:currentColor}
 .tag{
   font-size:.7rem;padding:3px 10px;border-radius:20px;font-weight:500;letter-spacing:.01em;
   background:var(--accent-light);color:var(--accent);
@@ -132,10 +138,11 @@ main{padding:40px 0 80px}
   font-size:.78rem;color:var(--text-secondary);cursor:pointer;transition:all .2s ease;font-family:inherit;align-self:flex-start;
 }
 .product-expand-btn:hover{border-color:var(--accent);color:var(--accent)}
+.product-links{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .product-details{
-  max-height:0;overflow:hidden;transition:max-height .4s ease;
+  display:none;
 }
-.product-details.open{max-height:500px}
+.product-details.open{display:block}
 .product-details-inner{
   padding-top:12px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px;
 }
@@ -340,7 +347,7 @@ function renderNews(data) {
       </div>
       <div class="news-grid">
         ${items.map(n => `
-          <a class="news-card" href="${n.url || '#'}" target="_blank" rel="noopener">
+          <div class="news-card">
             <div class="news-source">${n.source || '综合资讯'}</div>
             <div class="news-title">${n.title}</div>
             <div class="news-summary">${n.summary || ''}</div>
@@ -350,7 +357,13 @@ function renderNews(data) {
                 ${(n.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}
               </div>
             </div>
-          </a>
+            ${n.url ? `
+              <a class="news-link" href="${n.url}" target="_blank" rel="noopener">
+                阅读原文
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            ` : ''}
+          </div>
         `).join('')}
       </div>
     </section>
@@ -400,7 +413,21 @@ function renderProducts(products, sectionTitle, sectionId, cardStyle) {
                   </div>
                 ` : ''}
               </div>
-              <button class="product-expand-btn" onclick="toggleDetails(this)">查看详情</button>
+              <div class="product-links">
+                ${p.url ? `
+                  <a class="product-link" href="${p.url}" target="_blank" rel="noopener">
+                    在亚马逊查看
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                ` : ''}
+                ${p.source_url ? `
+                  <a class="product-link source-link" href="${p.source_url}" target="_blank" rel="noopener">
+                    查看原文
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                ` : ''}
+              </div>
+              <button class="product-expand-btn" onclick="toggleDetails('${sectionId}', ${idx}, this)">查看详情</button>
               <div class="product-details" id="details-${sectionId}-${idx}">
                 <div class="product-details-inner">
                   ${(p.selling_points && p.selling_points.length) ? `
@@ -415,18 +442,6 @@ function renderProducts(products, sectionTitle, sectionId, cardStyle) {
                       <ul>${p.trend_match_points.map(t => `<li>${t}</li>`).join('')}</ul>
                     </div>
                   ` : ''}
-                  ${p.url ? `
-                    <a class="product-link" href="${p.url}" target="_blank" rel="noopener">
-                      在亚马逊查看
-                      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    </a>
-                  ` : ''}
-                  ${p.source_url ? `
-                    <a class="product-link source-link" href="${p.source_url}" target="_blank" rel="noopener">
-                      查看原文
-                      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    </a>
-                  ` : ''}
                 </div>
               </div>
             </div>
@@ -437,8 +452,9 @@ function renderProducts(products, sectionTitle, sectionId, cardStyle) {
   `;
 }
 
-function toggleDetails(btn) {
-  const details = btn.nextElementSibling;
+function toggleDetails(sectionId, idx, btn) {
+  const details = document.getElementById('details-' + sectionId + '-' + idx);
+  if (!details) return;
   const isOpen = details.classList.contains('open');
   details.classList.toggle('open');
   btn.textContent = isOpen ? '查看详情' : '收起详情';
@@ -558,12 +574,20 @@ function renderPotential(data) {
                 </div>
               ` : ''}
             </div>
-            ${p.url ? `
-              <a class="product-link" href="${p.url}" target="_blank" rel="noopener">
-                在亚马逊查看
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            ` : ''}
+            <div class="product-links">
+              ${p.url ? `
+                <a class="product-link" href="${p.url}" target="_blank" rel="noopener">
+                  在亚马逊查看
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              ` : ''}
+              ${p.source_url ? `
+                <a class="product-link source-link" href="${p.source_url}" target="_blank" rel="noopener">
+                  查看原文
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              ` : ''}
+            </div>
           </div>
         `).join('')}
       </div>
