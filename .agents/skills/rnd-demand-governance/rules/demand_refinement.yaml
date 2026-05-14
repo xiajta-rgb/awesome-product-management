@@ -1,0 +1,87 @@
+# 需求描述补全优化规则 v1.0
+# 用于将用户原始需求描述补全为结构化、专业化的需求文档
+
+version: "1.0"
+
+# 补全维度定义
+# AI 在补全需求时，需要尝试填充以下字段
+refinement_fields:
+  demand_name: "需求名称（简洁、可量化）"
+  demand_id: "需求编号（自动生成）"
+  demand_category: "需求分类（产品优化/效率提升/合规风控/基础设施/新功能开发/体验改进）"
+  background: "需求背景（当前状况、存在的问题、触发事件）"
+  pain_points: "业务痛点（具体表现、影响程度、频率）"
+  target_users: "目标用户（角色、部门、用户规模）"
+  usage_scenario: "使用场景（典型使用流程、触发条件）"
+  current_solution: "当前解决方案（现有替代方案及其不足）"
+  expected_value: "预期价值（量化指标、预期改善幅度、业务影响）"
+  cross_department_impact: "跨部门影响（涉及部门、影响方式、协同需求）"
+  resource_input: "资源投入估算（人月、技术栈、外部依赖）"
+  deadline_risk: "截止风险（时间节点、延期后果）"
+  success_metrics: "成功度量指标（上线后如何评估是否成功）"
+  risks_assumptions: "风险与假设（技术风险、业务风险、外部依赖）"
+
+# 补全方法论
+# AI 在补全时应参考的产品管理方法论
+refinement_methods:
+  - name: "5W1H"
+    description: "Who/What/When/Where/Why/How 六要素分析法"
+    application: "确保需求描述覆盖用户、功能、时机、场景、原因、方式六个维度"
+  
+  - name: "User Story 格式"
+    description: "As a [角色], I want [功能], so that [价值]"
+    application: "将需求转化为标准用户故事，明确角色-功能-价值关系"
+  
+  - name: "JTBD (Jobs-to-be-Done)"
+    description: "识别用户雇佣产品完成的真实任务"
+    application: "区分表面需求和深层Job，找到用户真正想完成的任务"
+  
+  - name: "PR-FAQ (Amazon Press Release + FAQ)"
+    description: "先写新闻稿和FAQ，反推需求价值"
+    application: "从客户视角反推需求是否真实存在，是否有明确客户证据"
+  
+  - name: "SMART 原则"
+    description: "Specific/Measurable/Achievable/Relevant/Time-bound"
+    application: "确保预期价值和成功指标具体、可量化、可实现、相关、有时限"
+
+# 补全质量评估标准
+# AI 补全完成后，自检是否达到质量标准
+quality_checks:
+  - field: "background"
+    check: "是否描述了当前状况和存在的问题"
+    min_requirement: true
+  
+  - field: "pain_points"
+    check: "是否列出了至少1个具体痛点及其表现"
+    min_requirement: true
+  
+  - field: "target_users"
+    check: "是否明确描述了目标用户角色或部门"
+    min_requirement: true
+  
+  - field: "expected_value"
+    check: "是否包含可量化的预期收益或影响"
+    min_requirement: true
+  
+  - field: "usage_scenario"
+    check: "是否描述了典型使用场景或流程"
+    min_requirement: true
+  
+  - field: "resource_input"
+    check: "是否包含资源投入估算"
+    min_requirement: false
+  
+  - field: "success_metrics"
+    check: "是否定义了成功度量指标"
+    min_requirement: false
+  
+  - field: "risks_assumptions"
+    check: "是否列出了风险与假设"
+    min_requirement: false
+
+# 补全置信度标记
+# 标记哪些字段是用户明确提供的，哪些是AI推测补全的
+confidence_levels:
+  confirmed: "用户明确提供的信息"
+  inferred: "根据上下文合理推测的信息"
+  assumed: "AI基于经验假设的信息（需要用户确认）"
