@@ -22,9 +22,7 @@ body{
   background:var(--bg);color:var(--text-primary);line-height:1.6;-webkit-font-smoothing:antialiased;
 }
 h1,h2,h3,h4{font-family:'Playfair Display','DM Sans',-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',serif}
-
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-
 .fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
@@ -33,238 +31,212 @@ header{
   backdrop-filter:blur(12px);background:rgba(255,255,255,.92);
 }
 .header-inner{
-  max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
 }
 .brand{display:flex;flex-direction:column;gap:2px}
-.brand h1{
-  font-size:1.65rem;font-weight:700;color:var(--accent);letter-spacing:-.02em;line-height:1.2;
-}
-.brand .subtitle{
-  font-family:'DM Sans',-apple-system,sans-serif;font-size:.82rem;color:var(--text-secondary);font-weight:400;letter-spacing:.02em;
-}
-.header-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.date-filter{display:flex;align-items:center;gap:8px}
-.date-filter label{font-size:.78rem;color:var(--text-secondary);font-weight:500;white-space:nowrap}
+.brand h1{font-size:1.5rem;font-weight:700;color:var(--accent);letter-spacing:-.02em;line-height:1.2}
+.brand .subtitle{font-family:'DM Sans',sans-serif;font-size:.78rem;color:var(--text-secondary);font-weight:400;letter-spacing:.02em}
+.header-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.date-filter{display:flex;align-items:center;gap:6px}
+.date-filter label{font-size:.75rem;color:var(--text-secondary);font-weight:500;white-space:nowrap}
 .date-filter input[type="date"]{
-  padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.82rem;
-  font-family:inherit;color:var(--text-primary);background:var(--card);cursor:pointer;outline:none;
-  transition:border-color .2s;
+  padding:5px 10px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.8rem;
+  font-family:inherit;color:var(--text-primary);background:var(--card);cursor:pointer;outline:none;transition:border-color .2s;
 }
 .date-filter input[type="date"]:hover{border-color:var(--accent)}
 .date-filter input[type="date"]:focus{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-light)}
 .date-nav-btn{
-  display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;
   border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--card);
-  color:var(--text-secondary);cursor:pointer;transition:all .2s;font-size:.9rem;
+  color:var(--text-secondary);cursor:pointer;transition:all .2s;font-size:.85rem;
 }
 .date-nav-btn:hover{border-color:var(--accent);color:var(--accent)}
 .date-nav-btn:disabled{opacity:.3;cursor:not-allowed}
 .date-today-btn{
-  padding:6px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--card);
-  color:var(--text-primary);font-size:.78rem;cursor:pointer;font-family:inherit;font-weight:500;
+  padding:5px 10px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--card);
+  color:var(--text-primary);font-size:.75rem;cursor:pointer;font-family:inherit;font-weight:500;
   transition:all .2s;white-space:nowrap;
 }
 .date-today-btn:hover{border-color:var(--accent);color:var(--accent)}
-.update-time{font-size:.78rem;color:var(--text-secondary);display:flex;align-items:center;gap:6px}
-.update-time svg{width:14px;height:14px;stroke:var(--text-secondary)}
+.update-time{font-size:.75rem;color:var(--text-secondary);display:flex;align-items:center;gap:5px}
+.update-time svg{width:13px;height:13px;stroke:var(--text-secondary)}
 .refresh-btn{
-  display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid var(--border);
-  border-radius:var(--radius-sm);background:var(--card);color:var(--text-primary);font-size:.82rem;
+  display:inline-flex;align-items:center;gap:5px;padding:6px 14px;border:1px solid var(--border);
+  border-radius:var(--radius-sm);background:var(--card);color:var(--text-primary);font-size:.78rem;
   font-weight:500;cursor:pointer;transition:all .2s ease;font-family:inherit;
 }
 .refresh-btn:hover{border-color:var(--accent);color:var(--accent);box-shadow:var(--shadow)}
-.refresh-btn svg{width:14px;height:14px;stroke:currentColor;transition:transform .4s ease}
+.refresh-btn svg{width:13px;height:13px;stroke:currentColor;transition:transform .4s ease}
 .refresh-btn:hover svg{transform:rotate(180deg)}
 .refresh-btn.loading svg{animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-main{padding:40px 0 80px}
+main{padding:32px 0 80px}
 
-.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:40px}
 .stat-card{
-  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;
   text-align:center;transition:all .3s ease;position:relative;overflow:hidden;
 }
-.stat-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);opacity:0;transition:opacity .3s ease;
-}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);opacity:0;transition:opacity .3s ease}
 .stat-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
 .stat-card:hover::before{opacity:1}
-.stat-value{
-  font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1.1;
-}
-.stat-label{font-size:.82rem;color:var(--text-secondary);margin-top:6px;font-weight:500;letter-spacing:.03em}
+.stat-value{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--accent);line-height:1.1}
+.stat-label{font-size:.75rem;color:var(--text-secondary);margin-top:4px;font-weight:500;letter-spacing:.03em}
 
-.section{margin-bottom:56px}
-.section-header{margin-bottom:24px;display:flex;align-items:baseline;gap:12px}
-.section-header h2{
-  font-size:1.5rem;font-weight:600;color:var(--text-primary);letter-spacing:-.01em;
-}
+.section{margin-bottom:40px}
+.section-header{margin-bottom:16px;display:flex;align-items:baseline;gap:10px}
+.section-header h2{font-size:1.3rem;font-weight:600;color:var(--text-primary);letter-spacing:-.01em}
 .section-header .section-line{flex:1;height:1px;background:var(--border)}
 .section-header .section-count{
-  font-family:'DM Sans',sans-serif;font-size:.78rem;color:var(--text-secondary);font-weight:500;
-  background:var(--accent-light);padding:3px 10px;border-radius:20px;
+  font-family:'DM Sans',sans-serif;font-size:.72rem;color:var(--text-secondary);font-weight:500;
+  background:var(--accent-light);padding:2px 8px;border-radius:20px;
 }
 
-.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.news-card{
-  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;
-  transition:all .3s ease;cursor:pointer;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;
-}
-.news-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);border-color:var(--accent)}
-.news-card .news-source{
-  font-size:.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;
-}
-.news-card .news-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;line-height:1.4;color:var(--text-primary)}
-.news-card .news-summary{font-size:.85rem;color:var(--text-secondary);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.news-card .news-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px}
-.news-card .news-date{font-size:.75rem;color:var(--text-secondary)}
-.news-card .news-tags{display:flex;gap:6px;flex-wrap:wrap}
-.news-link{
-  display:inline-flex;align-items:center;gap:5px;font-size:.8rem;color:var(--accent);text-decoration:none;font-weight:600;
-  padding:8px 16px;border:1px solid var(--accent);border-radius:var(--radius-sm);transition:all .2s ease;margin-top:4px;
-}
-.news-link:hover{background:var(--accent);color:#fff}
-.news-link svg{width:13px;height:13px;stroke:currentColor}
-.tag{
-  font-size:.7rem;padding:3px 10px;border-radius:20px;font-weight:500;letter-spacing:.01em;
-  background:var(--accent-light);color:var(--accent);
-}
+.tag{font-size:.65rem;padding:2px 8px;border-radius:20px;font-weight:500;letter-spacing:.01em;background:var(--accent-light);color:var(--accent)}
 .tag-alert{background:var(--alert-light);color:var(--alert)}
 
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.product-card{
-  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;
-  transition:all .3s ease;display:flex;flex-direction:column;gap:12px;
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.news-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;
+  transition:all .3s ease;cursor:pointer;display:flex;flex-direction:column;gap:6px;
 }
-.product-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
-.product-card .product-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.product-card .product-title{
-  font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;line-height:1.4;flex:1;
-}
-.product-card .product-price{
-  font-size:1.3rem;font-weight:700;color:var(--accent);white-space:nowrap;
-}
-.product-card .product-price span{font-size:.75rem;font-weight:400;color:var(--text-secondary)}
-.product-features{display:flex;gap:6px;flex-wrap:wrap}
-.product-scores{display:flex;gap:16px;flex-wrap:wrap}
-.score-item{
-  display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 14px;
-  background:var(--bg);border-radius:var(--radius-sm);min-width:70px;
-}
-.score-item .score-value{font-size:1.1rem;font-weight:700;color:var(--accent)}
-.score-item .score-value.alert{color:var(--alert)}
-.score-item .score-label{font-size:.68rem;color:var(--text-secondary);font-weight:500}
-.product-expand-btn{
-  background:none;border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 16px;
-  font-size:.78rem;color:var(--text-secondary);cursor:pointer;transition:all .2s ease;font-family:inherit;align-self:flex-start;
-}
-.product-expand-btn:hover{border-color:var(--accent);color:var(--accent)}
-.product-links{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.product-details{
-  display:none;
-}
-.product-details.open{display:block}
-.product-details-inner{
-  padding-top:12px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px;
-}
-.detail-group h4{font-size:.78rem;font-weight:600;color:var(--text-secondary);margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
-.detail-group ul{list-style:none;display:flex;flex-direction:column;gap:3px}
-.detail-group ul li{font-size:.84rem;color:var(--text-primary);padding-left:14px;position:relative}
-.detail-group ul li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
-.product-link{
-  display:inline-flex;align-items:center;gap:4px;font-size:.78rem;color:var(--accent);text-decoration:none;font-weight:500;
-  transition:opacity .2s;
-}
-.product-link:hover{opacity:.7}
-.product-link svg{width:12px;height:12px;stroke:currentColor}
-.source-link{color:var(--text-secondary)!important;margin-left:8px}
+.news-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);border-color:var(--accent)}
+.news-source{font-size:.65rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.news-title{font-family:'Playfair Display',serif;font-size:.92rem;font-weight:600;line-height:1.35;color:var(--text-primary);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.news-summary{font-size:.78rem;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.news-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.news-date{font-size:.68rem;color:var(--text-secondary)}
+.news-tags{display:flex;gap:4px;flex-wrap:wrap}
 
-.elements-grid{display:flex;flex-wrap:wrap;gap:12px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.product-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;
+  transition:all .3s ease;cursor:pointer;display:flex;flex-direction:column;gap:8px;
+}
+.product-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);border-color:var(--accent)}
+.product-header{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.product-title{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:600;line-height:1.35;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.product-price{font-size:1.1rem;font-weight:700;color:var(--accent);white-space:nowrap}
+.product-price span{font-size:.68rem;font-weight:400;color:var(--text-secondary)}
+.product-features{display:flex;gap:4px;flex-wrap:wrap}
+.product-scores{display:flex;gap:8px;flex-wrap:wrap}
+.score-item{display:flex;flex-direction:column;align-items:center;gap:1px;padding:4px 10px;background:var(--bg);border-radius:var(--radius-sm);min-width:56px}
+.score-item .score-value{font-size:.9rem;font-weight:700;color:var(--accent)}
+.score-item .score-value.alert{color:var(--alert)}
+.score-item .score-label{font-size:.6rem;color:var(--text-secondary);font-weight:500}
+
+.elements-grid{display:flex;flex-wrap:wrap;gap:10px}
 .element-pill{
-  display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:14px 20px;transition:all .3s ease;min-width:200px;flex:1;
+  display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:10px 16px;transition:all .3s ease;min-width:180px;flex:1;cursor:pointer;
 }
 .element-pill:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
 .element-pill.core{border-left:3px solid var(--accent)}
-.element-pill .element-name{font-weight:600;font-size:.92rem;min-width:100px}
-.element-pill .element-bar-wrap{flex:1;display:flex;flex-direction:column;gap:3px}
-.element-pill .element-bar{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
-.element-pill .element-bar-fill{height:100%;background:var(--accent);border-radius:3px;transition:width .8s ease}
-.element-pill .element-meta{display:flex;gap:12px;font-size:.72rem;color:var(--text-secondary)}
-.element-pill .element-freq{font-weight:600;color:var(--accent)}
+.element-name{font-weight:600;font-size:.85rem;min-width:80px}
+.element-bar-wrap{flex:1;display:flex;flex-direction:column;gap:2px}
+.element-bar{height:5px;background:var(--border);border-radius:3px;overflow:hidden}
+.element-bar-fill{height:100%;background:var(--accent);border-radius:3px;transition:width .8s ease}
+.element-meta{display:flex;gap:10px;font-size:.65rem;color:var(--text-secondary)}
+.element-freq{font-weight:600;color:var(--accent)}
 
-.suggestions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.suggestions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .suggestion-card{
-  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;
-  transition:all .3s ease;border-left:3px solid var(--accent);
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;
+  transition:all .3s ease;border-left:3px solid var(--accent);cursor:pointer;
 }
 .suggestion-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
-.suggestion-card .suggestion-element{
-  font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--accent);margin-bottom:4px;
-}
-.suggestion-card .suggestion-type{
-  font-size:.7rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;
-}
-.suggestion-card .suggestion-desc{font-size:.88rem;color:var(--text-primary);line-height:1.65}
+.suggestion-element{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;color:var(--accent);margin-bottom:2px}
+.suggestion-type{font-size:.65rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.suggestion-desc{font-size:.82rem;color:var(--text-primary);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
-.pitfalls-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.pitfalls-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .pitfall-card{
-  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;
-  transition:all .3s ease;border-left:3px solid var(--alert);
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;
+  transition:all .3s ease;border-left:3px solid var(--alert);cursor:pointer;
 }
 .pitfall-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
-.pitfall-card .pitfall-title{
-  font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--alert);margin-bottom:8px;
-}
-.pitfall-card .pitfall-desc{font-size:.88rem;color:var(--text-primary);line-height:1.65;margin-bottom:12px}
-.pitfall-card .pain-points{display:flex;flex-direction:column;gap:4px}
-.pitfall-card .pain-point{
-  font-size:.8rem;color:var(--text-secondary);padding:5px 10px;background:var(--alert-light);border-radius:6px;
-}
+.pitfall-title{font-family:'Playfair Display',serif;font-size:.92rem;font-weight:600;color:var(--alert);margin-bottom:4px}
+.pitfall-desc{font-size:.82rem;color:var(--text-primary);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
-.potential-section .potential-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.potential-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .potential-card{
-  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;
-  transition:all .3s ease;border-left:3px solid #D4A843;display:flex;flex-direction:column;gap:10px;
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;
+  transition:all .3s ease;border-left:3px solid #D4A843;cursor:pointer;display:flex;flex-direction:column;gap:6px;
 }
 .potential-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
-.potential-card .potential-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;line-height:1.4}
-.potential-card .potential-price{font-size:1.2rem;font-weight:700;color:#D4A843}
+.potential-title{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:600;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.potential-price{font-size:1.05rem;font-weight:700;color:#D4A843}
 
-footer{
-  background:var(--card);border-top:1px solid var(--border);padding:32px 24px;text-align:center;
-}
-footer .footer-text{font-size:.78rem;color:var(--text-secondary);line-height:1.8}
+footer{background:var(--card);border-top:1px solid var(--border);padding:24px;text-align:center}
+footer .footer-text{font-size:.75rem;color:var(--text-secondary);line-height:1.8}
 footer .footer-text strong{color:var(--text-primary);font-weight:600}
 
-.loading-state{
-  display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:16px;
-}
-.loading-spinner{
-  width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent);
-  border-radius:50%;animation:spin .8s linear infinite;
-}
+.loading-state{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:16px}
+.loading-spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
 .loading-text{font-size:.88rem;color:var(--text-secondary)}
 
-.error-state{
-  display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:40vh;gap:12px;
-}
+.error-state{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:40vh;gap:12px}
 .error-state .error-icon{font-size:2.5rem;color:var(--alert)}
 .error-state .error-msg{font-size:.92rem;color:var(--text-secondary);text-align:center;max-width:400px}
-.error-state .retry-btn{
-  padding:10px 24px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);
-  font-size:.85rem;cursor:pointer;font-family:inherit;font-weight:500;transition:opacity .2s;
-}
+.error-state .retry-btn{padding:10px 24px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);font-size:.85rem;cursor:pointer;font-family:inherit;font-weight:500;transition:opacity .2s}
 .error-state .retry-btn:hover{opacity:.85}
 
-.empty-state{padding:40px;text-align:center;color:var(--text-secondary);font-size:.9rem}
+.modal-overlay{
+  position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.45);z-index:200;
+  display:flex;align-items:center;justify-content:center;padding:24px;
+  opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease;
+  backdrop-filter:blur(4px);
+}
+.modal-overlay.active{opacity:1;visibility:visible}
+.modal{
+  background:var(--card);border-radius:16px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;
+  box-shadow:0 25px 60px rgba(0,0,0,.15);transform:translateY(20px) scale(.97);
+  transition:transform .3s ease;padding:0;
+}
+.modal-overlay.active .modal{transform:translateY(0) scale(1)}
+.modal-header{
+  position:sticky;top:0;background:var(--card);padding:20px 24px 16px;
+  border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:12px;z-index:1;
+}
+.modal-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;line-height:1.4;flex:1}
+.modal-close{
+  width:32px;height:32px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--card);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;
+  font-size:1.1rem;color:var(--text-secondary);
+}
+.modal-close:hover{border-color:var(--alert);color:var(--alert);background:var(--alert-light)}
+.modal-body{padding:20px 24px 24px}
+.modal-body .detail-section{margin-bottom:18px}
+.modal-body .detail-section:last-child{margin-bottom:0}
+.modal-body .detail-label{font-size:.7rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.modal-body .detail-text{font-size:.88rem;color:var(--text-primary);line-height:1.7}
+.modal-body .detail-tags{display:flex;gap:6px;flex-wrap:wrap}
+.modal-body .detail-scores{display:flex;gap:12px;flex-wrap:wrap}
+.modal-body .detail-scores .score-item{padding:8px 16px;min-width:80px}
+.modal-body .detail-scores .score-item .score-value{font-size:1.1rem}
+.modal-body .detail-scores .score-item .score-label{font-size:.68rem}
+.modal-body .detail-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.modal-body .detail-link{
+  display:inline-flex;align-items:center;gap:5px;font-size:.82rem;color:var(--accent);text-decoration:none;font-weight:600;
+  padding:8px 16px;border:1px solid var(--accent);border-radius:var(--radius-sm);transition:all .2s ease;
+}
+.modal-body .detail-link:hover{background:var(--accent);color:#fff}
+.modal-body .detail-link svg{width:13px;height:13px;stroke:currentColor}
+.modal-body .detail-link.secondary{border-color:var(--border);color:var(--text-secondary)}
+.modal-body .detail-link.secondary:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-light)}
+.modal-body .pain-point-list{display:flex;flex-direction:column;gap:4px}
+.modal-body .pain-point-item{font-size:.82rem;color:var(--text-secondary);padding:6px 12px;background:var(--alert-light);border-radius:6px}
+.modal-body .selling-points-list{list-style:none;display:flex;flex-direction:column;gap:4px}
+.modal-body .selling-points-list li{font-size:.85rem;color:var(--text-primary);padding-left:14px;position:relative}
+.modal-body .selling-points-list li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
 
 @media(max-width:768px){
   .stats-bar{grid-template-columns:repeat(2,1fr)}
-  .news-grid,.products-grid,.suggestions-grid,.pitfalls-grid,.potential-section .potential-grid{grid-template-columns:1fr}
+  .news-grid,.products-grid,.suggestions-grid,.pitfalls-grid,.potential-grid{grid-template-columns:1fr}
   .header-inner{flex-direction:column;align-items:flex-start}
   .element-pill{min-width:100%}
+  .modal{max-height:90vh;margin:12px}
 }
 @media(max-width:480px){
   .stats-bar{grid-template-columns:1fr}
@@ -295,18 +267,28 @@ footer .footer-text strong{color:var(--text-primary);font-weight:600}
       </div>
       <button class="refresh-btn" id="refreshBtn" onclick="fetchData()">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-        刷新数据
+        刷新
       </button>
     </div>
   </div>
 </header>
 
 <main class="container" id="mainContent">
-  <div class="loading-state" id="loadingState">
+  <div class="loading-state">
     <div class="loading-spinner"></div>
     <div class="loading-text">正在获取选品情报...</div>
   </div>
 </main>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+  <div class="modal" id="modalBox">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle"></div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
 
 <footer id="footer" style="display:none">
   <div class="footer-text">
@@ -323,25 +305,36 @@ let currentData = null;
 let availableDates = [];
 let selectedDate = null;
 
+const LINK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+
 function formatTime(isoStr) {
   if (!isoStr) return '未知';
-  try {
-    const d = new Date(isoStr);
-    return d.toLocaleString('zh-CN', { year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' });
-  } catch { return isoStr; }
+  try { const d = new Date(isoStr); return d.toLocaleString('zh-CN', { year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' }); }
+  catch { return isoStr; }
 }
-
 function formatDate(dateStr) {
   if (!dateStr) return '';
-  try {
-    const d = new Date(dateStr);
-    return d.toLocaleDateString('zh-CN', { year:'numeric', month:'2-digit', day:'2-digit' });
-  } catch { return dateStr; }
+  try { const d = new Date(dateStr); return d.toLocaleDateString('zh-CN', { year:'numeric', month:'2-digit', day:'2-digit' }); }
+  catch { return dateStr; }
 }
 
+function openModal(title, bodyHtml) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalBody').innerHTML = bodyHtml;
+  document.getElementById('modalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function closeModalOnOverlay(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
 function renderHeader(data) {
-  const el = document.getElementById('updateTime');
-  el.querySelector('span').textContent = '更新于 ' + formatTime(data.run_time);
+  document.getElementById('updateTime').querySelector('span').textContent = '更新于 ' + formatTime(data.run_time);
 }
 
 function renderStats(data) {
@@ -355,16 +348,7 @@ function renderStats(data) {
     { value: stats.news_count || 0, label: '新闻资讯' },
     { value: pitfalls.length, label: '避坑预警' }
   ];
-  return `
-    <div class="stats-bar fade-in">
-      ${items.map(i => `
-        <div class="stat-card">
-          <div class="stat-value">${i.value}</div>
-          <div class="stat-label">${i.label}</div>
-        </div>
-      `).join('')}
-    </div>
-  `;
+  return `<div class="stats-bar fade-in">${items.map(i => `<div class="stat-card"><div class="stat-value">${i.value}</div><div class="stat-label">${i.label}</div></div>`).join('')}</div>`;
 }
 
 function renderNews(data) {
@@ -372,29 +356,17 @@ function renderNews(data) {
   if (!items.length) return '';
   return `
     <section class="section fade-in">
-      <div class="section-header">
-        <h2>行业资讯</h2>
-        <div class="section-line"></div>
-        <span class="section-count">${items.length} 条</span>
-      </div>
+      <div class="section-header"><h2>行业资讯</h2><div class="section-line"></div><span class="section-count">${items.length} 条</span></div>
       <div class="news-grid">
-        ${items.map(n => `
-          <div class="news-card">
+        ${items.map((n, idx) => `
+          <div class="news-card" onclick="openNewsModal(${idx})">
             <div class="news-source">${n.source || '综合资讯'}</div>
             <div class="news-title">${n.title}</div>
             <div class="news-summary">${n.summary || ''}</div>
             <div class="news-meta">
               <span class="news-date">${formatDate(n.date)}</span>
-              <div class="news-tags">
-                ${(n.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}
-              </div>
+              <div class="news-tags">${(n.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
             </div>
-            ${n.url ? `
-              <a class="news-link" href="${n.url}" target="_blank" rel="noopener">
-                阅读原文
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            ` : ''}
           </div>
         `).join('')}
       </div>
@@ -402,79 +374,37 @@ function renderNews(data) {
   `;
 }
 
-function renderProducts(products, sectionTitle, sectionId, cardStyle) {
+function openNewsModal(idx) {
+  const n = currentData.news_items[idx];
+  if (!n) return;
+  const body = `
+    <div class="detail-section"><div class="detail-label">来源</div><div class="detail-text">${n.source || '综合资讯'} · ${formatDate(n.date)}</div></div>
+    <div class="detail-section"><div class="detail-label">摘要</div><div class="detail-text">${n.summary || ''}</div></div>
+    ${n.tags && n.tags.length ? `<div class="detail-section"><div class="detail-label">标签</div><div class="detail-tags">${n.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div></div>` : ''}
+    ${n.url ? `<div class="detail-section"><div class="detail-links"><a class="detail-link" href="${n.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">阅读原文 ${LINK_SVG}</a></div></div>` : ''}
+  `;
+  openModal(n.title, body);
+}
+
+function renderProducts(products, sectionTitle, sectionId) {
   if (!products || !products.length) return '';
   return `
     <section class="section fade-in" id="${sectionId}">
-      <div class="section-header">
-        <h2>${sectionTitle}</h2>
-        <div class="section-line"></div>
-        <span class="section-count">${products.length} 件</span>
-      </div>
+      <div class="section-header"><h2>${sectionTitle}</h2><div class="section-line"></div><span class="section-count">${products.length} 件</span></div>
       <div class="products-grid">
         ${products.map((p, idx) => {
           const marginPct = p.expected_margin != null ? Math.round(p.expected_margin * 100) : null;
           const uniqPct = p.uniqueness_coefficient != null ? Math.round(p.uniqueness_coefficient * 100) : null;
-          const marginAlert = p.margin_alert;
           return `
-            <div class="product-card ${cardStyle || ''}">
+            <div class="product-card" onclick="openProductModal('${sectionId}', ${idx})">
               <div class="product-header">
                 <div class="product-title">${p.title}</div>
                 ${p.price != null ? `<div class="product-price">$${p.price.toFixed(2)}<span> USD</span></div>` : ''}
               </div>
-              <div class="product-features">
-                ${(p.features || []).map(f => `<span class="tag">${f}</span>`).join('')}
-              </div>
+              <div class="product-features">${(p.features || []).slice(0, 4).map(f => `<span class="tag">${f}</span>`).join('')}</div>
               <div class="product-scores">
-                ${marginPct != null ? `
-                  <div class="score-item">
-                    <div class="score-value ${marginAlert ? 'alert' : ''}">${marginPct}%</div>
-                    <div class="score-label">预期利润</div>
-                  </div>
-                ` : ''}
-                ${uniqPct != null ? `
-                  <div class="score-item">
-                    <div class="score-value">${uniqPct}%</div>
-                    <div class="score-label">独特性</div>
-                  </div>
-                ` : ''}
-                ${p.review_status ? `
-                  <div class="score-item">
-                    <div class="score-value" style="font-size:.82rem">${p.review_status}</div>
-                    <div class="score-label">评论状态</div>
-                  </div>
-                ` : ''}
-              </div>
-              <div class="product-links">
-                ${p.url ? `
-                  <a class="product-link" href="${p.url}" target="_blank" rel="noopener">
-                    在亚马逊查看
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
-                ` : ''}
-                ${p.source_url ? `
-                  <a class="product-link source-link" href="${p.source_url}" target="_blank" rel="noopener">
-                    查看原文
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
-                ` : ''}
-              </div>
-              <button class="product-expand-btn" onclick="toggleDetails('${sectionId}', ${idx}, this)">查看详情</button>
-              <div class="product-details" id="details-${sectionId}-${idx}">
-                <div class="product-details-inner">
-                  ${(p.selling_points && p.selling_points.length) ? `
-                    <div class="detail-group">
-                      <h4>核心卖点</h4>
-                      <ul>${p.selling_points.map(s => `<li>${s}</li>`).join('')}</ul>
-                    </div>
-                  ` : ''}
-                  ${(p.trend_match_points && p.trend_match_points.length) ? `
-                    <div class="detail-group">
-                      <h4>趋势匹配</h4>
-                      <ul>${p.trend_match_points.map(t => `<li>${t}</li>`).join('')}</ul>
-                    </div>
-                  ` : ''}
-                </div>
+                ${marginPct != null ? `<div class="score-item"><div class="score-value${p.margin_alert ? ' alert' : ''}">${marginPct}%</div><div class="score-label">利润</div></div>` : ''}
+                ${uniqPct != null ? `<div class="score-item"><div class="score-value">${uniqPct}%</div><div class="score-label">独特性</div></div>` : ''}
               </div>
             </div>
           `;
@@ -484,12 +414,52 @@ function renderProducts(products, sectionTitle, sectionId, cardStyle) {
   `;
 }
 
-function toggleDetails(sectionId, idx, btn) {
-  const details = document.getElementById('details-' + sectionId + '-' + idx);
-  if (!details) return;
-  const isOpen = details.classList.contains('open');
-  details.classList.toggle('open');
-  btn.textContent = isOpen ? '查看详情' : '收起详情';
+function openProductModal(sectionId, idx) {
+  const section = sectionId === 'hitProducts'
+    ? currentData.hit_products
+    : currentData.potential_products;
+  const p = section.products[idx];
+  if (!p) return;
+  const marginPct = p.expected_margin != null ? Math.round(p.expected_margin * 100) : null;
+  const uniqPct = p.uniqueness_coefficient != null ? Math.round(p.uniqueness_coefficient * 100) : null;
+  const body = `
+    ${p.price != null ? `<div class="detail-section"><div class="detail-label">价格</div><div class="detail-text" style="font-size:1.3rem;font-weight:700;color:var(--accent)">$${p.price.toFixed(2)} USD</div></div>` : ''}
+    <div class="detail-section"><div class="detail-label">特征标签</div><div class="detail-tags">${(p.features || []).map(f => `<span class="tag">${f}</span>`).join('')}</div></div>
+    <div class="detail-section">
+      <div class="detail-label">核心指标</div>
+      <div class="detail-scores">
+        ${marginPct != null ? `<div class="score-item"><div class="score-value${p.margin_alert ? ' alert' : ''}">${marginPct}%</div><div class="score-label">预期利润</div></div>` : ''}
+        ${uniqPct != null ? `<div class="score-item"><div class="score-value">${uniqPct}%</div><div class="score-label">独特性</div></div>` : ''}
+        ${p.review_status ? `<div class="score-item"><div class="score-value" style="font-size:.85rem">${p.review_status}</div><div class="score-label">评论状态</div></div>` : ''}
+      </div>
+    </div>
+    ${p.selling_points && p.selling_points.length ? `<div class="detail-section"><div class="detail-label">核心卖点</div><ul class="selling-points-list">${p.selling_points.map(s => `<li>${s}</li>`).join('')}</ul></div>` : ''}
+    ${p.trend_match_points && p.trend_match_points.length ? `<div class="detail-section"><div class="detail-label">趋势匹配</div><ul class="selling-points-list">${p.trend_match_points.map(t => `<li>${t}</li>`).join('')}</ul></div>` : ''}
+    <div class="detail-section"><div class="detail-links">
+      ${p.url ? `<a class="detail-link" href="${p.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">在亚马逊查看 ${LINK_SVG}</a>` : ''}
+      ${p.source_url ? `<a class="detail-link secondary" href="${p.source_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">查看数据原文 ${LINK_SVG}</a>` : ''}
+    </div></div>
+  `;
+  openModal(p.title, body);
+}
+
+function renderPotential(data) {
+  const products = (data.potential_products && data.potential_products.products) || [];
+  if (!products.length) return '';
+  return `
+    <section class="section fade-in">
+      <div class="section-header"><h2>潜力商品</h2><div class="section-line"></div><span class="section-count">${products.length} 件</span></div>
+      <div class="potential-grid">
+        ${products.map((p, idx) => `
+          <div class="potential-card" onclick="openProductModal('potentialProducts', ${idx})">
+            <div class="potential-title">${p.title}</div>
+            ${p.price != null ? `<div class="potential-price">$${p.price.toFixed(2)}</div>` : ''}
+            <div class="product-features">${(p.features || []).slice(0, 4).map(f => `<span class="tag">${f}</span>`).join('')}</div>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+  `;
 }
 
 function renderElements(data) {
@@ -498,19 +468,13 @@ function renderElements(data) {
   const maxFreq = Math.max(...elements.map(e => e.frequency), 1);
   return `
     <section class="section fade-in">
-      <div class="section-header">
-        <h2>核心趋势元素</h2>
-        <div class="section-line"></div>
-        <span class="section-count">Top ${elements.length}</span>
-      </div>
+      <div class="section-header"><h2>核心趋势元素</h2><div class="section-line"></div><span class="section-count">Top ${elements.length}</span></div>
       <div class="elements-grid">
-        ${elements.map(e => `
-          <div class="element-pill ${e.is_core ? 'core' : ''}">
+        ${elements.map((e, idx) => `
+          <div class="element-pill ${e.is_core ? 'core' : ''}" onclick="openElementModal(${idx})">
             <div class="element-name">${e.element}</div>
             <div class="element-bar-wrap">
-              <div class="element-bar">
-                <div class="element-bar-fill" style="width:${Math.round((e.frequency / maxFreq) * 100)}%"></div>
-              </div>
+              <div class="element-bar"><div class="element-bar-fill" style="width:${Math.round((e.frequency / maxFreq) * 100)}%"></div></div>
               <div class="element-meta">
                 <span class="element-freq">频次 ${e.frequency}</span>
                 ${e.margin != null ? `<span>利润 ${Math.round(e.margin * 100)}%</span>` : ''}
@@ -524,19 +488,29 @@ function renderElements(data) {
   `;
 }
 
+function openElementModal(idx) {
+  const e = currentData.top10_elements.elements[idx];
+  if (!e) return;
+  const body = `
+    <div class="detail-section"><div class="detail-label">元素名称</div><div class="detail-text" style="font-size:1.1rem;font-weight:600;color:var(--accent)">${e.element}</div></div>
+    <div class="detail-section"><div class="detail-scores">
+      <div class="score-item"><div class="score-value">${e.frequency}</div><div class="score-label">出现频次</div></div>
+      ${e.margin != null ? `<div class="score-item"><div class="score-value">${Math.round(e.margin * 100)}%</div><div class="score-label">利润水平</div></div>` : ''}
+      <div class="score-item"><div class="score-value">${e.is_core ? '是' : '否'}</div><div class="score-label">核心元素</div></div>
+    </div></div>
+  `;
+  openModal(e.element, body);
+}
+
 function renderSuggestions(data) {
   const suggestions = (data.visual_diff_suggestions && data.visual_diff_suggestions.suggestions) || [];
   if (!suggestions.length) return '';
   return `
     <section class="section fade-in">
-      <div class="section-header">
-        <h2>视觉差异化建议</h2>
-        <div class="section-line"></div>
-        <span class="section-count">${suggestions.length} 条</span>
-      </div>
+      <div class="section-header"><h2>视觉差异化建议</h2><div class="section-line"></div><span class="section-count">${suggestions.length} 条</span></div>
       <div class="suggestions-grid">
-        ${suggestions.map(s => `
-          <div class="suggestion-card">
+        ${suggestions.map((s, idx) => `
+          <div class="suggestion-card" onclick="openSuggestionModal(${idx})">
             <div class="suggestion-element">${s.element}</div>
             <div class="suggestion-type">${s.suggestion_type || '差异化建议'}</div>
             <div class="suggestion-desc">${s.description}</div>
@@ -547,26 +521,28 @@ function renderSuggestions(data) {
   `;
 }
 
+function openSuggestionModal(idx) {
+  const s = currentData.visual_diff_suggestions.suggestions[idx];
+  if (!s) return;
+  const body = `
+    <div class="detail-section"><div class="detail-label">元素</div><div class="detail-text" style="font-size:1.1rem;font-weight:600;color:var(--accent)">${s.element}</div></div>
+    <div class="detail-section"><div class="detail-label">建议类型</div><div class="detail-text">${s.suggestion_type || '差异化建议'}</div></div>
+    <div class="detail-section"><div class="detail-label">详细描述</div><div class="detail-text">${s.description}</div></div>
+  `;
+  openModal(s.element + ' — 差异化建议', body);
+}
+
 function renderPitfalls(data) {
   const pitfalls = (data.pitfall_warnings && data.pitfall_warnings.pitfalls) || [];
   if (!pitfalls.length) return '';
   return `
     <section class="section fade-in">
-      <div class="section-header">
-        <h2>避坑预警</h2>
-        <div class="section-line"></div>
-        <span class="section-count">${pitfalls.length} 条</span>
-      </div>
+      <div class="section-header"><h2>避坑预警</h2><div class="section-line"></div><span class="section-count">${pitfalls.length} 条</span></div>
       <div class="pitfalls-grid">
-        ${pitfalls.map(p => `
-          <div class="pitfall-card">
+        ${pitfalls.map((p, idx) => `
+          <div class="pitfall-card" onclick="openPitfallModal(${idx})">
             <div class="pitfall-title">${p.title}</div>
             <div class="pitfall-desc">${p.description}</div>
-            ${(p.pain_points && p.pain_points.length) ? `
-              <div class="pain-points">
-                ${p.pain_points.map(pp => `<div class="pain-point">${pp}</div>`).join('')}
-              </div>
-            ` : ''}
           </div>
         `).join('')}
       </div>
@@ -574,57 +550,16 @@ function renderPitfalls(data) {
   `;
 }
 
-function renderPotential(data) {
-  const products = (data.potential_products && data.potential_products.products) || [];
-  if (!products.length) return '';
-  return `
-    <section class="section potential-section fade-in">
-      <div class="section-header">
-        <h2>潜力商品</h2>
-        <div class="section-line"></div>
-        <span class="section-count">${products.length} 件</span>
-      </div>
-      <div class="potential-grid">
-        ${products.map(p => `
-          <div class="potential-card">
-            <div class="potential-title">${p.title}</div>
-            ${p.price != null ? `<div class="potential-price">$${p.price.toFixed(2)}</div>` : ''}
-            <div class="product-features">
-              ${(p.features || []).map(f => `<span class="tag">${f}</span>`).join('')}
-            </div>
-            <div class="product-scores">
-              ${p.expected_margin != null ? `
-                <div class="score-item">
-                  <div class="score-value">${Math.round(p.expected_margin * 100)}%</div>
-                  <div class="score-label">预期利润</div>
-                </div>
-              ` : ''}
-              ${p.uniqueness_coefficient != null ? `
-                <div class="score-item">
-                  <div class="score-value">${Math.round(p.uniqueness_coefficient * 100)}%</div>
-                  <div class="score-label">独特性</div>
-                </div>
-              ` : ''}
-            </div>
-            <div class="product-links">
-              ${p.url ? `
-                <a class="product-link" href="${p.url}" target="_blank" rel="noopener">
-                  在亚马逊查看
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-              ` : ''}
-              ${p.source_url ? `
-                <a class="product-link source-link" href="${p.source_url}" target="_blank" rel="noopener">
-                  查看原文
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-              ` : ''}
-            </div>
-          </div>
-        `).join('')}
-      </div>
-    </section>
+function openPitfallModal(idx) {
+  const p = currentData.pitfall_warnings.pitfalls[idx];
+  if (!p) return;
+  const body = `
+    <div class="detail-section"><div class="detail-label">产品</div><div class="detail-text">${p.title}</div></div>
+    <div class="detail-section"><div class="detail-label">预警描述</div><div class="detail-text">${p.description}</div></div>
+    ${p.pain_points && p.pain_points.length ? `<div class="detail-section"><div class="detail-label">痛点详情</div><div class="pain-point-list">${p.pain_points.map(pp => `<div class="pain-point-item">${pp}</div>`).join('')}</div></div>` : ''}
+    ${p.data_source ? `<div class="detail-section"><div class="detail-label">数据来源</div><div class="detail-text">${p.data_source}</div></div>` : ''}
   `;
+  openModal(p.title + ' — 避坑预警', body);
 }
 
 function renderUniqueness(data) {
@@ -632,14 +567,10 @@ function renderUniqueness(data) {
   if (!recs.length) return '';
   return `
     <section class="section fade-in">
-      <div class="section-header">
-        <h2>差异化推荐</h2>
-        <div class="section-line"></div>
-        <span class="section-count">${recs.length} 条</span>
-      </div>
+      <div class="section-header"><h2>差异化推荐</h2><div class="section-line"></div><span class="section-count">${recs.length} 条</span></div>
       <div class="suggestions-grid">
-        ${recs.map(r => `
-          <div class="suggestion-card">
+        ${recs.map((r, idx) => `
+          <div class="suggestion-card" onclick="openUniquenessModal(${idx})">
             ${r.element ? `<div class="suggestion-element">${r.element}</div>` : ''}
             ${r.recommendation_type ? `<div class="suggestion-type">${r.recommendation_type}</div>` : ''}
             <div class="suggestion-desc">${r.description || r.recommendation || ''}</div>
@@ -650,50 +581,42 @@ function renderUniqueness(data) {
   `;
 }
 
+function openUniquenessModal(idx) {
+  const r = currentData.uniqueness_recommendations.recommendations[idx];
+  if (!r) return;
+  const body = `
+    ${r.element ? `<div class="detail-section"><div class="detail-label">元素</div><div class="detail-text" style="font-size:1.1rem;font-weight:600;color:var(--accent)">${r.element}</div></div>` : ''}
+    ${r.recommendation_type ? `<div class="detail-section"><div class="detail-label">推荐类型</div><div class="detail-text">${r.recommendation_type}</div></div>` : ''}
+    <div class="detail-section"><div class="detail-label">详细描述</div><div class="detail-text">${r.description || r.recommendation || ''}</div></div>
+  `;
+  openModal(r.element || '差异化推荐', body);
+}
+
 function renderPage(data) {
   currentData = data;
   renderHeader(data);
-
   const main = document.getElementById('mainContent');
   main.innerHTML = [
     renderStats(data),
     renderNews(data),
-    renderProducts(
-      (data.hit_products && data.hit_products.products) || [],
-      '爆品推荐', 'hitProducts'
-    ),
+    renderProducts((data.hit_products && data.hit_products.products) || [], '爆品推荐', 'hitProducts'),
     renderPotential(data),
     renderElements(data),
     renderSuggestions(data),
     renderUniqueness(data),
     renderPitfalls(data)
   ].join('');
-
   document.getElementById('footer').style.display = '';
-
   requestAnimationFrame(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   });
 }
 
 function renderError(msg) {
-  const main = document.getElementById('mainContent');
-  main.innerHTML = `
-    <div class="error-state">
-      <div class="error-icon">⚠</div>
-      <div class="error-msg">${msg || '数据加载失败，请稍后重试'}</div>
-      <button class="retry-btn" onclick="fetchData()">重新加载</button>
-    </div>
-  `;
+  document.getElementById('mainContent').innerHTML = `<div class="error-state"><div class="error-icon">⚠</div><div class="error-msg">${msg || '数据加载失败，请稍后重试'}</div><button class="retry-btn" onclick="fetchData()">重新加载</button></div>`;
 }
 
 async function fetchAvailableDates() {
@@ -703,22 +626,13 @@ async function fetchAvailableDates() {
     const data = await res.json();
     availableDates = data.dates || [];
     updateDateNavButtons();
-  } catch (err) {
-    console.error('Failed to fetch available dates:', err);
-  }
+  } catch (err) { console.error('Failed to fetch available dates:', err); }
 }
 
 function updateDateNavButtons() {
-  const picker = document.getElementById('datePicker');
   const prevBtn = document.getElementById('prevDayBtn');
   const nextBtn = document.getElementById('nextDayBtn');
-
-  if (!selectedDate || !availableDates.length) {
-    prevBtn.disabled = true;
-    nextBtn.disabled = true;
-    return;
-  }
-
+  if (!selectedDate || !availableDates.length) { prevBtn.disabled = true; nextBtn.disabled = true; return; }
   const idx = availableDates.indexOf(selectedDate);
   prevBtn.disabled = idx <= 0;
   nextBtn.disabled = idx >= availableDates.length - 1;
@@ -736,8 +650,7 @@ function navigateDate(offset) {
 }
 
 function onDateChange() {
-  const picker = document.getElementById('datePicker');
-  selectedDate = picker.value;
+  selectedDate = document.getElementById('datePicker').value;
   updateDateNavButtons();
   fetchData();
 }
@@ -752,57 +665,32 @@ function goToLatest() {
 async function fetchData() {
   const btn = document.getElementById('refreshBtn');
   const main = document.getElementById('mainContent');
-
   btn.classList.add('loading');
-
-  if (!currentData) {
-    main.innerHTML = `
-      <div class="loading-state" id="loadingState">
-        <div class="loading-spinner"></div>
-        <div class="loading-text">正在获取选品情报...</div>
-      </div>
-    `;
-  }
-
+  if (!currentData) { main.innerHTML = '<div class="loading-state"><div class="loading-spinner"></div><div class="loading-text">正在获取选品情报...</div></div>'; }
   try {
     let url = API_URL;
-    if (selectedDate) {
-      url += `?date=${selectedDate}`;
-    }
+    if (selectedDate) url += `?date=${selectedDate}`;
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-
     if (!selectedDate && data.run_time) {
       try {
         const dt = new Date(data.run_time);
         const todayStr = dt.toISOString().slice(0, 10);
         selectedDate = todayStr;
         document.getElementById('datePicker').value = todayStr;
-        if (!availableDates.includes(todayStr)) {
-          availableDates.unshift(todayStr);
-        }
+        if (!availableDates.includes(todayStr)) availableDates.unshift(todayStr);
         updateDateNavButtons();
       } catch (e) {}
     }
-
     renderPage(data);
   } catch (err) {
     console.error('Fetch error:', err);
-    if (!currentData) {
-      renderError(selectedDate
-        ? `${selectedDate} 暂无数据，请选择其他日期或查看最新数据`
-        : '无法连接数据服务，请检查网络后重试');
-    }
-  } finally {
-    btn.classList.remove('loading');
-  }
+    if (!currentData) renderError(selectedDate ? `${selectedDate} 暂无数据，请选择其他日期或查看最新数据` : '无法连接数据服务，请检查网络后重试');
+  } finally { btn.classList.remove('loading'); }
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-  await fetchAvailableDates();
-  fetchData();
-});
+document.addEventListener('DOMContentLoaded', async () => { await fetchAvailableDates(); fetchData(); });
 </script>
 </body>
 </html>
