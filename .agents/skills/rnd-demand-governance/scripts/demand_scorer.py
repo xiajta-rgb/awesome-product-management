@@ -228,6 +228,8 @@ class DemandScorer:
       "deduction": "扣分原因"
     }}
   }},
+  "scoring_confidence": "高/中/低（信息充分=高，部分推测=中，大量假设=低）",
+  "reject_reason": "D级需求必填：驳回的具体原因和改进建议",
   "ai_suggestions": [
     "①【业务价值】具体建议",
     "②【战略匹配度】具体建议",

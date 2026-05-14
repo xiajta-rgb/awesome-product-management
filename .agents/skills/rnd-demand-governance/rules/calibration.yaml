@@ -1,5 +1,18 @@
 # 校准规则 v1.0
 # 存储从用户反馈中提取的校准规则，评分时优先于基础规则
+#
+# 校准规则类型说明：
+# - dimension_calibrations: 维度级校准，调整某个维度的评分倾向
+#   示例：用户纠正"ROI不应因低投入就给高分，零收益必须低分"
+#   → {dimension: "roi", trigger: "收益为零", action: "force_max_score", value: 4, reason: "零收益时ROI必为低分"}
+#
+# - threshold_calibrations: 阈值级校准，调整等级划分边界
+#   示例：用户纠正"70分就应该算B级，不是60分"
+#   → {grade: "B", old_min: 60, new_min: 70, reason: "公司标准更高"}
+#
+# - pattern_calibrations: 模式级校准，识别特定需求模式的评分调整
+#   示例：用户纠正"所有合规类需求紧急程度应至少9分"
+#   → {pattern: "合规类需求", dimension: "urgency", min_score: 9, reason: "合规风险不可延后"}
 
 version: "1.0"
 confidence_level: "initial"
