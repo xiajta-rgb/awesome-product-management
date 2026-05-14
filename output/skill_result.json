@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-05-14T16:57:12.341725+08:00",
+  "run_time": "2026-05-14T17:06:00.150220+08:00",
   "news_items": [
     {
       "title": "亚马逊全球开店发布《2025年时尚品类电商选品洞察报告》",
@@ -222,63 +222,6 @@
         "margin_alert": "低毛利预警"
       },
       {
-        "title": "STITCH & STONE 4-Pack Graphic Tees for Boys 蓝色 棉 图案印花",
-        "url": "https://www.amazon.com/dp/B0D7MYCHKF",
-        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
-        "features": [
-          "蓝色",
-          "纯棉",
-          "图案印花",
-          "圆领"
-        ],
-        "price": 19.99,
-        "selling_points": [],
-        "trend_match_points": [],
-        "data_source": "amazon",
-        "expected_margin": 0.0,
-        "uniqueness_coefficient": 1.0,
-        "review_status": "有有效评论",
-        "margin_alert": "低毛利预警"
-      },
-      {
-        "title": "INTO THE AM Cosmic Beats Men's Tee 藏青色 棉混纺 图案印花",
-        "url": "https://www.amazon.com/dp/B092PWJCFF",
-        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
-        "features": [
-          "藏青色",
-          "棉混纺",
-          "图案印花",
-          "圆领"
-        ],
-        "price": 28.21,
-        "selling_points": [],
-        "trend_match_points": [],
-        "data_source": "amazon",
-        "expected_margin": 0.0,
-        "uniqueness_coefficient": 1.0,
-        "review_status": "有有效评论",
-        "margin_alert": "低毛利预警"
-      },
-      {
-        "title": "JMIERR Men's Short Sleeve T-Shirt 灰色 速干面料 V领",
-        "url": "https://www.amazon.com/dp/B0CYPV1YL8",
-        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
-        "features": [
-          "灰色",
-          "速干面料",
-          "V领",
-          "短袖"
-        ],
-        "price": 17.61,
-        "selling_points": [],
-        "trend_match_points": [],
-        "data_source": "amazon",
-        "expected_margin": 0.0,
-        "uniqueness_coefficient": 1.0,
-        "review_status": "有有效评论",
-        "margin_alert": "低毛利预警"
-      },
-      {
         "title": "Amazon Essentials Men's Slim-Fit Chino Pants 大地色 弹力斜纹布",
         "url": "https://www.amazon.com/dp/B07R54MCNJ",
         "source_url": "https://es.accio.com/business/amazon-best-selling-clothes",
@@ -454,7 +397,71 @@
   "potential_products": {
     "push_type": "potential_product_list",
     "title": "潜力爆品列表推送",
-    "products": []
+    "products": [
+      {
+        "title": "INTO THE AM Cosmic Beats Men's Tee 藏青色 棉混纺 图案印花",
+        "url": "https://www.amazon.com/dp/B092PWJCFF",
+        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
+        "features": [
+          "藏青色",
+          "棉混纺",
+          "图案印花",
+          "圆领"
+        ],
+        "price": 28.21,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "有有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "JMIERR Men's Short Sleeve T-Shirt 灰色 速干面料 V领",
+        "url": "https://www.amazon.com/dp/B0CYPV1YL8",
+        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
+        "features": [
+          "灰色",
+          "速干面料",
+          "V领",
+          "短袖"
+        ],
+        "price": 17.61,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "有有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      },
+      {
+        "title": "STITCH & STONE 4-Pack Graphic Tees for Boys 蓝色 棉 图案印花",
+        "url": "https://www.amazon.com/dp/B0D7MYCHKF",
+        "source_url": "https://de.accio.com/business/top-selling-t-shirts-amazon",
+        "features": [
+          "蓝色",
+          "纯棉",
+          "图案印花",
+          "圆领"
+        ],
+        "price": 19.99,
+        "selling_points": [],
+        "trend_match_points": [],
+        "data_source": "amazon",
+        "expected_margin": 0.0,
+        "uniqueness_coefficient": 1.0,
+        "review_status": "有有效评论",
+        "margin_alert": "低毛利预警",
+        "growth_potential": "",
+        "supply_chain_feasibility": ""
+      }
+    ]
   },
   "top10_elements": {
     "push_type": "top10_elements",
@@ -547,33 +554,9 @@
     "title": "视觉差异化建议推送",
     "suggestions": [
       {
-        "element": "烟熏淡彩",
-        "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 '烟熏淡彩' 在站内爆品中缺失，建议补充视觉呈现",
-        "data_source": ""
-      },
-      {
-        "element": "奶酪黄",
-        "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 '奶酪黄' 在站内爆品中缺失，建议补充视觉呈现",
-        "data_source": ""
-      },
-      {
-        "element": "褶皱",
-        "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 '褶皱' 在站内爆品中缺失，建议补充视觉呈现",
-        "data_source": ""
-      },
-      {
         "element": "水鸭绿",
         "suggestion_type": "visual_gap",
         "description": "站外趋势元素 '水鸭绿' 在站内爆品中缺失，建议补充视觉呈现",
-        "data_source": ""
-      },
-      {
-        "element": "华夫格面料",
-        "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 '华夫格面料' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
@@ -583,9 +566,27 @@
         "data_source": ""
       },
       {
+        "element": "烟熏淡彩",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '烟熏淡彩' 在站内爆品中缺失，建议补充视觉呈现",
+        "data_source": ""
+      },
+      {
         "element": "Pastel Sport",
         "suggestion_type": "visual_gap",
         "description": "站外趋势元素 'Pastel Sport' 在站内爆品中缺失，建议补充视觉呈现",
+        "data_source": ""
+      },
+      {
+        "element": "奶酪黄",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '奶酪黄' 在站内爆品中缺失，建议补充视觉呈现",
+        "data_source": ""
+      },
+      {
+        "element": "华夫格面料",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '华夫格面料' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
@@ -601,6 +602,36 @@
         "data_source": ""
       },
       {
+        "element": "褶皱",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '褶皱' 在站内爆品中缺失，建议补充视觉呈现",
+        "data_source": ""
+      },
+      {
+        "element": "雪纺",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '雪纺'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Neutral Classic",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Neutral Classic'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "纽扣领",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '纽扣领'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "A字",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'A字'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
         "element": "Straight Fit",
         "suggestion_type": "visual_differentiation",
         "description": "站内爆品独有元素 'Straight Fit'，可作为视觉差异化亮点",
@@ -613,75 +644,15 @@
         "data_source": ""
       },
       {
-        "element": "桶形",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '桶形'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "Solid Basic",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Solid Basic'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "Neutral Classic",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Neutral Classic'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "羊毛混纺",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '羊毛混纺'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "A字",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'A字'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "雪纺",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '雪纺'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "Polyester",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Polyester'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "圆领",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '圆领'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "双排扣",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '双排扣'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "蓝色",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '蓝色'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
         "element": "棉混纺",
         "suggestion_type": "visual_differentiation",
         "description": "站内爆品独有元素 '棉混纺'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
-        "element": "弹力斜纹布",
+        "element": "桶形",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '弹力斜纹布'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 '桶形'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
@@ -691,15 +662,51 @@
         "data_source": ""
       },
       {
-        "element": "纽扣领",
+        "element": "双排扣",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '纽扣领'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 '双排扣'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "圆领",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '圆领'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Polyester",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Polyester'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Solid Basic",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Solid Basic'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
         "element": "工字背",
         "suggestion_type": "visual_differentiation",
         "description": "站内爆品独有元素 '工字背'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "羊毛混纺",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '羊毛混纺'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "弹力斜纹布",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '弹力斜纹布'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "蓝色",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '蓝色'，可作为视觉差异化亮点",
         "data_source": ""
       }
     ]
@@ -750,24 +757,6 @@
         "pain_points": [
           "纯棉易缩水",
           "白色易透"
-        ],
-        "data_source": "amazon"
-      },
-      {
-        "title": "INTO THE AM Cosmic Beats Men's Tee 藏青色 棉混纺 图案印花",
-        "description": "该产品存在 2 个常见问题，选品时需注意规避",
-        "pain_points": [
-          "印花易褪色",
-          "尺码偏大"
-        ],
-        "data_source": "amazon"
-      },
-      {
-        "title": "JMIERR Men's Short Sleeve T-Shirt 灰色 速干面料 V领",
-        "description": "该产品存在 2 个常见问题，选品时需注意规避",
-        "pain_points": [
-          "速干面料有静电",
-          "V领偏深"
         ],
         "data_source": "amazon"
       },
@@ -826,6 +815,24 @@
         "data_source": "amazon"
       },
       {
+        "title": "INTO THE AM Cosmic Beats Men's Tee 藏青色 棉混纺 图案印花",
+        "description": "该产品存在 2 个常见问题，选品时需注意规避",
+        "pain_points": [
+          "印花易褪色",
+          "尺码偏大"
+        ],
+        "data_source": "amazon"
+      },
+      {
+        "title": "JMIERR Men's Short Sleeve T-Shirt 灰色 速干面料 V领",
+        "description": "该产品存在 2 个常见问题，选品时需注意规避",
+        "pain_points": [
+          "速干面料有静电",
+          "V领偏深"
+        ],
+        "data_source": "amazon"
+      },
+      {
         "title": "ATHMILE Oversized T-Shirts for Teen Girls 灰色 棉混纺 宽松",
         "description": "该产品存在 2 个常见问题，选品时需注意规避",
         "pain_points": [
@@ -861,7 +868,7 @@
         "data_source": "amazon"
       }
     ],
-    "generated_at": "2026-05-14T08:57:12.341504"
+    "generated_at": "2026-05-14T09:06:00.150067"
   },
   "uniqueness_recommendations": {
     "push_type": "uniqueness_recommendations",
@@ -911,33 +918,6 @@
         "category_main": "",
         "category_sub": "",
         "price": 32.99,
-        "data_source": "amazon"
-      },
-      {
-        "title": "STITCH & STONE 4-Pack Graphic Tees for Boys 蓝色 棉 图案印花",
-        "url": "https://www.amazon.com/dp/B0D7MYCHKF",
-        "uniqueness_coefficient": 1.0,
-        "category_main": "",
-        "category_sub": "",
-        "price": 19.99,
-        "data_source": "amazon"
-      },
-      {
-        "title": "INTO THE AM Cosmic Beats Men's Tee 藏青色 棉混纺 图案印花",
-        "url": "https://www.amazon.com/dp/B092PWJCFF",
-        "uniqueness_coefficient": 1.0,
-        "category_main": "",
-        "category_sub": "",
-        "price": 28.21,
-        "data_source": "amazon"
-      },
-      {
-        "title": "JMIERR Men's Short Sleeve T-Shirt 灰色 速干面料 V领",
-        "url": "https://www.amazon.com/dp/B0CYPV1YL8",
-        "uniqueness_coefficient": 1.0,
-        "category_main": "",
-        "category_sub": "",
-        "price": 17.61,
         "data_source": "amazon"
       },
       {
@@ -995,6 +975,24 @@
         "data_source": "amazon"
       },
       {
+        "title": "INTO THE AM Cosmic Beats Men's Tee 藏青色 棉混纺 图案印花",
+        "url": "https://www.amazon.com/dp/B092PWJCFF",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 28.21,
+        "data_source": "amazon"
+      },
+      {
+        "title": "JMIERR Men's Short Sleeve T-Shirt 灰色 速干面料 V领",
+        "url": "https://www.amazon.com/dp/B0CYPV1YL8",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 17.61,
+        "data_source": "amazon"
+      },
+      {
         "title": "ATHMILE Oversized T-Shirts for Teen Girls 灰色 棉混纺 宽松",
         "url": "https://www.amazon.com/dp/B0CLCGB6RD",
         "uniqueness_coefficient": 1.0,
@@ -1010,6 +1008,15 @@
         "category_main": "",
         "category_sub": "",
         "price": 38.0,
+        "data_source": "amazon"
+      },
+      {
+        "title": "STITCH & STONE 4-Pack Graphic Tees for Boys 蓝色 棉 图案印花",
+        "url": "https://www.amazon.com/dp/B0D7MYCHKF",
+        "uniqueness_coefficient": 1.0,
+        "category_main": "",
+        "category_sub": "",
+        "price": 19.99,
         "data_source": "amazon"
       },
       {
@@ -1031,7 +1038,7 @@
     "filtered_products": 17,
     "matched_products": 13,
     "total_candidates": 17,
-    "hit_products": 17,
-    "potential_products": 0
+    "hit_products": 14,
+    "potential_products": 3
   }
 }
