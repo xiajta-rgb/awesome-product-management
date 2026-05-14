@@ -1,127 +1,102 @@
-# 需求描述补全优化规则 v3.0
-# 用于将用户原始需求描述补全为结构化、标准化的需求文档
+# 需求描述补全优化规则 v4.0
 
-version: "3.0"
+version: "4.0"
 
-# 最终录入字段定义（对外展示的标准字段）
+# 最终录入字段定义
 output_fields:
   demand_type:
     name: "需求类型"
     description: "普通需求 / 价值需求"
     values: ["普通需求", "价值需求"]
-    guide: "价值需求：直接创造业务价值（收入/降本/效率/合规）。普通需求：日常优化/体验改进/技术债。"
+    auto_derived: true
+    derivation_rule: "A级/B级→价值需求 | C级/D级→普通需求"
   
   demand_module:
     name: "需求模块"
     description: "需求所属业务域"
-    values:
-      - "仓储与物流域"
-      - "研发域"
-      - "供应链与制造域"
-      - "营销域"
+    values: ["仓储与物流域", "研发域", "供应链与制造域", "营销域"]
+    auto_derived: false
     guide: "根据需求涉及的核心业务流程判断归属域"
   
   title:
     name: "标题"
     description: "用一句话简单描述需求的核心内容"
     max_length: 50
-    guide: "简洁明了，包含核心动作和目标"
+    auto_derived: false
   
   background:
     name: "背景"
     description: "问题背景与现状说明"
-    guide: "描述当前状况、触发事件、现有系统情况"
+    auto_derived: false
   
   pain_points:
     name: "业务痛点"
     description: "描述当前业务的痛点"
-    guide: "列出具体表现、影响程度、频率"
+    auto_derived: false
   
   description:
     name: "需求描述"
     description: "需求点补充描述更具体详细"
-    guide: "详细说明要做什么、怎么做、预期效果"
+    auto_derived: false
   
   label:
     name: "标签"
-    description: "需求类型标签"
+    description: "需求类型标签（由评分自动推导）"
     values: ["战略", "经营", "日常", "无效型"]
-    guide: "战略=公司级战略方向；经营=经营优化改进；日常=日常运维改进；无效型=无业务价值"
+    auto_derived: true
+    derivation_rule: "A级≥80→战略 | B级60-79→经营 | C级40-59→日常 | D级<40→无效型"
   
   priority:
     name: "优先级"
-    description: "需求优先级 P0-P3"
+    description: "需求优先级（由评分自动推导）"
     values: ["P0", "P1", "P2", "P3"]
-    guide: "P0=紧急致命（立即处理）；P1=重要高优（本周处理）；P2=中等优先（迭代内处理）；P3=低优先级（排期处理）"
+    auto_derived: true
+    derivation_rule: "A级≥80→P0(立即处理) | B级60-79→P1(本周处理) | C级40-59→P2(迭代内处理) | D级<40→P3(排期处理)"
 
-# 补全方法论（用于将原始描述转化为标准字段）
-refinement_methods:
-  - name: "5W1H"
-    description: "Who/What/When/Where/Why/How 六要素分析法"
-    application: "确保需求描述覆盖用户、功能、时机、场景、原因、方式六个维度"
-  
-  - name: "User Story 格式"
-    description: "As a [角色], I want [功能], so that [价值]"
-    application: "将需求转化为标准用户故事，明确角色-功能-价值关系"
-  
-  - name: "JTBD (Jobs-to-be-Done)"
-    description: "识别用户雇佣产品完成的真实任务"
-    application: "区分表面需求和深层Job，用于判断需求类型（价值/普通）和标签（战略/经营/日常/无效型）"
-  
-  - name: "PR-FAQ (Amazon Press Release + FAQ)"
-    description: "先写新闻稿和FAQ，反推需求价值"
-    application: "从客户视角反推需求是否真实存在"
-  
-  - name: "SMART 原则"
-    description: "Specific/Measurable/Achievable/Relevant/Time-bound"
-    application: "确保预期价值和成功指标具体、可量化、可实现、相关、有时限"
-
-# 内部评分辅助字段（不对外展示，仅用于评分引擎）
-internal_fields:
-  demand_id: "需求编号（自动生成，D001/D002...）"
-  target_users: "目标用户（角色、部门、用户规模）"
-  usage_scenario: "使用场景（典型使用流程、触发条件）"
-  current_solution: "当前解决方案（现有替代方案及其不足）"
-  expected_value: "预期价值（量化指标、预期改善幅度、业务影响）"
-  cross_department_impact: "跨部门影响（涉及部门、影响方式、协同需求）"
-  resource_input: "资源投入估算（人月、技术栈、外部依赖）"
-  deadline_risk: "截止风险（时间节点、延期后果）"
-  success_metrics: "成功度量指标（上线后如何评估是否成功）"
-  risks_assumptions: "风险与假设（技术风险、业务风险、外部依赖）"
-
-# 补全质量评估标准
+# 补全质量评估标准（不包含自动推导字段）
 quality_checks:
   - field: "title"
     check: "是否用一句话描述了需求核心内容"
     min_requirement: true
-  
   - field: "background"
     check: "是否描述了当前状况和存在的问题"
     min_requirement: true
-  
   - field: "pain_points"
     check: "是否列出了至少1个具体痛点及其表现"
     min_requirement: true
-  
   - field: "description"
     check: "是否详细描述了需求点和预期效果"
     min_requirement: true
-  
-  - field: "demand_type"
-    check: "是否明确标注了需求类型"
-    min_requirement: true
-  
   - field: "demand_module"
     check: "是否选择了正确的需求模块"
     min_requirement: true
-  
-  - field: "label"
-    check: "是否标注了需求标签"
-    min_requirement: true
-  
-  - field: "priority"
-    check: "是否标注了优先级"
-    min_requirement: true
+
+# 评分→标签→优先级 自动映射表
+score_to_label_mapping:
+  - min_score: 80
+    max_score: 100
+    grade: "A"
+    label: "战略"
+    priority: "P0"
+    demand_type: "价值需求"
+  - min_score: 60
+    max_score: 79
+    grade: "B"
+    label: "经营"
+    priority: "P1"
+    demand_type: "价值需求"
+  - min_score: 40
+    max_score: 59
+    grade: "C"
+    label: "日常"
+    priority: "P2"
+    demand_type: "普通需求"
+  - min_score: 0
+    max_score: 39
+    grade: "D"
+    label: "无效型"
+    priority: "P3"
+    demand_type: "普通需求"
 
 # 补全置信度标记
 confidence_levels:
@@ -133,10 +108,3 @@ confidence_levels:
 insufficient_info_rules:
   missing_threshold: 3
   action: "pause_and_ask"
-  guidance: "当必须字段缺失≥3个时，暂停评分，主动追问用户补充关键信息"
-  output_template: |
-    ⚠️ 需求信息不足，无法进行专业评审。请补充以下关键信息：
-    1. {缺失字段}：{引导问题}
-    ...
-    补充后我将重新进行补全和评审。
-  partial_missing_guidance: "当必须字段缺失1-2个时，可合理推测补全，标记为assumed，在评审结果中提醒用户确认"
