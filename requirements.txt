@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+requests
+beautifulsoup4
+selenium
+Pillow
+SQLAlchemy
+pymysql
+APScheduler
+openpyxl
+python-dotenv
