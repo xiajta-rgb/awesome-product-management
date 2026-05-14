@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-05-14T08:10:00.576494+00:00",
+  "run_time": "2026-05-14T16:57:12.341725+08:00",
   "news_items": [
     {
       "title": "亚马逊全球开店发布《2025年时尚品类电商选品洞察报告》",
@@ -547,15 +547,15 @@
     "title": "视觉差异化建议推送",
     "suggestions": [
       {
-        "element": "酒红色",
+        "element": "烟熏淡彩",
         "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 '酒红色' 在站内爆品中缺失，建议补充视觉呈现",
+        "description": "站外趋势元素 '烟熏淡彩' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
-        "element": "亮青柠",
+        "element": "奶酪黄",
         "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 '亮青柠' 在站内爆品中缺失，建议补充视觉呈现",
+        "description": "站外趋势元素 '奶酪黄' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
@@ -577,15 +577,9 @@
         "data_source": ""
       },
       {
-        "element": "奶酪黄",
+        "element": "亮青柠",
         "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 '奶酪黄' 在站内爆品中缺失，建议补充视觉呈现",
-        "data_source": ""
-      },
-      {
-        "element": "烟熏淡彩",
-        "suggestion_type": "visual_gap",
-        "description": "站外趋势元素 '烟熏淡彩' 在站内爆品中缺失，建议补充视觉呈现",
+        "description": "站外趋势元素 '亮青柠' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
@@ -595,27 +589,21 @@
         "data_source": ""
       },
       {
+        "element": "酒红色",
+        "suggestion_type": "visual_gap",
+        "description": "站外趋势元素 '酒红色' 在站内爆品中缺失，建议补充视觉呈现",
+        "data_source": ""
+      },
+      {
         "element": "桶形剪裁",
         "suggestion_type": "visual_gap",
         "description": "站外趋势元素 '桶形剪裁' 在站内爆品中缺失，建议补充视觉呈现",
         "data_source": ""
       },
       {
-        "element": "羊毛混纺",
+        "element": "Straight Fit",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '羊毛混纺'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "Neutral Classic",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Neutral Classic'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "双排扣",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '双排扣'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 'Straight Fit'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
@@ -625,33 +613,27 @@
         "data_source": ""
       },
       {
-        "element": "棉混纺",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '棉混纺'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "雪纺",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '雪纺'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
         "element": "桶形",
         "suggestion_type": "visual_differentiation",
         "description": "站内爆品独有元素 '桶形'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
-        "element": "Polyester",
+        "element": "Solid Basic",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Polyester'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 'Solid Basic'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
-        "element": "碎花",
+        "element": "Neutral Classic",
         "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '碎花'，可作为视觉差异化亮点",
+        "description": "站内爆品独有元素 'Neutral Classic'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "羊毛混纺",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '羊毛混纺'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
@@ -661,9 +643,51 @@
         "data_source": ""
       },
       {
+        "element": "雪纺",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '雪纺'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "Polyester",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 'Polyester'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
         "element": "圆领",
         "suggestion_type": "visual_differentiation",
         "description": "站内爆品独有元素 '圆领'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "双排扣",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '双排扣'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "蓝色",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '蓝色'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "棉混纺",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '棉混纺'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "弹力斜纹布",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '弹力斜纹布'，可作为视觉差异化亮点",
+        "data_source": ""
+      },
+      {
+        "element": "碎花",
+        "suggestion_type": "visual_differentiation",
+        "description": "站内爆品独有元素 '碎花'，可作为视觉差异化亮点",
         "data_source": ""
       },
       {
@@ -676,30 +700,6 @@
         "element": "工字背",
         "suggestion_type": "visual_differentiation",
         "description": "站内爆品独有元素 '工字背'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "Straight Fit",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Straight Fit'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "蓝色",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '蓝色'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "Solid Basic",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 'Solid Basic'，可作为视觉差异化亮点",
-        "data_source": ""
-      },
-      {
-        "element": "弹力斜纹布",
-        "suggestion_type": "visual_differentiation",
-        "description": "站内爆品独有元素 '弹力斜纹布'，可作为视觉差异化亮点",
         "data_source": ""
       }
     ]
@@ -861,7 +861,7 @@
         "data_source": "amazon"
       }
     ],
-    "generated_at": "2026-05-14T08:10:00.576346"
+    "generated_at": "2026-05-14T08:57:12.341504"
   },
   "uniqueness_recommendations": {
     "push_type": "uniqueness_recommendations",

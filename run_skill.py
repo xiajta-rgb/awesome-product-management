@@ -4,7 +4,7 @@ import sys
 import os
 import urllib.request
 import urllib.error
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("skill_runner")
@@ -498,7 +498,7 @@ def fetch_realtime_trends():
 def run_full_pipeline():
     logger.info("=" * 80)
     logger.info("亚马逊美国站跨境服装电商智能选品技能 - 实时数据采集")
-    logger.info(f"运行时间: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    logger.info(f"运行时间: {datetime.now(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M:%S')} 北京时间")
     logger.info("=" * 80)
 
     raw_products = fetch_realtime_products()
@@ -583,7 +583,7 @@ def run_full_pipeline():
     logger.info(f"  视觉差异化: {len(extraction_result['visual_diff_suggestions'])} 条")
 
     output_data = {
-        "run_time": datetime.now(timezone.utc).isoformat(),
+        "run_time": datetime.now(timezone(timedelta(hours=8))).isoformat(),
         "news_items": news_items,
         "hit_products": hit_product_push,
         "potential_products": potential_product_push,
@@ -611,7 +611,7 @@ def run_full_pipeline():
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-    run_date = datetime.now().strftime("%Y-%m-%d")
+    run_date = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
     dated_file = os.path.join(output_dir, f"skill_result_{run_date}.json")
     with open(dated_file, "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
